@@ -29,7 +29,7 @@ require 'shipping-api-model'
 
 api_instance = AmzSpApi::ShippingApiModel::ShippingApi.new
 
-shipment_id = "shipment_id_example" # String | 
+shipment_id = 'shipment_id_example' # String | 
 
 
 begin
@@ -207,7 +207,7 @@ require 'shipping-api-model'
 
 api_instance = AmzSpApi::ShippingApiModel::ShippingApi.new
 
-shipment_id = "shipment_id_example" # String | 
+shipment_id = 'shipment_id_example' # String | 
 
 
 begin
@@ -253,7 +253,7 @@ require 'shipping-api-model'
 
 api_instance = AmzSpApi::ShippingApiModel::ShippingApi.new
 
-tracking_id = "tracking_id_example" # String | 
+tracking_id = 'tracking_id_example' # String | 
 
 
 begin
@@ -299,7 +299,7 @@ require 'shipping-api-model'
 
 api_instance = AmzSpApi::ShippingApiModel::ShippingApi.new
 
-shipment_id = "shipment_id_example" # String | 
+shipment_id = 'shipment_id_example' # String | 
 
 body = AmzSpApi::ShippingApiModel::PurchaseLabelsRequest.new # PurchaseLabelsRequest | 
 
@@ -394,9 +394,9 @@ require 'shipping-api-model'
 
 api_instance = AmzSpApi::ShippingApiModel::ShippingApi.new
 
-shipment_id = "shipment_id_example" # String | 
+shipment_id = 'shipment_id_example' # String | 
 
-tracking_id = "tracking_id_example" # String | 
+tracking_id = 'tracking_id_example' # String | 
 
 body = AmzSpApi::ShippingApiModel::RetrieveShippingLabelRequest.new # RetrieveShippingLabelRequest | 
 

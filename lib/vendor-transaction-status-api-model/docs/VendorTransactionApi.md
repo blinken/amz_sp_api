@@ -21,7 +21,7 @@ require 'vendor-transaction-status-api-model'
 
 api_instance = AmzSpApi::VendorTransactionStatusApiModel::VendorTransactionApi.new
 
-transaction_id = "transaction_id_example" # String | The GUID provided by Amazon in the 'transactionId' field in response to the post request of a specific transaction.
+transaction_id = 'transaction_id_example' # String | The GUID provided by Amazon in the 'transactionId' field in response to the post request of a specific transaction.
 
 
 begin

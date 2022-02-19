@@ -1,6 +1,6 @@
 # AmzSpApi::ShipmentInvoicingApiModel::ShipmentInvoiceApi
 
-All URIs are relative to *https://localhost/*
+All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -23,7 +23,7 @@ require 'shipment-invoicing-api-model'
 
 api_instance = AmzSpApi::ShipmentInvoicingApiModel::ShipmentInvoiceApi.new
 
-shipment_id = "shipment_id_example" # String | The shipment identifier for the shipment.
+shipment_id = 'shipment_id_example' # String | The shipment identifier for the shipment.
 
 
 begin
@@ -69,7 +69,7 @@ require 'shipment-invoicing-api-model'
 
 api_instance = AmzSpApi::ShipmentInvoicingApiModel::ShipmentInvoiceApi.new
 
-shipment_id = "shipment_id_example" # String | The identifier for the shipment. Get this value from the FBAOutboundShipmentStatus notification. For information about subscribing to notifications, see the [Notifications API Use Case Guide](https://github.com/amzn/selling-partner-api-docs/blob/main/guides/en-US/use-case-guides/notifications-api-use-case-guide/notifications-use-case-guide-v1.md).
+shipment_id = 'shipment_id_example' # String | The identifier for the shipment. Get this value from the FBAOutboundShipmentStatus notification. For information about subscribing to notifications, see the [Notifications API Use Case Guide](https://github.com/amzn/selling-partner-api-docs/blob/main/guides/en-US/use-case-guides/notifications-api-use-case-guide/notifications-use-case-guide-v1.md).
 
 
 begin
@@ -115,7 +115,7 @@ require 'shipment-invoicing-api-model'
 
 api_instance = AmzSpApi::ShipmentInvoicingApiModel::ShipmentInvoiceApi.new
 
-shipment_id = "shipment_id_example" # String | The identifier for the shipment.
+shipment_id = 'shipment_id_example' # String | The identifier for the shipment.
 
 body = AmzSpApi::ShipmentInvoicingApiModel::SubmitInvoiceRequest.new # SubmitInvoiceRequest | 
 

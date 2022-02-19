@@ -26,7 +26,7 @@ require 'services-api-model'
 
 api_instance = AmzSpApi::ServicesApiModel::ServiceApi.new
 
-service_job_id = "service_job_id_example" # String | An Amazon defined service job identifier.
+service_job_id = 'service_job_id_example' # String | An Amazon defined service job identifier.
 
 body = AmzSpApi::ServicesApiModel::AddAppointmentRequest.new # AddAppointmentRequest | Add appointment operation input details.
 
@@ -75,9 +75,9 @@ require 'services-api-model'
 
 api_instance = AmzSpApi::ServicesApiModel::ServiceApi.new
 
-service_job_id = "service_job_id_example" # String | An Amazon defined service job identifier.
+service_job_id = 'service_job_id_example' # String | An Amazon defined service job identifier.
 
-cancellation_reason_code = "cancellation_reason_code_example" # String | A cancel reason code that specifies the reason for cancelling a service job.
+cancellation_reason_code = 'cancellation_reason_code_example' # String | A cancel reason code that specifies the reason for cancelling a service job.
 
 
 begin
@@ -124,7 +124,7 @@ require 'services-api-model'
 
 api_instance = AmzSpApi::ServicesApiModel::ServiceApi.new
 
-service_job_id = "service_job_id_example" # String | An Amazon defined service job identifier.
+service_job_id = 'service_job_id_example' # String | An Amazon defined service job identifier.
 
 
 begin
@@ -170,7 +170,7 @@ require 'services-api-model'
 
 api_instance = AmzSpApi::ServicesApiModel::ServiceApi.new
 
-service_job_id = "service_job_id_example" # String | A service job identifier.
+service_job_id = 'service_job_id_example' # String | A service job identifier.
 
 
 begin
@@ -216,21 +216,21 @@ require 'services-api-model'
 
 api_instance = AmzSpApi::ServicesApiModel::ServiceApi.new
 
-marketplace_ids = ["marketplace_ids_example"] # Array<String> | Used to select jobs that were placed in the specified marketplaces. 
+marketplace_ids = ['marketplace_ids_example'] # Array<String> | Used to select jobs that were placed in the specified marketplaces. 
 
 opts = { 
-  service_order_ids: ["service_order_ids_example"], # Array<String> | List of service order ids for the query you want to perform.Max values supported 20. 
-  service_job_status: ["service_job_status_example"], # Array<String> | A list of one or more job status by which to filter the list of jobs.
-  page_token: "page_token_example", # String | String returned in the response of your previous request.
+  service_order_ids: ['service_order_ids_example'], # Array<String> | List of service order ids for the query you want to perform.Max values supported 20. 
+  service_job_status: ['service_job_status_example'], # Array<String> | A list of one or more job status by which to filter the list of jobs.
+  page_token: 'page_token_example', # String | String returned in the response of your previous request.
   page_size: 20, # Integer | A non-negative integer that indicates the maximum number of jobs to return in the list, Value must be 1 - 20. Default 20. 
-  sort_field: "sort_field_example", # String | Sort fields on which you want to sort the output.
-  sort_order: "sort_order_example", # String | Sort order for the query you want to perform.
-  created_after: "created_after_example", # String | A date used for selecting jobs created after (or at) a specified time must be in ISO 8601 format. Required if LastUpdatedAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. 
-  created_before: "created_before_example", # String | A date used for selecting jobs created before (or at) a specified time must be in ISO 8601 format. 
-  last_updated_after: "last_updated_after_example", # String | A date used for selecting jobs updated after (or at) a specified time must be in ISO 8601 format. Required if createdAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. 
-  last_updated_before: "last_updated_before_example", # String | A date used for selecting jobs updated before (or at) a specified time must be in ISO 8601 format. 
-  schedule_start_date: "schedule_start_date_example", # String | A date used for filtering jobs schedule after (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. 
-  schedule_end_date: "schedule_end_date_example" # String | A date used for filtering jobs schedule before (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. 
+  sort_field: 'sort_field_example', # String | Sort fields on which you want to sort the output.
+  sort_order: 'sort_order_example', # String | Sort order for the query you want to perform.
+  created_after: 'created_after_example', # String | A date used for selecting jobs created after (or at) a specified time must be in ISO 8601 format. Required if LastUpdatedAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. 
+  created_before: 'created_before_example', # String | A date used for selecting jobs created before (or at) a specified time must be in ISO 8601 format. 
+  last_updated_after: 'last_updated_after_example', # String | A date used for selecting jobs updated after (or at) a specified time must be in ISO 8601 format. Required if createdAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. 
+  last_updated_before: 'last_updated_before_example', # String | A date used for selecting jobs updated before (or at) a specified time must be in ISO 8601 format. 
+  schedule_start_date: 'schedule_start_date_example', # String | A date used for filtering jobs schedule after (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. 
+  schedule_end_date: 'schedule_end_date_example' # String | A date used for filtering jobs schedule before (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. 
 }
 
 begin
@@ -288,9 +288,9 @@ require 'services-api-model'
 
 api_instance = AmzSpApi::ServicesApiModel::ServiceApi.new
 
-service_job_id = "service_job_id_example" # String | An Amazon defined service job identifier.
+service_job_id = 'service_job_id_example' # String | An Amazon defined service job identifier.
 
-appointment_id = "appointment_id_example" # String | An existing appointment identifier for the Service Job.
+appointment_id = 'appointment_id_example' # String | An existing appointment identifier for the Service Job.
 
 body = AmzSpApi::ServicesApiModel::RescheduleAppointmentRequest.new # RescheduleAppointmentRequest | Reschedule appointment operation input details.
 

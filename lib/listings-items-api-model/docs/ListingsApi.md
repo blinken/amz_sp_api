@@ -24,14 +24,14 @@ require 'listings-items-api-model'
 
 api_instance = AmzSpApi::ListingsItemsApiModel::ListingsApi.new
 
-seller_id = "seller_id_example" # String | A selling partner identifier, such as a merchant account or vendor code.
+seller_id = 'seller_id_example' # String | A selling partner identifier, such as a merchant account or vendor code.
 
-sku = "sku_example" # String | A selling partner provided identifier for an Amazon listing.
+sku = 'sku_example' # String | A selling partner provided identifier for an Amazon listing.
 
-marketplace_ids = ["ATVPDKIKX0DER"] # Array<String> | A comma-delimited list of Amazon marketplace identifiers for the request.
+marketplace_ids = ['ATVPDKIKX0DER'] # Array<String> | A comma-delimited list of Amazon marketplace identifiers for the request.
 
 opts = { 
-  issue_locale: "en_US" # String | A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \"en_US\", \"fr_CA\", \"fr_FR\". Localized messages default to \"en_US\" when a localization is not available in the specified locale.
+  issue_locale: 'en_US' # String | A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \"en_US\", \"fr_CA\", \"fr_FR\". Localized messages default to \"en_US\" when a localization is not available in the specified locale.
 }
 
 begin
@@ -80,15 +80,15 @@ require 'listings-items-api-model'
 
 api_instance = AmzSpApi::ListingsItemsApiModel::ListingsApi.new
 
-seller_id = "seller_id_example" # String | A selling partner identifier, such as a merchant account or vendor code.
+seller_id = 'seller_id_example' # String | A selling partner identifier, such as a merchant account or vendor code.
 
-sku = "sku_example" # String | A selling partner provided identifier for an Amazon listing.
+sku = 'sku_example' # String | A selling partner provided identifier for an Amazon listing.
 
-marketplace_ids = ["ATVPDKIKX0DER"] # Array<String> | A comma-delimited list of Amazon marketplace identifiers for the request.
+marketplace_ids = ['ATVPDKIKX0DER'] # Array<String> | A comma-delimited list of Amazon marketplace identifiers for the request.
 
 opts = { 
-  issue_locale: "en_US", # String | A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \"en_US\", \"fr_CA\", \"fr_FR\". Localized messages default to \"en_US\" when a localization is not available in the specified locale.
-  included_data: ["summaries"] # Array<String> | A comma-delimited list of data sets to include in the response. Default: summaries.
+  issue_locale: 'en_US', # String | A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \"en_US\", \"fr_CA\", \"fr_FR\". Localized messages default to \"en_US\" when a localization is not available in the specified locale.
+  included_data: ['summaries'] # Array<String> | A comma-delimited list of data sets to include in the response. Default: summaries.
 }
 
 begin
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
  **sku** | **String**| A selling partner provided identifier for an Amazon listing. | 
  **marketplace_ids** | [**Array&lt;String&gt;**](String.md)| A comma-delimited list of Amazon marketplace identifiers for the request. | 
  **issue_locale** | **String**| A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \&quot;en_US\&quot;, \&quot;fr_CA\&quot;, \&quot;fr_FR\&quot;. Localized messages default to \&quot;en_US\&quot; when a localization is not available in the specified locale. | [optional] 
- **included_data** | [**Array&lt;String&gt;**](String.md)| A comma-delimited list of data sets to include in the response. Default: summaries. | [optional] [default to summaries]
+ **included_data** | [**Array&lt;String&gt;**](String.md)| A comma-delimited list of data sets to include in the response. Default: summaries. | [optional] 
 
 ### Return type
 
@@ -138,16 +138,16 @@ require 'listings-items-api-model'
 
 api_instance = AmzSpApi::ListingsItemsApiModel::ListingsApi.new
 
-seller_id = "seller_id_example" # String | A selling partner identifier, such as a merchant account or vendor code.
+seller_id = 'seller_id_example' # String | A selling partner identifier, such as a merchant account or vendor code.
 
-sku = "sku_example" # String | A selling partner provided identifier for an Amazon listing.
+sku = 'sku_example' # String | A selling partner provided identifier for an Amazon listing.
 
-marketplace_ids = ["ATVPDKIKX0DER"] # Array<String> | A comma-delimited list of Amazon marketplace identifiers for the request.
+marketplace_ids = ['ATVPDKIKX0DER'] # Array<String> | A comma-delimited list of Amazon marketplace identifiers for the request.
 
 body = AmzSpApi::ListingsItemsApiModel::ListingsItemPatchRequest.new # ListingsItemPatchRequest | The request body schema for the patchListingsItem operation.
 
 opts = { 
-  issue_locale: "en_US" # String | A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \"en_US\", \"fr_CA\", \"fr_FR\". Localized messages default to \"en_US\" when a localization is not available in the specified locale.
+  issue_locale: 'en_US' # String | A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \"en_US\", \"fr_CA\", \"fr_FR\". Localized messages default to \"en_US\" when a localization is not available in the specified locale.
 }
 
 begin
@@ -197,16 +197,16 @@ require 'listings-items-api-model'
 
 api_instance = AmzSpApi::ListingsItemsApiModel::ListingsApi.new
 
-seller_id = "seller_id_example" # String | A selling partner identifier, such as a merchant account or vendor code.
+seller_id = 'seller_id_example' # String | A selling partner identifier, such as a merchant account or vendor code.
 
-sku = "sku_example" # String | A selling partner provided identifier for an Amazon listing.
+sku = 'sku_example' # String | A selling partner provided identifier for an Amazon listing.
 
-marketplace_ids = ["ATVPDKIKX0DER"] # Array<String> | A comma-delimited list of Amazon marketplace identifiers for the request.
+marketplace_ids = ['ATVPDKIKX0DER'] # Array<String> | A comma-delimited list of Amazon marketplace identifiers for the request.
 
 body = AmzSpApi::ListingsItemsApiModel::ListingsItemPutRequest.new # ListingsItemPutRequest | The request body schema for the putListingsItem operation.
 
 opts = { 
-  issue_locale: "en_US" # String | A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \"en_US\", \"fr_CA\", \"fr_FR\". Localized messages default to \"en_US\" when a localization is not available in the specified locale.
+  issue_locale: 'en_US' # String | A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \"en_US\", \"fr_CA\", \"fr_FR\". Localized messages default to \"en_US\" when a localization is not available in the specified locale.
 }
 
 begin

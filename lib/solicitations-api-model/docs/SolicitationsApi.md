@@ -22,9 +22,9 @@ require 'solicitations-api-model'
 
 api_instance = AmzSpApi::SolicitationsApiModel::SolicitationsApi.new
 
-amazon_order_id = "amazon_order_id_example" # String | An Amazon order identifier. This specifies the order for which a solicitation is sent.
+amazon_order_id = 'amazon_order_id_example' # String | An Amazon order identifier. This specifies the order for which a solicitation is sent.
 
-marketplace_ids = ["marketplace_ids_example"] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
+marketplace_ids = ['marketplace_ids_example'] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
 
 
 begin
@@ -71,9 +71,9 @@ require 'solicitations-api-model'
 
 api_instance = AmzSpApi::SolicitationsApiModel::SolicitationsApi.new
 
-amazon_order_id = "amazon_order_id_example" # String | An Amazon order identifier. This specifies the order for which you want a list of available solicitation types.
+amazon_order_id = 'amazon_order_id_example' # String | An Amazon order identifier. This specifies the order for which you want a list of available solicitation types.
 
-marketplace_ids = ["marketplace_ids_example"] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
+marketplace_ids = ['marketplace_ids_example'] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
 
 
 begin

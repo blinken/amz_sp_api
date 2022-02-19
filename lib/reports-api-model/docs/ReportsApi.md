@@ -1,6 +1,6 @@
 # AmzSpApi::ReportsApiModel::ReportsApi
 
-All URIs are relative to *https://sellingpartnerapi-na.amazon.com/*
+All URIs are relative to *https://sellingpartnerapi-na.amazon.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -29,7 +29,7 @@ require 'reports-api-model'
 
 api_instance = AmzSpApi::ReportsApiModel::ReportsApi.new
 
-report_id = "report_id_example" # String | The identifier for the report. This identifier is unique only in combination with a seller ID.
+report_id = 'report_id_example' # String | The identifier for the report. This identifier is unique only in combination with a seller ID.
 
 
 begin
@@ -75,7 +75,7 @@ require 'reports-api-model'
 
 api_instance = AmzSpApi::ReportsApiModel::ReportsApi.new
 
-report_schedule_id = "report_schedule_id_example" # String | The identifier for the report schedule. This identifier is unique only in combination with a seller ID.
+report_schedule_id = 'report_schedule_id_example' # String | The identifier for the report schedule. This identifier is unique only in combination with a seller ID.
 
 
 begin
@@ -213,7 +213,7 @@ require 'reports-api-model'
 
 api_instance = AmzSpApi::ReportsApiModel::ReportsApi.new
 
-report_id = "report_id_example" # String | The identifier for the report. This identifier is unique only in combination with a seller ID.
+report_id = 'report_id_example' # String | The identifier for the report. This identifier is unique only in combination with a seller ID.
 
 
 begin
@@ -259,7 +259,7 @@ require 'reports-api-model'
 
 api_instance = AmzSpApi::ReportsApiModel::ReportsApi.new
 
-report_document_id = "report_document_id_example" # String | The identifier for the report document.
+report_document_id = 'report_document_id_example' # String | The identifier for the report document.
 
 
 begin
@@ -305,7 +305,7 @@ require 'reports-api-model'
 
 api_instance = AmzSpApi::ReportsApiModel::ReportsApi.new
 
-report_schedule_id = "report_schedule_id_example" # String | The identifier for the report schedule. This identifier is unique only in combination with a seller ID.
+report_schedule_id = 'report_schedule_id_example' # String | The identifier for the report schedule. This identifier is unique only in combination with a seller ID.
 
 
 begin
@@ -351,7 +351,7 @@ require 'reports-api-model'
 
 api_instance = AmzSpApi::ReportsApiModel::ReportsApi.new
 
-report_types = ["report_types_example"] # Array<String> | A list of report types used to filter report schedules.
+report_types = ['report_types_example'] # Array<String> | A list of report types used to filter report schedules.
 
 
 begin
@@ -398,13 +398,13 @@ require 'reports-api-model'
 api_instance = AmzSpApi::ReportsApiModel::ReportsApi.new
 
 opts = { 
-  report_types: ["report_types_example"], # Array<String> | A list of report types used to filter reports. When reportTypes is provided, the other filter parameters (processingStatuses, marketplaceIds, createdSince, createdUntil) and pageSize may also be provided. Either reportTypes or nextToken is required.
-  processing_statuses: ["processing_statuses_example"], # Array<String> | A list of processing statuses used to filter reports.
-  marketplace_ids: ["marketplace_ids_example"], # Array<String> | A list of marketplace identifiers used to filter reports. The reports returned will match at least one of the marketplaces that you specify.
+  report_types: ['report_types_example'], # Array<String> | A list of report types used to filter reports. When reportTypes is provided, the other filter parameters (processingStatuses, marketplaceIds, createdSince, createdUntil) and pageSize may also be provided. Either reportTypes or nextToken is required.
+  processing_statuses: ['processing_statuses_example'], # Array<String> | A list of processing statuses used to filter reports.
+  marketplace_ids: ['marketplace_ids_example'], # Array<String> | A list of marketplace identifiers used to filter reports. The reports returned will match at least one of the marketplaces that you specify.
   page_size: 10, # Integer | The maximum number of reports to return in a single call.
-  created_since: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | The earliest report creation date and time for reports to include in the response, in ISO 8601 date time format. The default is 90 days ago. Reports are retained for a maximum of 90 days.
-  created_until: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | The latest report creation date and time for reports to include in the response, in ISO 8601 date time format. The default is now.
-  next_token: "next_token_example" # String | A string token returned in the response to your previous request. nextToken is returned when the number of results exceeds the specified pageSize value. To get the next page of results, call the getReports operation and include this token as the only parameter. Specifying nextToken with any other parameters will cause the request to fail.
+  created_since: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | The earliest report creation date and time for reports to include in the response, in ISO 8601 date time format. The default is 90 days ago. Reports are retained for a maximum of 90 days.
+  created_until: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | The latest report creation date and time for reports to include in the response, in ISO 8601 date time format. The default is now.
+  next_token: 'next_token_example' # String | A string token returned in the response to your previous request. nextToken is returned when the number of results exceeds the specified pageSize value. To get the next page of results, call the getReports operation and include this token as the only parameter. Specifying nextToken with any other parameters will cause the request to fail.
 }
 
 begin

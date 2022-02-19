@@ -22,7 +22,7 @@ require 'vendor-direct-fulfillment-shipping-api-model'
 
 api_instance = AmzSpApi::VendorDirectFulfillmentShippingApiModel::CustomerInvoicesApi.new
 
-purchase_order_number = "purchase_order_number_example" # String | Purchase order number of the shipment for which to return the invoice.
+purchase_order_number = 'purchase_order_number_example' # String | Purchase order number of the shipment for which to return the invoice.
 
 
 begin
@@ -68,15 +68,15 @@ require 'vendor-direct-fulfillment-shipping-api-model'
 
 api_instance = AmzSpApi::VendorDirectFulfillmentShippingApiModel::CustomerInvoicesApi.new
 
-created_after = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | Orders that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format.
+created_after = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | Orders that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format.
 
-created_before = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | Orders that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format.
+created_before = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | Orders that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format.
 
 opts = { 
-  ship_from_party_id: "ship_from_party_id_example", # String | The vendor warehouseId for order fulfillment. If not specified, the result will contain orders for all warehouses.
+  ship_from_party_id: 'ship_from_party_id_example', # String | The vendor warehouseId for order fulfillment. If not specified, the result will contain orders for all warehouses.
   limit: 56, # Integer | The limit to the number of records returned
-  sort_order: "sort_order_example", # String | Sort ASC or DESC by order creation date.
-  next_token: "next_token_example" # String | Used for pagination when there are more orders than the specified result size limit. The token value is returned in the previous API call.
+  sort_order: 'sort_order_example', # String | Sort ASC or DESC by order creation date.
+  next_token: 'next_token_example' # String | Used for pagination when there are more orders than the specified result size limit. The token value is returned in the previous API call.
 }
 
 begin

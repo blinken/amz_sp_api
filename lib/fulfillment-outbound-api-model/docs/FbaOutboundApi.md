@@ -32,7 +32,7 @@ require 'fulfillment-outbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentOutboundApiModel::FbaOutboundApi.new
 
-seller_fulfillment_order_id = "seller_fulfillment_order_id_example" # String | The identifier assigned to the item by the seller when the fulfillment order was created.
+seller_fulfillment_order_id = 'seller_fulfillment_order_id_example' # String | The identifier assigned to the item by the seller when the fulfillment order was created.
 
 
 begin
@@ -126,7 +126,7 @@ api_instance = AmzSpApi::FulfillmentOutboundApiModel::FbaOutboundApi.new
 
 body = AmzSpApi::FulfillmentOutboundApiModel::CreateFulfillmentReturnRequest.new # CreateFulfillmentReturnRequest | 
 
-seller_fulfillment_order_id = "seller_fulfillment_order_id_example" # String | An identifier assigned by the seller to the fulfillment order at the time it was created. The seller uses their own records to find the correct SellerFulfillmentOrderId value based on the buyer's request to return items.
+seller_fulfillment_order_id = 'seller_fulfillment_order_id_example' # String | An identifier assigned by the seller to the fulfillment order at the time it was created. The seller uses their own records to find the correct SellerFulfillmentOrderId value based on the buyer's request to return items.
 
 
 begin
@@ -173,12 +173,12 @@ require 'fulfillment-outbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentOutboundApiModel::FbaOutboundApi.new
 
-marketplace_id = "marketplace_id_example" # String | The marketplace for which to return a list of the inventory that is eligible for the specified feature.
+marketplace_id = 'marketplace_id_example' # String | The marketplace for which to return a list of the inventory that is eligible for the specified feature.
 
-feature_name = "feature_name_example" # String | The name of the feature for which to return a list of eligible inventory.
+feature_name = 'feature_name_example' # String | The name of the feature for which to return a list of eligible inventory.
 
 opts = { 
-  next_token: "next_token_example" # String | A string token returned in the response to your previous request that is used to return the next response page. A value of null will return the first page.
+  next_token: 'next_token_example' # String | A string token returned in the response to your previous request that is used to return the next response page. A value of null will return the first page.
 }
 
 begin
@@ -226,11 +226,11 @@ require 'fulfillment-outbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentOutboundApiModel::FbaOutboundApi.new
 
-marketplace_id = "marketplace_id_example" # String | The marketplace for which to return the count.
+marketplace_id = 'marketplace_id_example' # String | The marketplace for which to return the count.
 
-feature_name = "feature_name_example" # String | The name of the feature.
+feature_name = 'feature_name_example' # String | The name of the feature.
 
-seller_sku = "seller_sku_example" # String | Used to identify an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
+seller_sku = 'seller_sku_example' # String | Used to identify an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
 
 
 begin
@@ -278,7 +278,7 @@ require 'fulfillment-outbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentOutboundApiModel::FbaOutboundApi.new
 
-marketplace_id = "marketplace_id_example" # String | The marketplace for which to return the list of features.
+marketplace_id = 'marketplace_id_example' # String | The marketplace for which to return the list of features.
 
 
 begin
@@ -324,7 +324,7 @@ require 'fulfillment-outbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentOutboundApiModel::FbaOutboundApi.new
 
-seller_fulfillment_order_id = "seller_fulfillment_order_id_example" # String | The identifier assigned to the item by the seller when the fulfillment order was created.
+seller_fulfillment_order_id = 'seller_fulfillment_order_id_example' # String | The identifier assigned to the item by the seller when the fulfillment order was created.
 
 
 begin
@@ -463,8 +463,8 @@ require 'fulfillment-outbound-api-model'
 api_instance = AmzSpApi::FulfillmentOutboundApiModel::FbaOutboundApi.new
 
 opts = { 
-  query_start_date: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | A date used to select fulfillment orders that were last updated after (or at) a specified time. An update is defined as any change in fulfillment order status, including the creation of a new fulfillment order.
-  next_token: "next_token_example" # String | A string token returned in the response to your previous request.
+  query_start_date: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | A date used to select fulfillment orders that were last updated after (or at) a specified time. An update is defined as any change in fulfillment order status, including the creation of a new fulfillment order.
+  next_token: 'next_token_example' # String | A string token returned in the response to your previous request.
 }
 
 begin
@@ -511,13 +511,13 @@ require 'fulfillment-outbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentOutboundApiModel::FbaOutboundApi.new
 
-seller_sku = "seller_sku_example" # String | The seller SKU for which return reason codes are required.
+seller_sku = 'seller_sku_example' # String | The seller SKU for which return reason codes are required.
 
-language = "language_example" # String | The language that the TranslatedDescription property of the ReasonCodeDetails response object should be translated into.
+language = 'language_example' # String | The language that the TranslatedDescription property of the ReasonCodeDetails response object should be translated into.
 
 opts = { 
-  marketplace_id: "marketplace_id_example", # String | The marketplace for which the seller wants return reason codes.
-  seller_fulfillment_order_id: "seller_fulfillment_order_id_example" # String | The identifier assigned to the item by the seller when the fulfillment order was created. The service uses this value to determine the marketplace for which the seller wants return reason codes.
+  marketplace_id: 'marketplace_id_example', # String | The marketplace for which the seller wants return reason codes.
+  seller_fulfillment_order_id: 'seller_fulfillment_order_id_example' # String | The identifier assigned to the item by the seller when the fulfillment order was created. The service uses this value to determine the marketplace for which the seller wants return reason codes.
 }
 
 begin
@@ -568,7 +568,7 @@ api_instance = AmzSpApi::FulfillmentOutboundApiModel::FbaOutboundApi.new
 
 body = AmzSpApi::FulfillmentOutboundApiModel::UpdateFulfillmentOrderRequest.new # UpdateFulfillmentOrderRequest | 
 
-seller_fulfillment_order_id = "seller_fulfillment_order_id_example" # String | The identifier assigned to the item by the seller when the fulfillment order was created.
+seller_fulfillment_order_id = 'seller_fulfillment_order_id_example' # String | The identifier assigned to the item by the seller when the fulfillment order was created.
 
 
 begin

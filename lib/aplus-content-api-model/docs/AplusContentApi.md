@@ -30,7 +30,7 @@ require 'aplus-content-api-model'
 
 api_instance = AmzSpApi::AplusContentApiModel::AplusContentApi.new
 
-marketplace_id = "marketplace_id_example" # String | The identifier for the marketplace where the A+ Content is published.
+marketplace_id = 'marketplace_id_example' # String | The identifier for the marketplace where the A+ Content is published.
 
 post_content_document_request = AmzSpApi::AplusContentApiModel::PostContentDocumentRequest.new # PostContentDocumentRequest | The content document request details.
 
@@ -79,11 +79,11 @@ require 'aplus-content-api-model'
 
 api_instance = AmzSpApi::AplusContentApiModel::AplusContentApi.new
 
-content_reference_key = "content_reference_key_example" # String | The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ Content identifier.
+content_reference_key = 'content_reference_key_example' # String | The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ Content identifier.
 
-marketplace_id = "marketplace_id_example" # String | The identifier for the marketplace where the A+ Content is published.
+marketplace_id = 'marketplace_id_example' # String | The identifier for the marketplace where the A+ Content is published.
 
-included_data_set = ["included_data_set_example"] # Array<String> | The set of A+ Content data types to include in the response.
+included_data_set = ['included_data_set_example'] # Array<String> | The set of A+ Content data types to include in the response.
 
 
 begin
@@ -131,14 +131,14 @@ require 'aplus-content-api-model'
 
 api_instance = AmzSpApi::AplusContentApiModel::AplusContentApi.new
 
-content_reference_key = "content_reference_key_example" # String | The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ Content identifier.
+content_reference_key = 'content_reference_key_example' # String | The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ Content identifier.
 
-marketplace_id = "marketplace_id_example" # String | The identifier for the marketplace where the A+ Content is published.
+marketplace_id = 'marketplace_id_example' # String | The identifier for the marketplace where the A+ Content is published.
 
 opts = { 
-  included_data_set: ["included_data_set_example"], # Array<String> | The set of A+ Content data types to include in the response. If you do not include this parameter, the operation returns the related ASINs without metadata.
-  asin_set: ["asin_set_example"], # Array<String> | The set of ASINs.
-  page_token: "page_token_example" # String | A page token from the nextPageToken response element returned by your previous call to this operation. nextPageToken is returned when the results of a call exceed the page size. To get the next page of results, call the operation and include pageToken as the only parameter. Specifying pageToken with any other parameter will cause the request to fail. When no nextPageToken value is returned there are no more pages to return. A pageToken value is not usable across different operations.
+  included_data_set: ['included_data_set_example'], # Array<String> | The set of A+ Content data types to include in the response. If you do not include this parameter, the operation returns the related ASINs without metadata.
+  asin_set: ['asin_set_example'], # Array<String> | The set of ASINs.
+  page_token: 'page_token_example' # String | A page token from the nextPageToken response element returned by your previous call to this operation. nextPageToken is returned when the results of a call exceed the page size. To get the next page of results, call the operation and include pageToken as the only parameter. Specifying pageToken with any other parameter will cause the request to fail. When no nextPageToken value is returned there are no more pages to return. A pageToken value is not usable across different operations.
 }
 
 begin
@@ -188,9 +188,9 @@ require 'aplus-content-api-model'
 
 api_instance = AmzSpApi::AplusContentApiModel::AplusContentApi.new
 
-content_reference_key = "content_reference_key_example" # String | The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ content identifier.
+content_reference_key = 'content_reference_key_example' # String | The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ content identifier.
 
-marketplace_id = "marketplace_id_example" # String | The identifier for the marketplace where the A+ Content is published.
+marketplace_id = 'marketplace_id_example' # String | The identifier for the marketplace where the A+ Content is published.
 
 
 begin
@@ -237,9 +237,9 @@ require 'aplus-content-api-model'
 
 api_instance = AmzSpApi::AplusContentApiModel::AplusContentApi.new
 
-content_reference_key = "content_reference_key_example" # String | The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ content identifier.
+content_reference_key = 'content_reference_key_example' # String | The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ content identifier.
 
-marketplace_id = "marketplace_id_example" # String | The identifier for the marketplace where the A+ Content is published.
+marketplace_id = 'marketplace_id_example' # String | The identifier for the marketplace where the A+ Content is published.
 
 post_content_document_asin_relations_request = AmzSpApi::AplusContentApiModel::PostContentDocumentAsinRelationsRequest.new # PostContentDocumentAsinRelationsRequest | The content document ASIN relations request details.
 
@@ -289,9 +289,9 @@ require 'aplus-content-api-model'
 
 api_instance = AmzSpApi::AplusContentApiModel::AplusContentApi.new
 
-content_reference_key = "content_reference_key_example" # String | The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ content identifier.
+content_reference_key = 'content_reference_key_example' # String | The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ content identifier.
 
-marketplace_id = "marketplace_id_example" # String | The identifier for the marketplace where the A+ Content is published.
+marketplace_id = 'marketplace_id_example' # String | The identifier for the marketplace where the A+ Content is published.
 
 
 begin
@@ -338,10 +338,10 @@ require 'aplus-content-api-model'
 
 api_instance = AmzSpApi::AplusContentApiModel::AplusContentApi.new
 
-marketplace_id = "marketplace_id_example" # String | The identifier for the marketplace where the A+ Content is published.
+marketplace_id = 'marketplace_id_example' # String | The identifier for the marketplace where the A+ Content is published.
 
 opts = { 
-  page_token: "page_token_example" # String | A page token from the nextPageToken response element returned by your previous call to this operation. nextPageToken is returned when the results of a call exceed the page size. To get the next page of results, call the operation and include pageToken as the only parameter. Specifying pageToken with any other parameter will cause the request to fail. When no nextPageToken value is returned there are no more pages to return. A pageToken value is not usable across different operations.
+  page_token: 'page_token_example' # String | A page token from the nextPageToken response element returned by your previous call to this operation. nextPageToken is returned when the results of a call exceed the page size. To get the next page of results, call the operation and include pageToken as the only parameter. Specifying pageToken with any other parameter will cause the request to fail. When no nextPageToken value is returned there are no more pages to return. A pageToken value is not usable across different operations.
 }
 
 begin
@@ -388,12 +388,12 @@ require 'aplus-content-api-model'
 
 api_instance = AmzSpApi::AplusContentApiModel::AplusContentApi.new
 
-marketplace_id = "marketplace_id_example" # String | The identifier for the marketplace where the A+ Content is published.
+marketplace_id = 'marketplace_id_example' # String | The identifier for the marketplace where the A+ Content is published.
 
-asin = "asin_example" # String | The Amazon Standard Identification Number (ASIN).
+asin = 'asin_example' # String | The Amazon Standard Identification Number (ASIN).
 
 opts = { 
-  page_token: "page_token_example" # String | A page token from the nextPageToken response element returned by your previous call to this operation. nextPageToken is returned when the results of a call exceed the page size. To get the next page of results, call the operation and include pageToken as the only parameter. Specifying pageToken with any other parameter will cause the request to fail. When no nextPageToken value is returned there are no more pages to return. A pageToken value is not usable across different operations.
+  page_token: 'page_token_example' # String | A page token from the nextPageToken response element returned by your previous call to this operation. nextPageToken is returned when the results of a call exceed the page size. To get the next page of results, call the operation and include pageToken as the only parameter. Specifying pageToken with any other parameter will cause the request to fail. When no nextPageToken value is returned there are no more pages to return. A pageToken value is not usable across different operations.
 }
 
 begin
@@ -441,9 +441,9 @@ require 'aplus-content-api-model'
 
 api_instance = AmzSpApi::AplusContentApiModel::AplusContentApi.new
 
-content_reference_key = "content_reference_key_example" # String | The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ Content identifier.
+content_reference_key = 'content_reference_key_example' # String | The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ Content identifier.
 
-marketplace_id = "marketplace_id_example" # String | The identifier for the marketplace where the A+ Content is published.
+marketplace_id = 'marketplace_id_example' # String | The identifier for the marketplace where the A+ Content is published.
 
 post_content_document_request = AmzSpApi::AplusContentApiModel::PostContentDocumentRequest.new # PostContentDocumentRequest | The content document request details.
 
@@ -493,12 +493,12 @@ require 'aplus-content-api-model'
 
 api_instance = AmzSpApi::AplusContentApiModel::AplusContentApi.new
 
-marketplace_id = "marketplace_id_example" # String | The identifier for the marketplace where the A+ Content is published.
+marketplace_id = 'marketplace_id_example' # String | The identifier for the marketplace where the A+ Content is published.
 
 post_content_document_request = AmzSpApi::AplusContentApiModel::PostContentDocumentRequest.new # PostContentDocumentRequest | The content document request details.
 
 opts = { 
-  asin_set: ["asin_set_example"] # Array<String> | The set of ASINs.
+  asin_set: ['asin_set_example'] # Array<String> | The set of ASINs.
 }
 
 begin

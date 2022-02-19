@@ -21,7 +21,7 @@ require 'vendor-direct-fulfillment-transactions-api-model'
 
 api_instance = AmzSpApi::VendorDirectFulfillmentTransactionsApiModel::VendorTransactionApi.new
 
-transaction_id = "transaction_id_example" # String | Previously returned in the response to the POST request of a specific transaction.
+transaction_id = 'transaction_id_example' # String | Previously returned in the response to the POST request of a specific transaction.
 
 
 begin

@@ -23,7 +23,7 @@ require 'vendor-direct-fulfillment-orders-api-model'
 
 api_instance = AmzSpApi::VendorDirectFulfillmentOrdersApiModel::VendorOrdersApi.new
 
-purchase_order_number = "purchase_order_number_example" # String | The order identifier for the purchase order that you want. Formatting Notes: alpha-numeric code.
+purchase_order_number = 'purchase_order_number_example' # String | The order identifier for the purchase order that you want. Formatting Notes: alpha-numeric code.
 
 
 begin
@@ -69,17 +69,17 @@ require 'vendor-direct-fulfillment-orders-api-model'
 
 api_instance = AmzSpApi::VendorDirectFulfillmentOrdersApiModel::VendorOrdersApi.new
 
-created_after = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | Purchase orders that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format.
+created_after = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | Purchase orders that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format.
 
-created_before = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | Purchase orders that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format.
+created_before = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | Purchase orders that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format.
 
 opts = { 
-  ship_from_party_id: "ship_from_party_id_example", # String | The vendor warehouse identifier for the fulfillment warehouse. If not specified, the result will contain orders for all warehouses.
-  status: "status_example", # String | Returns only the purchase orders that match the specified status. If not specified, the result will contain orders that match any status.
+  ship_from_party_id: 'ship_from_party_id_example', # String | The vendor warehouse identifier for the fulfillment warehouse. If not specified, the result will contain orders for all warehouses.
+  status: 'status_example', # String | Returns only the purchase orders that match the specified status. If not specified, the result will contain orders that match any status.
   limit: 789, # Integer | The limit to the number of purchase orders returned.
-  sort_order: "sort_order_example", # String | Sort the list in ascending or descending order by order creation date.
-  next_token: "next_token_example", # String | Used for pagination when there are more orders than the specified result size limit. The token value is returned in the previous API call.
-  include_details: "true" # String | When true, returns the complete purchase order details. Otherwise, only purchase order numbers are returned.
+  sort_order: 'sort_order_example', # String | Sort the list in ascending or descending order by order creation date.
+  next_token: 'next_token_example', # String | Used for pagination when there are more orders than the specified result size limit. The token value is returned in the previous API call.
+  include_details: 'true' # String | When true, returns the complete purchase order details. Otherwise, only purchase order numbers are returned.
 }
 
 begin

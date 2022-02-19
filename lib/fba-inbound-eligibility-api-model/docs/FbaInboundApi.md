@@ -21,12 +21,12 @@ require 'fba-inbound-eligibility-api-model'
 
 api_instance = AmzSpApi::FbaInboundEligibilityApiModel::FbaInboundApi.new
 
-asin = "asin_example" # String | The ASIN of the item for which you want an eligibility preview.
+asin = 'asin_example' # String | The ASIN of the item for which you want an eligibility preview.
 
-program = "program_example" # String | The program that you want to check eligibility against.
+program = 'program_example' # String | The program that you want to check eligibility against.
 
 opts = { 
-  marketplace_ids: ["marketplace_ids_example"] # Array<String> | The identifier for the marketplace in which you want to determine eligibility. Required only when program=INBOUND.
+  marketplace_ids: ['marketplace_ids_example'] # Array<String> | The identifier for the marketplace in which you want to determine eligibility. Required only when program=INBOUND.
 }
 
 begin

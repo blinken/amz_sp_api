@@ -21,11 +21,11 @@ require 'authorization-api-model'
 
 api_instance = AmzSpApi::AuthorizationApiModel::AuthorizationApi.new
 
-selling_partner_id = "selling_partner_id_example" # String | The seller ID of the seller for whom you are requesting Selling Partner API authorization. This must be the seller ID of the seller who authorized your application on the Marketplace Appstore.
+selling_partner_id = 'selling_partner_id_example' # String | The seller ID of the seller for whom you are requesting Selling Partner API authorization. This must be the seller ID of the seller who authorized your application on the Marketplace Appstore.
 
-developer_id = "developer_id_example" # String | Your developer ID. This must be one of the developer ID values that you provided when you registered your application in Developer Central.
+developer_id = 'developer_id_example' # String | Your developer ID. This must be one of the developer ID values that you provided when you registered your application in Developer Central.
 
-mws_auth_token = "mws_auth_token_example" # String | The MWS Auth Token that was generated when the seller authorized your application on the Marketplace Appstore.
+mws_auth_token = 'mws_auth_token_example' # String | The MWS Auth Token that was generated when the seller authorized your application on the Marketplace Appstore.
 
 
 begin

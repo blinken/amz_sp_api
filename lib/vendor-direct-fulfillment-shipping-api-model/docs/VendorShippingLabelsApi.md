@@ -23,7 +23,7 @@ require 'vendor-direct-fulfillment-shipping-api-model'
 
 api_instance = AmzSpApi::VendorDirectFulfillmentShippingApiModel::VendorShippingLabelsApi.new
 
-purchase_order_number = "purchase_order_number_example" # String | The purchase order number for which you want to return the shipping label. It should be the same purchaseOrderNumber as received in the order.
+purchase_order_number = 'purchase_order_number_example' # String | The purchase order number for which you want to return the shipping label. It should be the same purchaseOrderNumber as received in the order.
 
 
 begin
@@ -69,15 +69,15 @@ require 'vendor-direct-fulfillment-shipping-api-model'
 
 api_instance = AmzSpApi::VendorDirectFulfillmentShippingApiModel::VendorShippingLabelsApi.new
 
-created_after = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | Shipping labels that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format.
+created_after = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | Shipping labels that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format.
 
-created_before = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | Shipping labels that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format.
+created_before = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | Shipping labels that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format.
 
 opts = { 
-  ship_from_party_id: "ship_from_party_id_example", # String | The vendor warehouseId for order fulfillment. If not specified, the result will contain orders for all warehouses.
+  ship_from_party_id: 'ship_from_party_id_example', # String | The vendor warehouseId for order fulfillment. If not specified, the result will contain orders for all warehouses.
   limit: 56, # Integer | The limit to the number of records returned.
-  sort_order: "ASC", # String | Sort ASC or DESC by order creation date.
-  next_token: "next_token_example" # String | Used for pagination when there are more ship labels than the specified result size limit. The token value is returned in the previous API call.
+  sort_order: 'ASC', # String | Sort ASC or DESC by order creation date.
+  next_token: 'next_token_example' # String | Used for pagination when there are more ship labels than the specified result size limit. The token value is returned in the previous API call.
 }
 
 begin

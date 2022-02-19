@@ -76,7 +76,7 @@ api_instance = AmzSpApi::NotificationsApiModel::NotificationsApi.new
 
 body = AmzSpApi::NotificationsApiModel::CreateSubscriptionRequest.new # CreateSubscriptionRequest | 
 
-notification_type = "notification_type_example" # String | The type of notification.   For more information about notification types, see [the Notifications API Use Case Guide](https://github.com/amzn/selling-partner-api-docs/blob/main/guides/en-US/use-case-guides/notifications-api-use-case-guide/notifications-use-case-guide-v1.md).
+notification_type = 'notification_type_example' # String | The type of notification.   For more information about notification types, see [the Notifications API Use Case Guide](https://github.com/amzn/selling-partner-api-docs/blob/main/guides/en-US/use-case-guides/notifications-api-use-case-guide/notifications-use-case-guide-v1.md).
 
 
 begin
@@ -123,7 +123,7 @@ require 'notifications-api-model'
 
 api_instance = AmzSpApi::NotificationsApiModel::NotificationsApi.new
 
-destination_id = "destination_id_example" # String | The identifier for the destination that you want to delete.
+destination_id = 'destination_id_example' # String | The identifier for the destination that you want to delete.
 
 
 begin
@@ -169,9 +169,9 @@ require 'notifications-api-model'
 
 api_instance = AmzSpApi::NotificationsApiModel::NotificationsApi.new
 
-subscription_id = "subscription_id_example" # String | The identifier for the subscription that you want to delete.
+subscription_id = 'subscription_id_example' # String | The identifier for the subscription that you want to delete.
 
-notification_type = "notification_type_example" # String | The type of notification.   For more information about notification types, see [the Notifications API Use Case Guide](https://github.com/amzn/selling-partner-api-docs/blob/main/guides/en-US/use-case-guides/notifications-api-use-case-guide/notifications-use-case-guide-v1.md).
+notification_type = 'notification_type_example' # String | The type of notification.   For more information about notification types, see [the Notifications API Use Case Guide](https://github.com/amzn/selling-partner-api-docs/blob/main/guides/en-US/use-case-guides/notifications-api-use-case-guide/notifications-use-case-guide-v1.md).
 
 
 begin
@@ -218,7 +218,7 @@ require 'notifications-api-model'
 
 api_instance = AmzSpApi::NotificationsApiModel::NotificationsApi.new
 
-destination_id = "destination_id_example" # String | The identifier generated when you created the destination.
+destination_id = 'destination_id_example' # String | The identifier generated when you created the destination.
 
 
 begin
@@ -304,7 +304,7 @@ require 'notifications-api-model'
 
 api_instance = AmzSpApi::NotificationsApiModel::NotificationsApi.new
 
-notification_type = "notification_type_example" # String | The type of notification.   For more information about notification types, see [the Notifications API Use Case Guide](https://github.com/amzn/selling-partner-api-docs/blob/main/guides/en-US/use-case-guides/notifications-api-use-case-guide/notifications-use-case-guide-v1.md).
+notification_type = 'notification_type_example' # String | The type of notification.   For more information about notification types, see [the Notifications API Use Case Guide](https://github.com/amzn/selling-partner-api-docs/blob/main/guides/en-US/use-case-guides/notifications-api-use-case-guide/notifications-use-case-guide-v1.md).
 
 
 begin
@@ -350,9 +350,9 @@ require 'notifications-api-model'
 
 api_instance = AmzSpApi::NotificationsApiModel::NotificationsApi.new
 
-subscription_id = "subscription_id_example" # String | The identifier for the subscription that you want to get.
+subscription_id = 'subscription_id_example' # String | The identifier for the subscription that you want to get.
 
-notification_type = "notification_type_example" # String | The type of notification.   For more information about notification types, see [the Notifications API Use Case Guide](https://github.com/amzn/selling-partner-api-docs/blob/main/guides/en-US/use-case-guides/notifications-api-use-case-guide/notifications-use-case-guide-v1.md).
+notification_type = 'notification_type_example' # String | The type of notification.   For more information about notification types, see [the Notifications API Use Case Guide](https://github.com/amzn/selling-partner-api-docs/blob/main/guides/en-US/use-case-guides/notifications-api-use-case-guide/notifications-use-case-guide-v1.md).
 
 
 begin

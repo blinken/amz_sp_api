@@ -21,7 +21,7 @@ require 'orders-api-model'
 
 api_instance = AmzSpApi::OrdersApiModel::ShipmentApi.new
 
-order_id = "order_id_example" # String | An Amazon-defined order identifier, in 3-7-7 format.
+order_id = 'order_id_example' # String | An Amazon-defined order identifier, in 3-7-7 format.
 
 payload = AmzSpApi::OrdersApiModel::UpdateShipmentStatusRequest.new # UpdateShipmentStatusRequest | Request to update the shipment status.
 

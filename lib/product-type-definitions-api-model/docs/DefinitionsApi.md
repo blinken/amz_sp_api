@@ -22,16 +22,16 @@ require 'product-type-definitions-api-model'
 
 api_instance = AmzSpApi::ProductTypeDefinitionsApiModel::DefinitionsApi.new
 
-product_type = "LUGGAGE" # String | The Amazon product type name.
+product_type = 'LUGGAGE' # String | The Amazon product type name.
 
-marketplace_ids = ["ATVPDKIKX0DER"] # Array<String> | A comma-delimited list of Amazon marketplace identifiers for the request. Note: This parameter is limited to one marketplaceId at this time.
+marketplace_ids = ['ATVPDKIKX0DER'] # Array<String> | A comma-delimited list of Amazon marketplace identifiers for the request. Note: This parameter is limited to one marketplaceId at this time.
 
 opts = { 
-  seller_id: "seller_id_example", # String | A selling partner identifier. When provided, seller-specific requirements and values are populated within the product type definition schema, such as brand names associated with the selling partner.
-  product_type_version: "LATEST", # String | The version of the Amazon product type to retrieve. Defaults to \"LATEST\",. Prerelease versions of product type definitions may be retrieved with \"RELEASE_CANDIDATE\". If no prerelease version is currently available, the \"LATEST\" live version will be provided.
-  requirements: "LISTING", # String | The name of the requirements set to retrieve requirements for.
-  requirements_enforced: "ENFORCED", # String | Identifies if the required attributes for a requirements set are enforced by the product type definition schema. Non-enforced requirements enable structural validation of individual attributes without all the required attributes being present (such as for partial updates).
-  locale: "DEFAULT" # String | Locale for retrieving display labels and other presentation details. Defaults to the default language of the first marketplace in the request.
+  seller_id: 'seller_id_example', # String | A selling partner identifier. When provided, seller-specific requirements and values are populated within the product type definition schema, such as brand names associated with the selling partner.
+  product_type_version: 'LATEST', # String | The version of the Amazon product type to retrieve. Defaults to \"LATEST\",. Prerelease versions of product type definitions may be retrieved with \"RELEASE_CANDIDATE\". If no prerelease version is currently available, the \"LATEST\" live version will be provided.
+  requirements: 'LISTING', # String | The name of the requirements set to retrieve requirements for.
+  requirements_enforced: 'ENFORCED', # String | Identifies if the required attributes for a requirements set are enforced by the product type definition schema. Non-enforced requirements enable structural validation of individual attributes without all the required attributes being present (such as for partial updates).
+  locale: 'DEFAULT' # String | Locale for retrieving display labels and other presentation details. Defaults to the default language of the first marketplace in the request.
 }
 
 begin
@@ -83,10 +83,10 @@ require 'product-type-definitions-api-model'
 
 api_instance = AmzSpApi::ProductTypeDefinitionsApiModel::DefinitionsApi.new
 
-marketplace_ids = ["ATVPDKIKX0DER"] # Array<String> | A comma-delimited list of Amazon marketplace identifiers for the request.
+marketplace_ids = ['ATVPDKIKX0DER'] # Array<String> | A comma-delimited list of Amazon marketplace identifiers for the request.
 
 opts = { 
-  keywords: ["LUGGAGE"] # Array<String> | A comma-delimited list of keywords to search product types by.
+  keywords: ['LUGGAGE'] # Array<String> | A comma-delimited list of keywords to search product types by.
 }
 
 begin

@@ -23,7 +23,7 @@ api_instance = AmzSpApi::VendorDirectFulfillmentInventoryApiModel::UpdateInvento
 
 body = AmzSpApi::VendorDirectFulfillmentInventoryApiModel::SubmitInventoryUpdateRequest.new # SubmitInventoryUpdateRequest | 
 
-warehouse_id = "warehouse_id_example" # String | Identifier for the warehouse for which to update inventory.
+warehouse_id = 'warehouse_id_example' # String | Identifier for the warehouse for which to update inventory.
 
 
 begin

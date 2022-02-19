@@ -23,9 +23,9 @@ require 'catalog-items-api-model'
 
 api_instance = AmzSpApi::CatalogItemsApiModel::CatalogApi.new
 
-marketplace_id = "marketplace_id_example" # String | A marketplace identifier. Specifies the marketplace for the item.
+marketplace_id = 'marketplace_id_example' # String | A marketplace identifier. Specifies the marketplace for the item.
 
-asin = "asin_example" # String | The Amazon Standard Identification Number (ASIN) of the item.
+asin = 'asin_example' # String | The Amazon Standard Identification Number (ASIN) of the item.
 
 
 begin
@@ -72,11 +72,11 @@ require 'catalog-items-api-model'
 
 api_instance = AmzSpApi::CatalogItemsApiModel::CatalogApi.new
 
-marketplace_id = "marketplace_id_example" # String | A marketplace identifier. Specifies the marketplace for the item.
+marketplace_id = 'marketplace_id_example' # String | A marketplace identifier. Specifies the marketplace for the item.
 
 opts = { 
-  asin: "asin_example", # String | The Amazon Standard Identification Number (ASIN) of the item.
-  seller_sku: "seller_sku_example" # String | Used to identify items in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
+  asin: 'asin_example', # String | The Amazon Standard Identification Number (ASIN) of the item.
+  seller_sku: 'seller_sku_example' # String | Used to identify items in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
 }
 
 begin
@@ -124,16 +124,16 @@ require 'catalog-items-api-model'
 
 api_instance = AmzSpApi::CatalogItemsApiModel::CatalogApi.new
 
-marketplace_id = "marketplace_id_example" # String | A marketplace identifier. Specifies the marketplace for which items are returned.
+marketplace_id = 'marketplace_id_example' # String | A marketplace identifier. Specifies the marketplace for which items are returned.
 
 opts = { 
-  query: "query_example", # String | Keyword(s) to use to search for items in the catalog. Example: 'harry potter books'.
-  query_context_id: "query_context_id_example", # String | An identifier for the context within which the given search will be performed. A marketplace might provide mechanisms for constraining a search to a subset of potential items. For example, the retail marketplace allows queries to be constrained to a specific category. The QueryContextId parameter specifies such a subset. If it is omitted, the search will be performed using the default context for the marketplace, which will typically contain the largest set of items.
-  seller_sku: "seller_sku_example", # String | Used to identify an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
-  upc: "upc_example", # String | A 12-digit bar code used for retail packaging.
-  ean: "ean_example", # String | A European article number that uniquely identifies the catalog item, manufacturer, and its attributes.
-  isbn: "isbn_example", # String | The unique commercial book identifier used to identify books internationally.
-  jan: "jan_example" # String | A Japanese article number that uniquely identifies the product, manufacturer, and its attributes.
+  query: 'query_example', # String | Keyword(s) to use to search for items in the catalog. Example: 'harry potter books'.
+  query_context_id: 'query_context_id_example', # String | An identifier for the context within which the given search will be performed. A marketplace might provide mechanisms for constraining a search to a subset of potential items. For example, the retail marketplace allows queries to be constrained to a specific category. The QueryContextId parameter specifies such a subset. If it is omitted, the search will be performed using the default context for the marketplace, which will typically contain the largest set of items.
+  seller_sku: 'seller_sku_example', # String | Used to identify an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
+  upc: 'upc_example', # String | A 12-digit bar code used for retail packaging.
+  ean: 'ean_example', # String | A European article number that uniquely identifies the catalog item, manufacturer, and its attributes.
+  isbn: 'isbn_example', # String | The unique commercial book identifier used to identify books internationally.
+  jan: 'jan_example' # String | A Japanese article number that uniquely identifies the product, manufacturer, and its attributes.
 }
 
 begin

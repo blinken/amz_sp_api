@@ -24,7 +24,7 @@ require 'vendor-orders-api-model'
 
 api_instance = AmzSpApi::VendorOrdersApiModel::VendorOrdersApi.new
 
-purchase_order_number = "purchase_order_number_example" # String | The purchase order identifier for the order that you want. Formatting Notes: 8-character alpha-numeric code.
+purchase_order_number = 'purchase_order_number_example' # String | The purchase order identifier for the order that you want. Formatting Notes: 8-character alpha-numeric code.
 
 
 begin
@@ -72,17 +72,17 @@ api_instance = AmzSpApi::VendorOrdersApiModel::VendorOrdersApi.new
 
 opts = { 
   limit: 789, # Integer | The limit to the number of records returned. Default value is 100 records.
-  created_after: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Purchase orders that became available after this time will be included in the result. Must be in ISO-8601 date/time format.
-  created_before: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Purchase orders that became available before this time will be included in the result. Must be in ISO-8601 date/time format.
-  sort_order: "sort_order_example", # String | Sort in ascending or descending order by purchase order creation date.
-  next_token: "next_token_example", # String | Used for pagination when there is more purchase orders than the specified result size limit. The token value is returned in the previous API call
-  include_details: "include_details_example", # String | When true, returns purchase orders with complete details. Otherwise, only purchase order numbers are returned. Default value is true.
-  changed_after: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Purchase orders that changed after this timestamp will be included in the result. Must be in ISO-8601 date/time format.
-  changed_before: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Purchase orders that changed before this timestamp will be included in the result. Must be in ISO-8601 date/time format.
-  po_item_state: "po_item_state_example", # String | Current state of the purchase order item. If this value is Cancelled, this API will return purchase orders which have one or more items cancelled by Amazon with updated item quantity as zero.
-  is_po_changed: "is_po_changed_example", # String | When true, returns purchase orders which were modified after the order was placed. Vendors are required to pull the changed purchase order and fulfill the updated purchase order and not the original one. Default value is false.
-  purchase_order_state: "purchase_order_state_example", # String | Filters purchase orders based on the purchase order state.
-  ordering_vendor_code: "ordering_vendor_code_example" # String | Filters purchase orders based on the specified ordering vendor code. This value should be same as 'sellingParty.partyId' in the purchase order. If not included in the filter, all purchase orders for all of the vendor codes that exist in the vendor group used to authorize the API client application are returned.
+  created_after: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | Purchase orders that became available after this time will be included in the result. Must be in ISO-8601 date/time format.
+  created_before: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | Purchase orders that became available before this time will be included in the result. Must be in ISO-8601 date/time format.
+  sort_order: 'sort_order_example', # String | Sort in ascending or descending order by purchase order creation date.
+  next_token: 'next_token_example', # String | Used for pagination when there is more purchase orders than the specified result size limit. The token value is returned in the previous API call
+  include_details: 'include_details_example', # String | When true, returns purchase orders with complete details. Otherwise, only purchase order numbers are returned. Default value is true.
+  changed_after: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | Purchase orders that changed after this timestamp will be included in the result. Must be in ISO-8601 date/time format.
+  changed_before: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | Purchase orders that changed before this timestamp will be included in the result. Must be in ISO-8601 date/time format.
+  po_item_state: 'po_item_state_example', # String | Current state of the purchase order item. If this value is Cancelled, this API will return purchase orders which have one or more items cancelled by Amazon with updated item quantity as zero.
+  is_po_changed: 'is_po_changed_example', # String | When true, returns purchase orders which were modified after the order was placed. Vendors are required to pull the changed purchase order and fulfill the updated purchase order and not the original one. Default value is false.
+  purchase_order_state: 'purchase_order_state_example', # String | Filters purchase orders based on the purchase order state.
+  ordering_vendor_code: 'ordering_vendor_code_example' # String | Filters purchase orders based on the specified ordering vendor code. This value should be same as 'sellingParty.partyId' in the purchase order. If not included in the filter, all purchase orders for all of the vendor codes that exist in the vendor group used to authorize the API client application are returned.
 }
 
 begin
@@ -141,18 +141,18 @@ api_instance = AmzSpApi::VendorOrdersApiModel::VendorOrdersApi.new
 
 opts = { 
   limit: 789, # Integer | The limit to the number of records returned. Default value is 100 records.
-  sort_order: "sort_order_example", # String | Sort in ascending or descending order by purchase order creation date.
-  next_token: "next_token_example", # String | Used for pagination when there are more purchase orders than the specified result size limit.
-  created_after: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Purchase orders that became available after this timestamp will be included in the result. Must be in ISO-8601 date/time format.
-  created_before: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Purchase orders that became available before this timestamp will be included in the result. Must be in ISO-8601 date/time format.
-  updated_after: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Purchase orders for which the last purchase order update happened after this timestamp will be included in the result. Must be in ISO-8601 date/time format.
-  updated_before: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Purchase orders for which the last purchase order update happened before this timestamp will be included in the result. Must be in ISO-8601 date/time format.
-  purchase_order_number: "purchase_order_number_example", # String | Provides purchase order status for the specified purchase order number.
-  purchase_order_status: "purchase_order_status_example", # String | Filters purchase orders based on the specified purchase order status. If not included in filter, this will return purchase orders for all statuses.
-  item_confirmation_status: "item_confirmation_status_example", # String | Filters purchase orders based on their item confirmation status. If the item confirmation status is not included in the filter, purchase orders for all confirmation statuses are included.
-  item_receive_status: "item_receive_status_example", # String | Filters purchase orders based on the purchase order's item receive status. If the item receive status is not included in the filter, purchase orders for all receive statuses are included.
-  ordering_vendor_code: "ordering_vendor_code_example", # String | Filters purchase orders based on the specified ordering vendor code. This value should be same as 'sellingParty.partyId' in the purchase order. If not included in filter, all purchase orders for all the vendor codes that exist in the vendor group used to authorize API client application are returned.
-  ship_to_party_id: "ship_to_party_id_example" # String | Filters purchase orders for a specific buyer's Fulfillment Center/warehouse by providing ship to location id here. This value should be same as 'shipToParty.partyId' in the purchase order. If not included in filter, this will return purchase orders for all the buyer's warehouses used for vendor group purchase orders.
+  sort_order: 'sort_order_example', # String | Sort in ascending or descending order by purchase order creation date.
+  next_token: 'next_token_example', # String | Used for pagination when there are more purchase orders than the specified result size limit.
+  created_after: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | Purchase orders that became available after this timestamp will be included in the result. Must be in ISO-8601 date/time format.
+  created_before: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | Purchase orders that became available before this timestamp will be included in the result. Must be in ISO-8601 date/time format.
+  updated_after: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | Purchase orders for which the last purchase order update happened after this timestamp will be included in the result. Must be in ISO-8601 date/time format.
+  updated_before: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | Purchase orders for which the last purchase order update happened before this timestamp will be included in the result. Must be in ISO-8601 date/time format.
+  purchase_order_number: 'purchase_order_number_example', # String | Provides purchase order status for the specified purchase order number.
+  purchase_order_status: 'purchase_order_status_example', # String | Filters purchase orders based on the specified purchase order status. If not included in filter, this will return purchase orders for all statuses.
+  item_confirmation_status: 'item_confirmation_status_example', # String | Filters purchase orders based on their item confirmation status. If the item confirmation status is not included in the filter, purchase orders for all confirmation statuses are included.
+  item_receive_status: 'item_receive_status_example', # String | Filters purchase orders based on the purchase order's item receive status. If the item receive status is not included in the filter, purchase orders for all receive statuses are included.
+  ordering_vendor_code: 'ordering_vendor_code_example', # String | Filters purchase orders based on the specified ordering vendor code. This value should be same as 'sellingParty.partyId' in the purchase order. If not included in filter, all purchase orders for all the vendor codes that exist in the vendor group used to authorize API client application are returned.
+  ship_to_party_id: 'ship_to_party_id_example' # String | Filters purchase orders for a specific buyer's Fulfillment Center/warehouse by providing ship to location id here. This value should be same as 'shipToParty.partyId' in the purchase order. If not included in filter, this will return purchase orders for all the buyer's warehouses used for vendor group purchase orders.
 }
 
 begin

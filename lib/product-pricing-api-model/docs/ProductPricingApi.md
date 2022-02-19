@@ -24,14 +24,14 @@ require 'product-pricing-api-model'
 
 api_instance = AmzSpApi::ProductPricingApiModel::ProductPricingApi.new
 
-marketplace_id = "marketplace_id_example" # String | A marketplace identifier. Specifies the marketplace for which prices are returned.
+marketplace_id = 'marketplace_id_example' # String | A marketplace identifier. Specifies the marketplace for which prices are returned.
 
-item_type = "item_type_example" # String | Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter. Possible values: Asin, Sku.
+item_type = 'item_type_example' # String | Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter. Possible values: Asin, Sku.
 
 opts = { 
-  asins: ["asins_example"], # Array<String> | A list of up to twenty Amazon Standard Identification Number (ASIN) values used to identify items in the given marketplace.
-  skus: ["skus_example"], # Array<String> | A list of up to twenty seller SKU values used to identify items in the given marketplace.
-  customer_type: "customer_type_example" # String | Indicates whether to request pricing information from the point of view of Consumer or Business buyers. Default is Consumer.
+  asins: ['asins_example'], # Array<String> | A list of up to twenty Amazon Standard Identification Number (ASIN) values used to identify items in the given marketplace.
+  skus: ['skus_example'], # Array<String> | A list of up to twenty seller SKU values used to identify items in the given marketplace.
+  customer_type: 'customer_type_example' # String | Indicates whether to request pricing information from the point of view of Consumer or Business buyers. Default is Consumer.
 }
 
 begin
@@ -81,14 +81,14 @@ require 'product-pricing-api-model'
 
 api_instance = AmzSpApi::ProductPricingApiModel::ProductPricingApi.new
 
-marketplace_id = "marketplace_id_example" # String | A marketplace identifier. Specifies the marketplace for which prices are returned.
+marketplace_id = 'marketplace_id_example' # String | A marketplace identifier. Specifies the marketplace for which prices are returned.
 
-item_condition = "item_condition_example" # String | Filters the offer listings to be considered based on item condition. Possible values: New, Used, Collectible, Refurbished, Club.
+item_condition = 'item_condition_example' # String | Filters the offer listings to be considered based on item condition. Possible values: New, Used, Collectible, Refurbished, Club.
 
-asin = "asin_example" # String | The Amazon Standard Identification Number (ASIN) of the item.
+asin = 'asin_example' # String | The Amazon Standard Identification Number (ASIN) of the item.
 
 opts = { 
-  customer_type: "customer_type_example" # String | Indicates whether to request Consumer or Business offers. Default is Consumer.
+  customer_type: 'customer_type_example' # String | Indicates whether to request Consumer or Business offers. Default is Consumer.
 }
 
 begin
@@ -137,14 +137,14 @@ require 'product-pricing-api-model'
 
 api_instance = AmzSpApi::ProductPricingApiModel::ProductPricingApi.new
 
-marketplace_id = "marketplace_id_example" # String | A marketplace identifier. Specifies the marketplace for which prices are returned.
+marketplace_id = 'marketplace_id_example' # String | A marketplace identifier. Specifies the marketplace for which prices are returned.
 
-item_condition = "item_condition_example" # String | Filters the offer listings based on item condition. Possible values: New, Used, Collectible, Refurbished, Club.
+item_condition = 'item_condition_example' # String | Filters the offer listings based on item condition. Possible values: New, Used, Collectible, Refurbished, Club.
 
-seller_sku = "seller_sku_example" # String | Identifies an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
+seller_sku = 'seller_sku_example' # String | Identifies an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
 
 opts = { 
-  customer_type: "customer_type_example" # String | Indicates whether to request Consumer or Business offers. Default is Consumer.
+  customer_type: 'customer_type_example' # String | Indicates whether to request Consumer or Business offers. Default is Consumer.
 }
 
 begin
@@ -193,15 +193,15 @@ require 'product-pricing-api-model'
 
 api_instance = AmzSpApi::ProductPricingApiModel::ProductPricingApi.new
 
-marketplace_id = "marketplace_id_example" # String | A marketplace identifier. Specifies the marketplace for which prices are returned.
+marketplace_id = 'marketplace_id_example' # String | A marketplace identifier. Specifies the marketplace for which prices are returned.
 
-item_type = "item_type_example" # String | Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter.
+item_type = 'item_type_example' # String | Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter.
 
 opts = { 
-  asins: ["asins_example"], # Array<String> | A list of up to twenty Amazon Standard Identification Number (ASIN) values used to identify items in the given marketplace.
-  skus: ["skus_example"], # Array<String> | A list of up to twenty seller SKU values used to identify items in the given marketplace.
-  item_condition: "item_condition_example", # String | Filters the offer listings based on item condition. Possible values: New, Used, Collectible, Refurbished, Club.
-  offer_type: "offer_type_example" # String | Indicates whether to request pricing information for the seller's B2C or B2B offers. Default is B2C.
+  asins: ['asins_example'], # Array<String> | A list of up to twenty Amazon Standard Identification Number (ASIN) values used to identify items in the given marketplace.
+  skus: ['skus_example'], # Array<String> | A list of up to twenty seller SKU values used to identify items in the given marketplace.
+  item_condition: 'item_condition_example', # String | Filters the offer listings based on item condition. Possible values: New, Used, Collectible, Refurbished, Club.
+  offer_type: 'offer_type_example' # String | Indicates whether to request pricing information for the seller's B2C or B2B offers. Default is B2C.
 }
 
 begin

@@ -24,7 +24,7 @@ api_instance = AmzSpApi::ProductFeesApiModel::FeesApi.new
 
 body = AmzSpApi::ProductFeesApiModel::GetMyFeesEstimateRequest.new # GetMyFeesEstimateRequest | 
 
-asin = "asin_example" # String | The Amazon Standard Identification Number (ASIN) of the item.
+asin = 'asin_example' # String | The Amazon Standard Identification Number (ASIN) of the item.
 
 
 begin
@@ -73,7 +73,7 @@ api_instance = AmzSpApi::ProductFeesApiModel::FeesApi.new
 
 body = AmzSpApi::ProductFeesApiModel::GetMyFeesEstimateRequest.new # GetMyFeesEstimateRequest | 
 
-seller_sku = "seller_sku_example" # String | Used to identify an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
+seller_sku = 'seller_sku_example' # String | Used to identify an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
 
 
 begin

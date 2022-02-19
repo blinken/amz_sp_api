@@ -28,7 +28,7 @@ require 'merchant-fulfillment-api-model'
 
 api_instance = AmzSpApi::MerchantFulfillmentApiModel::MerchantFulfillmentApi.new
 
-shipment_id = "shipment_id_example" # String | The Amazon-defined shipment identifier for the shipment to cancel.
+shipment_id = 'shipment_id_example' # String | The Amazon-defined shipment identifier for the shipment to cancel.
 
 
 begin
@@ -74,7 +74,7 @@ require 'merchant-fulfillment-api-model'
 
 api_instance = AmzSpApi::MerchantFulfillmentApiModel::MerchantFulfillmentApi.new
 
-shipment_id = "shipment_id_example" # String | The Amazon-defined shipment identifier for the shipment to cancel.
+shipment_id = 'shipment_id_example' # String | The Amazon-defined shipment identifier for the shipment to cancel.
 
 
 begin
@@ -350,7 +350,7 @@ require 'merchant-fulfillment-api-model'
 
 api_instance = AmzSpApi::MerchantFulfillmentApiModel::MerchantFulfillmentApi.new
 
-shipment_id = "shipment_id_example" # String | The Amazon-defined shipment identifier for the shipment.
+shipment_id = 'shipment_id_example' # String | The Amazon-defined shipment identifier for the shipment.
 
 
 begin

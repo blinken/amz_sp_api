@@ -21,15 +21,15 @@ require 'listings-restrictions-api-model'
 
 api_instance = AmzSpApi::ListingsRestrictionsApiModel::ListingsApi.new
 
-asin = "B0000ASIN1" # String | The Amazon Standard Identification Number (ASIN) of the item.
+asin = 'B0000ASIN1' # String | The Amazon Standard Identification Number (ASIN) of the item.
 
-seller_id = "seller_id_example" # String | A selling partner identifier, such as a merchant account.
+seller_id = 'seller_id_example' # String | A selling partner identifier, such as a merchant account.
 
-marketplace_ids = ["ATVPDKIKX0DER"] # Array<String> | A comma-delimited list of Amazon marketplace identifiers for the request.
+marketplace_ids = ['ATVPDKIKX0DER'] # Array<String> | A comma-delimited list of Amazon marketplace identifiers for the request.
 
 opts = { 
-  condition_type: "used_very_good", # String | The condition used to filter restrictions.
-  reason_locale: "en_US" # String | A locale for reason text localization. When not provided, the default language code of the first marketplace is used. Examples: \"en_US\", \"fr_CA\", \"fr_FR\". Localized messages default to \"en_US\" when a localization is not available in the specified locale.
+  condition_type: 'used_very_good', # String | The condition used to filter restrictions.
+  reason_locale: 'en_US' # String | A locale for reason text localization. When not provided, the default language code of the first marketplace is used. Examples: \"en_US\", \"fr_CA\", \"fr_FR\". Localized messages default to \"en_US\" when a localization is not available in the specified locale.
 }
 
 begin

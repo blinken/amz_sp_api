@@ -25,9 +25,9 @@ require 'fba-small-and-light-api-model'
 
 api_instance = AmzSpApi::FbaSmallAndLightApiModel::SmallAndLightApi.new
 
-seller_sku = "seller_sku_example" # String | The seller SKU that identifies the item.
+seller_sku = 'seller_sku_example' # String | The seller SKU that identifies the item.
 
-marketplace_ids = ["marketplace_ids_example"] # Array<String> | The marketplace in which to remove the item from the Small and Light program. Note: Accepts a single marketplace only.
+marketplace_ids = ['marketplace_ids_example'] # Array<String> | The marketplace in which to remove the item from the Small and Light program. Note: Accepts a single marketplace only.
 
 
 begin
@@ -73,9 +73,9 @@ require 'fba-small-and-light-api-model'
 
 api_instance = AmzSpApi::FbaSmallAndLightApiModel::SmallAndLightApi.new
 
-seller_sku = "seller_sku_example" # String | The seller SKU that identifies the item.
+seller_sku = 'seller_sku_example' # String | The seller SKU that identifies the item.
 
-marketplace_ids = ["marketplace_ids_example"] # Array<String> | The marketplace for which the eligibility status is retrieved. NOTE: Accepts a single marketplace only.
+marketplace_ids = ['marketplace_ids_example'] # Array<String> | The marketplace for which the eligibility status is retrieved. NOTE: Accepts a single marketplace only.
 
 
 begin
@@ -122,9 +122,9 @@ require 'fba-small-and-light-api-model'
 
 api_instance = AmzSpApi::FbaSmallAndLightApiModel::SmallAndLightApi.new
 
-seller_sku = "seller_sku_example" # String | The seller SKU that identifies the item.
+seller_sku = 'seller_sku_example' # String | The seller SKU that identifies the item.
 
-marketplace_ids = ["marketplace_ids_example"] # Array<String> | The marketplace for which the enrollment status is retrieved. Note: Accepts a single marketplace only.
+marketplace_ids = ['marketplace_ids_example'] # Array<String> | The marketplace for which the enrollment status is retrieved. Note: Accepts a single marketplace only.
 
 
 begin
@@ -217,9 +217,9 @@ require 'fba-small-and-light-api-model'
 
 api_instance = AmzSpApi::FbaSmallAndLightApiModel::SmallAndLightApi.new
 
-seller_sku = "seller_sku_example" # String | The seller SKU that identifies the item.
+seller_sku = 'seller_sku_example' # String | The seller SKU that identifies the item.
 
-marketplace_ids = ["marketplace_ids_example"] # Array<String> | The marketplace in which to enroll the item. Note: Accepts a single marketplace only.
+marketplace_ids = ['marketplace_ids_example'] # Array<String> | The marketplace in which to enroll the item. Note: Accepts a single marketplace only.
 
 
 begin
