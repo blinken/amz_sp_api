@@ -15,3 +15,4 @@ Name | Type | Description | Notes
 **country_code** | [**CountryCode**](CountryCode.md) |  | 
 **phone** | [**PhoneNumber**](PhoneNumber.md) |  | 
 
+

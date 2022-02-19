@@ -1,6 +1,6 @@
 # AmzSpApi::ShippingApiModel::ShippingApi
 
-All URIs are relative to *https://sellingpartnerapi-na.amazon.com/*
+All URIs are relative to *https://sellingpartnerapi-na.amazon.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**purchase_labels**](ShippingApi.md#purchase_labels) | **POST** /shipping/v1/shipments/{shipmentId}/purchaseLabels | 
 [**purchase_shipment**](ShippingApi.md#purchase_shipment) | **POST** /shipping/v1/purchaseShipment | 
 [**retrieve_shipping_label**](ShippingApi.md#retrieve_shipping_label) | **POST** /shipping/v1/shipments/{shipmentId}/containers/{trackingId}/label | 
+
 
 # **cancel_shipment**
 > CancelShipmentResponse cancel_shipment(shipment_id)
@@ -27,7 +28,8 @@ Cancel a shipment by the given shipmentId.  **Usage Plan:**  | Rate (requests pe
 require 'shipping-api-model'
 
 api_instance = AmzSpApi::ShippingApiModel::ShippingApi.new
-shipment_id = 'shipment_id_example' # String | 
+
+shipment_id = "shipment_id_example" # String | 
 
 
 begin
@@ -54,7 +56,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -72,6 +74,7 @@ Create a new shipment.  **Usage Plan:**  | Rate (requests per second) | Burst | 
 require 'shipping-api-model'
 
 api_instance = AmzSpApi::ShippingApiModel::ShippingApi.new
+
 body = AmzSpApi::ShippingApiModel::CreateShipmentRequest.new # CreateShipmentRequest | 
 
 
@@ -139,7 +142,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -157,6 +160,7 @@ Get service rates.  **Usage Plan:**  | Rate (requests per second) | Burst | | --
 require 'shipping-api-model'
 
 api_instance = AmzSpApi::ShippingApiModel::ShippingApi.new
+
 body = AmzSpApi::ShippingApiModel::GetRatesRequest.new # GetRatesRequest | 
 
 
@@ -202,7 +206,8 @@ Return the entire shipment object for the shipmentId.  **Usage Plan:**  | Rate (
 require 'shipping-api-model'
 
 api_instance = AmzSpApi::ShippingApiModel::ShippingApi.new
-shipment_id = 'shipment_id_example' # String | 
+
+shipment_id = "shipment_id_example" # String | 
 
 
 begin
@@ -229,7 +234,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -247,7 +252,8 @@ Return the tracking information of a shipment.  **Usage Plan:**  | Rate (request
 require 'shipping-api-model'
 
 api_instance = AmzSpApi::ShippingApiModel::ShippingApi.new
-tracking_id = 'tracking_id_example' # String | 
+
+tracking_id = "tracking_id_example" # String | 
 
 
 begin
@@ -274,13 +280,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
 
 # **purchase_labels**
-> PurchaseLabelsResponse purchase_labels(bodyshipment_id)
+> PurchaseLabelsResponse purchase_labels(shipment_id, body)
 
 
 
@@ -292,12 +298,14 @@ Purchase shipping labels based on a given rate.  **Usage Plan:**  | Rate (reques
 require 'shipping-api-model'
 
 api_instance = AmzSpApi::ShippingApiModel::ShippingApi.new
+
+shipment_id = "shipment_id_example" # String | 
+
 body = AmzSpApi::ShippingApiModel::PurchaseLabelsRequest.new # PurchaseLabelsRequest | 
-shipment_id = 'shipment_id_example' # String | 
 
 
 begin
-  result = api_instance.purchase_labels(bodyshipment_id)
+  result = api_instance.purchase_labels(shipment_id, body)
   p result
 rescue AmzSpApi::ShippingApiModel::ApiError => e
   puts "Exception when calling ShippingApi->purchase_labels: #{e}"
@@ -308,8 +316,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PurchaseLabelsRequest**](PurchaseLabelsRequest.md)|  | 
  **shipment_id** | **String**|  | 
+ **body** | [**PurchaseLabelsRequest**](PurchaseLabelsRequest.md)|  | 
 
 ### Return type
 
@@ -339,6 +347,7 @@ Purchase shipping labels.  **Usage Plan:**  | Rate (requests per second) | Burst
 require 'shipping-api-model'
 
 api_instance = AmzSpApi::ShippingApiModel::ShippingApi.new
+
 body = AmzSpApi::ShippingApiModel::PurchaseShipmentRequest.new # PurchaseShipmentRequest | 
 
 
@@ -372,7 +381,7 @@ No authorization required
 
 
 # **retrieve_shipping_label**
-> RetrieveShippingLabelResponse retrieve_shipping_label(bodyshipment_idtracking_id)
+> RetrieveShippingLabelResponse retrieve_shipping_label(shipment_id, tracking_id, body)
 
 
 
@@ -384,13 +393,16 @@ Retrieve shipping label based on the shipment id and tracking id.  **Usage Plan:
 require 'shipping-api-model'
 
 api_instance = AmzSpApi::ShippingApiModel::ShippingApi.new
+
+shipment_id = "shipment_id_example" # String | 
+
+tracking_id = "tracking_id_example" # String | 
+
 body = AmzSpApi::ShippingApiModel::RetrieveShippingLabelRequest.new # RetrieveShippingLabelRequest | 
-shipment_id = 'shipment_id_example' # String | 
-tracking_id = 'tracking_id_example' # String | 
 
 
 begin
-  result = api_instance.retrieve_shipping_label(bodyshipment_idtracking_id)
+  result = api_instance.retrieve_shipping_label(shipment_id, tracking_id, body)
   p result
 rescue AmzSpApi::ShippingApiModel::ApiError => e
   puts "Exception when calling ShippingApi->retrieve_shipping_label: #{e}"
@@ -401,9 +413,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RetrieveShippingLabelRequest**](RetrieveShippingLabelRequest.md)|  | 
  **shipment_id** | **String**|  | 
  **tracking_id** | **String**|  | 
+ **body** | [**RetrieveShippingLabelRequest**](RetrieveShippingLabelRequest.md)|  | 
 
 ### Return type
 

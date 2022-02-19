@@ -7,7 +7,8 @@ Name | Type | Description | Notes
 **data_type** | **String** | The data type of the additional input field. | 
 **constraints** | [**Constraints**](Constraints.md) |  | 
 **input_display_text** | **String** | The display text for the additional input field. | 
-**input_target** | [**InputTargetType**](InputTargetType.md) |  | [optional] 
+**input_target** | [**InputTargetType**](InputTargetType.md) | Whether the seller input applies to the item or the shipment. | [optional] 
 **stored_value** | [**AdditionalSellerInput**](AdditionalSellerInput.md) |  | 
 **restricted_set_values** | [**RestrictedSetValues**](RestrictedSetValues.md) |  | [optional] 
+
 

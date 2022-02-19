@@ -7,3 +7,4 @@ Name | Type | Description | Notes
 **invalid_return_items** | [**InvalidReturnItemList**](InvalidReturnItemList.md) |  | [optional] 
 **return_authorizations** | [**ReturnAuthorizationList**](ReturnAuthorizationList.md) |  | [optional] 
 
+

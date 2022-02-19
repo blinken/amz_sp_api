@@ -7,3 +7,4 @@ Name | Type | Description | Notes
 **message** | **String** | A message that describes the warning condition in a human-readable form. | 
 **details** | **String** | Additional details that can help the caller understand or address the warning. | [optional] 
 
+

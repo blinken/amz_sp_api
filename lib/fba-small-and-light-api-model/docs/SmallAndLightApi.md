@@ -1,6 +1,6 @@
 # AmzSpApi::FbaSmallAndLightApiModel::SmallAndLightApi
 
-All URIs are relative to *https://sellingpartnerapi-na.amazon.com/*
+All URIs are relative to *https://sellingpartnerapi-na.amazon.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**get_small_and_light_enrollment_by_seller_sku**](SmallAndLightApi.md#get_small_and_light_enrollment_by_seller_sku) | **GET** /fba/smallAndLight/v1/enrollments/{sellerSKU} | 
 [**get_small_and_light_fee_preview**](SmallAndLightApi.md#get_small_and_light_fee_preview) | **POST** /fba/smallAndLight/v1/feePreviews | 
 [**put_small_and_light_enrollment_by_seller_sku**](SmallAndLightApi.md#put_small_and_light_enrollment_by_seller_sku) | **PUT** /fba/smallAndLight/v1/enrollments/{sellerSKU} | 
+
 
 # **delete_small_and_light_enrollment_by_seller_sku**
 > delete_small_and_light_enrollment_by_seller_sku(seller_sku, marketplace_ids)
@@ -23,8 +24,10 @@ Removes the item indicated by the specified seller SKU from the Small and Light 
 require 'fba-small-and-light-api-model'
 
 api_instance = AmzSpApi::FbaSmallAndLightApiModel::SmallAndLightApi.new
-seller_sku = 'seller_sku_example' # String | The seller SKU that identifies the item.
-marketplace_ids = ['marketplace_ids_example'] # Array<String> | The marketplace in which to remove the item from the Small and Light program. Note: Accepts a single marketplace only.
+
+seller_sku = "seller_sku_example" # String | The seller SKU that identifies the item.
+
+marketplace_ids = ["marketplace_ids_example"] # Array<String> | The marketplace in which to remove the item from the Small and Light program. Note: Accepts a single marketplace only.
 
 
 begin
@@ -51,7 +54,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -69,8 +72,10 @@ Returns the Small and Light program eligibility status of the item indicated by 
 require 'fba-small-and-light-api-model'
 
 api_instance = AmzSpApi::FbaSmallAndLightApiModel::SmallAndLightApi.new
-seller_sku = 'seller_sku_example' # String | The seller SKU that identifies the item.
-marketplace_ids = ['marketplace_ids_example'] # Array<String> | The marketplace for which the eligibility status is retrieved. NOTE: Accepts a single marketplace only.
+
+seller_sku = "seller_sku_example" # String | The seller SKU that identifies the item.
+
+marketplace_ids = ["marketplace_ids_example"] # Array<String> | The marketplace for which the eligibility status is retrieved. NOTE: Accepts a single marketplace only.
 
 
 begin
@@ -98,7 +103,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -116,8 +121,10 @@ Returns the Small and Light enrollment status for the item indicated by the spec
 require 'fba-small-and-light-api-model'
 
 api_instance = AmzSpApi::FbaSmallAndLightApiModel::SmallAndLightApi.new
-seller_sku = 'seller_sku_example' # String | The seller SKU that identifies the item.
-marketplace_ids = ['marketplace_ids_example'] # Array<String> | The marketplace for which the enrollment status is retrieved. Note: Accepts a single marketplace only.
+
+seller_sku = "seller_sku_example" # String | The seller SKU that identifies the item.
+
+marketplace_ids = ["marketplace_ids_example"] # Array<String> | The marketplace for which the enrollment status is retrieved. Note: Accepts a single marketplace only.
 
 
 begin
@@ -145,7 +152,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -163,6 +170,7 @@ Returns the Small and Light fee estimates for the specified items. You must incl
 require 'fba-small-and-light-api-model'
 
 api_instance = AmzSpApi::FbaSmallAndLightApiModel::SmallAndLightApi.new
+
 body = AmzSpApi::FbaSmallAndLightApiModel::SmallAndLightFeePreviewRequest.new # SmallAndLightFeePreviewRequest | 
 
 
@@ -208,8 +216,10 @@ Enrolls the item indicated by the specified seller SKU in the Small and Light pr
 require 'fba-small-and-light-api-model'
 
 api_instance = AmzSpApi::FbaSmallAndLightApiModel::SmallAndLightApi.new
-seller_sku = 'seller_sku_example' # String | The seller SKU that identifies the item.
-marketplace_ids = ['marketplace_ids_example'] # Array<String> | The marketplace in which to enroll the item. Note: Accepts a single marketplace only.
+
+seller_sku = "seller_sku_example" # String | The seller SKU that identifies the item.
+
+marketplace_ids = ["marketplace_ids_example"] # Array<String> | The marketplace in which to enroll the item. Note: Accepts a single marketplace only.
 
 
 begin
@@ -237,7 +247,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 

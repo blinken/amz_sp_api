@@ -1,6 +1,6 @@
 # AmzSpApi::FulfillmentInboundApiModel::FbaInboundApi
 
-All URIs are relative to *https://sellingpartnerapi-na.amazon.com/*
+All URIs are relative to *https://sellingpartnerapi-na.amazon.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -22,6 +22,7 @@ Method | HTTP request | Description
 [**update_inbound_shipment**](FbaInboundApi.md#update_inbound_shipment) | **PUT** /fba/inbound/v0/shipments/{shipmentId} | 
 [**void_transport**](FbaInboundApi.md#void_transport) | **POST** /fba/inbound/v0/shipments/{shipmentId}/transport/void | 
 
+
 # **confirm_preorder**
 > ConfirmPreorderResponse confirm_preorder(shipment_id, need_by_date, marketplace_id)
 
@@ -35,9 +36,12 @@ Returns information needed to confirm a shipment for pre-order. Call this operat
 require 'fulfillment-inbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentInboundApiModel::FbaInboundApi.new
-shipment_id = 'shipment_id_example' # String | A shipment identifier originally returned by the createInboundShipmentPlan operation.
-need_by_date = Date.parse('2013-10-20') # Date | Date that the shipment must arrive at the Amazon fulfillment center to avoid delivery promise breaks for pre-ordered items. Must be in YYYY-MM-DD format. The response to the getPreorderInfo operation returns this value.
-marketplace_id = 'marketplace_id_example' # String | A marketplace identifier. Specifies the marketplace the shipment is tied to.
+
+shipment_id = "shipment_id_example" # String | A shipment identifier originally returned by the createInboundShipmentPlan operation.
+
+need_by_date = Date.parse("2013-10-20") # Date | Date that the shipment must arrive at the Amazon fulfillment center to avoid delivery promise breaks for pre-ordered items. Must be in YYYY-MM-DD format. The response to the getPreorderInfo operation returns this value.
+
+marketplace_id = "marketplace_id_example" # String | A marketplace identifier. Specifies the marketplace the shipment is tied to.
 
 
 begin
@@ -66,7 +70,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -84,7 +88,8 @@ Confirms that the seller accepts the Amazon-partnered shipping estimate, agrees 
 require 'fulfillment-inbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentInboundApiModel::FbaInboundApi.new
-shipment_id = 'shipment_id_example' # String | A shipment identifier originally returned by the createInboundShipmentPlan operation.
+
+shipment_id = "shipment_id_example" # String | A shipment identifier originally returned by the createInboundShipmentPlan operation.
 
 
 begin
@@ -111,13 +116,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
 
 # **create_inbound_shipment**
-> InboundShipmentResponse create_inbound_shipment(bodyshipment_id)
+> InboundShipmentResponse create_inbound_shipment(body, shipment_id)
 
 
 
@@ -129,12 +134,14 @@ Returns a new inbound shipment based on the specified shipmentId that was return
 require 'fulfillment-inbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentInboundApiModel::FbaInboundApi.new
+
 body = AmzSpApi::FulfillmentInboundApiModel::InboundShipmentRequest.new # InboundShipmentRequest | 
-shipment_id = 'shipment_id_example' # String | A shipment identifier originally returned by the createInboundShipmentPlan operation.
+
+shipment_id = "shipment_id_example" # String | A shipment identifier originally returned by the createInboundShipmentPlan operation.
 
 
 begin
-  result = api_instance.create_inbound_shipment(bodyshipment_id)
+  result = api_instance.create_inbound_shipment(body, shipment_id)
   p result
 rescue AmzSpApi::FulfillmentInboundApiModel::ApiError => e
   puts "Exception when calling FbaInboundApi->create_inbound_shipment: #{e}"
@@ -176,6 +183,7 @@ Returns one or more inbound shipment plans, which provide the information you ne
 require 'fulfillment-inbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentInboundApiModel::FbaInboundApi.new
+
 body = AmzSpApi::FulfillmentInboundApiModel::CreateInboundShipmentPlanRequest.new # CreateInboundShipmentPlanRequest | 
 
 
@@ -221,7 +229,8 @@ Initiates the process of estimating the shipping cost for an inbound shipment by
 require 'fulfillment-inbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentInboundApiModel::FbaInboundApi.new
-shipment_id = 'shipment_id_example' # String | A shipment identifier originally returned by the createInboundShipmentPlan operation.
+
+shipment_id = "shipment_id_example" # String | A shipment identifier originally returned by the createInboundShipmentPlan operation.
 
 
 begin
@@ -248,7 +257,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -266,7 +275,8 @@ Returns a bill of lading for a Less Than Truckload/Full Truckload (LTL/FTL) ship
 require 'fulfillment-inbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentInboundApiModel::FbaInboundApi.new
-shipment_id = 'shipment_id_example' # String | A shipment identifier originally returned by the createInboundShipmentPlan operation.
+
+shipment_id = "shipment_id_example" # String | A shipment identifier originally returned by the createInboundShipmentPlan operation.
 
 
 begin
@@ -293,7 +303,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -311,10 +321,12 @@ Returns information that lets a seller know if Amazon recommends sending an item
 require 'fulfillment-inbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentInboundApiModel::FbaInboundApi.new
-marketplace_id = 'marketplace_id_example' # String | A marketplace identifier. Specifies the marketplace where the product would be stored.
+
+marketplace_id = "marketplace_id_example" # String | A marketplace identifier. Specifies the marketplace where the product would be stored.
+
 opts = { 
-  seller_sku_list: ['seller_sku_list_example'], # Array<String> | A list of SellerSKU values. Used to identify items for which you want inbound guidance for shipment to Amazon's fulfillment network. Note: SellerSKU is qualified by the SellerId, which is included with every Selling Partner API operation that you submit. If you specify a SellerSKU that identifies a variation parent ASIN, this operation returns an error. A variation parent ASIN represents a generic product that cannot be sold. Variation child ASINs represent products that have specific characteristics (such as size and color) and can be sold. 
-  asin_list: ['asin_list_example'] # Array<String> | A list of ASIN values. Used to identify items for which you want inbound guidance for shipment to Amazon's fulfillment network. Note: If you specify a ASIN that identifies a variation parent ASIN, this operation returns an error. A variation parent ASIN represents a generic product that cannot be sold. Variation child ASINs represent products that have specific characteristics (such as size and color) and can be sold.
+  seller_sku_list: ["seller_sku_list_example"], # Array<String> | A list of SellerSKU values. Used to identify items for which you want inbound guidance for shipment to Amazon's fulfillment network. Note: SellerSKU is qualified by the SellerId, which is included with every Selling Partner API operation that you submit. If you specify a SellerSKU that identifies a variation parent ASIN, this operation returns an error. A variation parent ASIN represents a generic product that cannot be sold. Variation child ASINs represent products that have specific characteristics (such as size and color) and can be sold. 
+  asin_list: ["asin_list_example"] # Array<String> | A list of ASIN values. Used to identify items for which you want inbound guidance for shipment to Amazon's fulfillment network. Note: If you specify a ASIN that identifies a variation parent ASIN, this operation returns an error. A variation parent ASIN represents a generic product that cannot be sold. Variation child ASINs represent products that have specific characteristics (such as size and color) and can be sold.
 }
 
 begin
@@ -330,8 +342,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **marketplace_id** | **String**| A marketplace identifier. Specifies the marketplace where the product would be stored. | 
- **seller_sku_list** | [**Array&lt;String&gt;**](String.md)| A list of SellerSKU values. Used to identify items for which you want inbound guidance for shipment to Amazon&#x27;s fulfillment network. Note: SellerSKU is qualified by the SellerId, which is included with every Selling Partner API operation that you submit. If you specify a SellerSKU that identifies a variation parent ASIN, this operation returns an error. A variation parent ASIN represents a generic product that cannot be sold. Variation child ASINs represent products that have specific characteristics (such as size and color) and can be sold.  | [optional] 
- **asin_list** | [**Array&lt;String&gt;**](String.md)| A list of ASIN values. Used to identify items for which you want inbound guidance for shipment to Amazon&#x27;s fulfillment network. Note: If you specify a ASIN that identifies a variation parent ASIN, this operation returns an error. A variation parent ASIN represents a generic product that cannot be sold. Variation child ASINs represent products that have specific characteristics (such as size and color) and can be sold. | [optional] 
+ **seller_sku_list** | [**Array&lt;String&gt;**](String.md)| A list of SellerSKU values. Used to identify items for which you want inbound guidance for shipment to Amazon&#39;s fulfillment network. Note: SellerSKU is qualified by the SellerId, which is included with every Selling Partner API operation that you submit. If you specify a SellerSKU that identifies a variation parent ASIN, this operation returns an error. A variation parent ASIN represents a generic product that cannot be sold. Variation child ASINs represent products that have specific characteristics (such as size and color) and can be sold.  | [optional] 
+ **asin_list** | [**Array&lt;String&gt;**](String.md)| A list of ASIN values. Used to identify items for which you want inbound guidance for shipment to Amazon&#39;s fulfillment network. Note: If you specify a ASIN that identifies a variation parent ASIN, this operation returns an error. A variation parent ASIN represents a generic product that cannot be sold. Variation child ASINs represent products that have specific characteristics (such as size and color) and can be sold. | [optional] 
 
 ### Return type
 
@@ -343,7 +355,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -361,13 +373,19 @@ Returns package/pallet labels for faster and more accurate shipment processing a
 require 'fulfillment-inbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentInboundApiModel::FbaInboundApi.new
-shipment_id = 'shipment_id_example' # String | A shipment identifier originally returned by the createInboundShipmentPlan operation.
-page_type = 'page_type_example' # String | The page type to use to print the labels. Submitting a PageType value that is not supported in your marketplace returns an error.
-label_type = 'label_type_example' # String | The type of labels requested. 
+
+shipment_id = "shipment_id_example" # String | A shipment identifier originally returned by the createInboundShipmentPlan operation.
+
+page_type = "page_type_example" # String | The page type to use to print the labels. Submitting a PageType value that is not supported in your marketplace returns an error.
+
+label_type = "label_type_example" # String | The type of labels requested. 
+
 opts = { 
   number_of_packages: 56, # Integer | The number of packages in the shipment.
-  package_labels_to_print: ['package_labels_to_print_example'], # Array<String> | A list of identifiers that specify packages for which you want package labels printed.  Must match CartonId values previously passed using the FBA Inbound Shipment Carton Information Feed. If not, the operation returns the IncorrectPackageIdentifier error code.
-  number_of_pallets: 56 # Integer | The number of pallets in the shipment. This returns four identical labels for each pallet.
+  package_labels_to_print: ["package_labels_to_print_example"], # Array<String> | A list of identifiers that specify packages for which you want package labels printed.  Must match CartonId values previously passed using the FBA Inbound Shipment Carton Information Feed. If not, the operation returns the IncorrectPackageIdentifier error code.
+  number_of_pallets: 56, # Integer | The number of pallets in the shipment. This returns four identical labels for each pallet.
+  page_size: 56, # Integer | The page size for paginating through the total packages' labels. This is a required parameter for Non-Partnered LTL Shipments. Max value:1000.
+  page_start_index: 56 # Integer | The page start index for paginating through the total packages' labels. This is a required parameter for Non-Partnered LTL Shipments.
 }
 
 begin
@@ -388,6 +406,8 @@ Name | Type | Description  | Notes
  **number_of_packages** | **Integer**| The number of packages in the shipment. | [optional] 
  **package_labels_to_print** | [**Array&lt;String&gt;**](String.md)| A list of identifiers that specify packages for which you want package labels printed.  Must match CartonId values previously passed using the FBA Inbound Shipment Carton Information Feed. If not, the operation returns the IncorrectPackageIdentifier error code. | [optional] 
  **number_of_pallets** | **Integer**| The number of pallets in the shipment. This returns four identical labels for each pallet. | [optional] 
+ **page_size** | **Integer**| The page size for paginating through the total packages&#39; labels. This is a required parameter for Non-Partnered LTL Shipments. Max value:1000. | [optional] 
+ **page_start_index** | **Integer**| The page start index for paginating through the total packages&#39; labels. This is a required parameter for Non-Partnered LTL Shipments. | [optional] 
 
 ### Return type
 
@@ -399,7 +419,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -417,8 +437,10 @@ Returns pre-order information, including dates, that a seller needs before confi
 require 'fulfillment-inbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentInboundApiModel::FbaInboundApi.new
-shipment_id = 'shipment_id_example' # String | A shipment identifier originally returned by the createInboundShipmentPlan operation.
-marketplace_id = 'marketplace_id_example' # String | A marketplace identifier. Specifies the marketplace the shipment is tied to.
+
+shipment_id = "shipment_id_example" # String | A shipment identifier originally returned by the createInboundShipmentPlan operation.
+
+marketplace_id = "marketplace_id_example" # String | A marketplace identifier. Specifies the marketplace the shipment is tied to.
 
 
 begin
@@ -446,7 +468,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -464,10 +486,12 @@ Returns labeling requirements and item preparation instructions to help prepare 
 require 'fulfillment-inbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentInboundApiModel::FbaInboundApi.new
-ship_to_country_code = 'ship_to_country_code_example' # String | The country code of the country to which the items will be shipped. Note that labeling requirements and item preparation instructions can vary by country.
+
+ship_to_country_code = "ship_to_country_code_example" # String | The country code of the country to which the items will be shipped. Note that labeling requirements and item preparation instructions can vary by country.
+
 opts = { 
-  seller_sku_list: ['seller_sku_list_example'], # Array<String> | A list of SellerSKU values. Used to identify items for which you want labeling requirements and item preparation instructions for shipment to Amazon's fulfillment network. The SellerSKU is qualified by the Seller ID, which is included with every call to the Seller Partner API.  Note: Include seller SKUs that you have used to list items on Amazon's retail website. If you include a seller SKU that you have never used to list an item on Amazon's retail website, the seller SKU is returned in the InvalidSKUList property in the response.
-  asin_list: ['asin_list_example'] # Array<String> | A list of ASIN values. Used to identify items for which you want item preparation instructions to help with item sourcing decisions.  Note: ASINs must be included in the product catalog for at least one of the marketplaces that the seller  participates in. Any ASIN that is not included in the product catalog for at least one of the marketplaces that the seller participates in is returned in the InvalidASINList property in the response. You can find out which marketplaces a seller participates in by calling the getMarketplaceParticipations operation in the Selling Partner API for Sellers.
+  seller_sku_list: ["seller_sku_list_example"], # Array<String> | A list of SellerSKU values. Used to identify items for which you want labeling requirements and item preparation instructions for shipment to Amazon's fulfillment network. The SellerSKU is qualified by the Seller ID, which is included with every call to the Seller Partner API.  Note: Include seller SKUs that you have used to list items on Amazon's retail website. If you include a seller SKU that you have never used to list an item on Amazon's retail website, the seller SKU is returned in the InvalidSKUList property in the response.
+  asin_list: ["asin_list_example"] # Array<String> | A list of ASIN values. Used to identify items for which you want item preparation instructions to help with item sourcing decisions.  Note: ASINs must be included in the product catalog for at least one of the marketplaces that the seller  participates in. Any ASIN that is not included in the product catalog for at least one of the marketplaces that the seller participates in is returned in the InvalidASINList property in the response. You can find out which marketplaces a seller participates in by calling the getMarketplaceParticipations operation in the Selling Partner API for Sellers.
 }
 
 begin
@@ -483,7 +507,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ship_to_country_code** | **String**| The country code of the country to which the items will be shipped. Note that labeling requirements and item preparation instructions can vary by country. | 
- **seller_sku_list** | [**Array&lt;String&gt;**](String.md)| A list of SellerSKU values. Used to identify items for which you want labeling requirements and item preparation instructions for shipment to Amazon&#x27;s fulfillment network. The SellerSKU is qualified by the Seller ID, which is included with every call to the Seller Partner API.  Note: Include seller SKUs that you have used to list items on Amazon&#x27;s retail website. If you include a seller SKU that you have never used to list an item on Amazon&#x27;s retail website, the seller SKU is returned in the InvalidSKUList property in the response. | [optional] 
+ **seller_sku_list** | [**Array&lt;String&gt;**](String.md)| A list of SellerSKU values. Used to identify items for which you want labeling requirements and item preparation instructions for shipment to Amazon&#39;s fulfillment network. The SellerSKU is qualified by the Seller ID, which is included with every call to the Seller Partner API.  Note: Include seller SKUs that you have used to list items on Amazon&#39;s retail website. If you include a seller SKU that you have never used to list an item on Amazon&#39;s retail website, the seller SKU is returned in the InvalidSKUList property in the response. | [optional] 
  **asin_list** | [**Array&lt;String&gt;**](String.md)| A list of ASIN values. Used to identify items for which you want item preparation instructions to help with item sourcing decisions.  Note: ASINs must be included in the product catalog for at least one of the marketplaces that the seller  participates in. Any ASIN that is not included in the product catalog for at least one of the marketplaces that the seller participates in is returned in the InvalidASINList property in the response. You can find out which marketplaces a seller participates in by calling the getMarketplaceParticipations operation in the Selling Partner API for Sellers. | [optional] 
 
 ### Return type
@@ -496,7 +520,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -514,12 +538,15 @@ Returns a list of items in a specified inbound shipment, or a list of items that
 require 'fulfillment-inbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentInboundApiModel::FbaInboundApi.new
-query_type = 'query_type_example' # String | Indicates whether items are returned using a date range (by providing the LastUpdatedAfter and LastUpdatedBefore parameters), or using NextToken, which continues returning items specified in a previous request.
-marketplace_id = 'marketplace_id_example' # String | A marketplace identifier. Specifies the marketplace where the product would be stored.
+
+query_type = "query_type_example" # String | Indicates whether items are returned using a date range (by providing the LastUpdatedAfter and LastUpdatedBefore parameters), or using NextToken, which continues returning items specified in a previous request.
+
+marketplace_id = "marketplace_id_example" # String | A marketplace identifier. Specifies the marketplace where the product would be stored.
+
 opts = { 
-  last_updated_after: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | A date used for selecting inbound shipment items that were last updated after (or at) a specified time. The selection includes updates made by Amazon and by the seller.
-  last_updated_before: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | A date used for selecting inbound shipment items that were last updated before (or at) a specified time. The selection includes updates made by Amazon and by the seller.
-  next_token: 'next_token_example' # String | A string token returned in the response to your previous request.
+  last_updated_after: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | A date used for selecting inbound shipment items that were last updated after (or at) a specified time. The selection includes updates made by Amazon and by the seller.
+  last_updated_before: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | A date used for selecting inbound shipment items that were last updated before (or at) a specified time. The selection includes updates made by Amazon and by the seller.
+  next_token: "next_token_example" # String | A string token returned in the response to your previous request.
 }
 
 begin
@@ -550,7 +577,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -568,8 +595,10 @@ Returns a list of items in a specified inbound shipment.  **Usage Plan:**  | Rat
 require 'fulfillment-inbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentInboundApiModel::FbaInboundApi.new
-shipment_id = 'shipment_id_example' # String | A shipment identifier used for selecting items in a specific inbound shipment.
-marketplace_id = 'marketplace_id_example' # String | A marketplace identifier. Specifies the marketplace where the product would be stored.
+
+shipment_id = "shipment_id_example" # String | A shipment identifier used for selecting items in a specific inbound shipment.
+
+marketplace_id = "marketplace_id_example" # String | A marketplace identifier. Specifies the marketplace where the product would be stored.
 
 
 begin
@@ -597,7 +626,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -615,14 +644,17 @@ Returns a list of inbound shipments based on criteria that you specify.  **Usage
 require 'fulfillment-inbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentInboundApiModel::FbaInboundApi.new
-query_type = 'query_type_example' # String | Indicates whether shipments are returned using shipment information (by providing the ShipmentStatusList or ShipmentIdList parameters), using a date range (by providing the LastUpdatedAfter and LastUpdatedBefore parameters), or by using NextToken to continue returning items specified in a previous request.
-marketplace_id = 'marketplace_id_example' # String | A marketplace identifier. Specifies the marketplace where the product would be stored.
+
+query_type = "query_type_example" # String | Indicates whether shipments are returned using shipment information (by providing the ShipmentStatusList or ShipmentIdList parameters), using a date range (by providing the LastUpdatedAfter and LastUpdatedBefore parameters), or by using NextToken to continue returning items specified in a previous request.
+
+marketplace_id = "marketplace_id_example" # String | A marketplace identifier. Specifies the marketplace where the product would be stored.
+
 opts = { 
-  shipment_status_list: ['shipment_status_list_example'], # Array<String> | A list of ShipmentStatus values. Used to select shipments with a current status that matches the status values that you specify.
-  shipment_id_list: ['shipment_id_list_example'], # Array<String> | A list of shipment IDs used to select the shipments that you want. If both ShipmentStatusList and ShipmentIdList are specified, only shipments that match both parameters are returned.
-  last_updated_after: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | A date used for selecting inbound shipments that were last updated after (or at) a specified time. The selection includes updates made by Amazon and by the seller.
-  last_updated_before: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | A date used for selecting inbound shipments that were last updated before (or at) a specified time. The selection includes updates made by Amazon and by the seller.
-  next_token: 'next_token_example' # String | A string token returned in the response to your previous request.
+  shipment_status_list: ["shipment_status_list_example"], # Array<String> | A list of ShipmentStatus values. Used to select shipments with a current status that matches the status values that you specify.
+  shipment_id_list: ["shipment_id_list_example"], # Array<String> | A list of shipment IDs used to select the shipments that you want. If both ShipmentStatusList and ShipmentIdList are specified, only shipments that match both parameters are returned.
+  last_updated_after: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | A date used for selecting inbound shipments that were last updated after (or at) a specified time. The selection includes updates made by Amazon and by the seller.
+  last_updated_before: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | A date used for selecting inbound shipments that were last updated before (or at) a specified time. The selection includes updates made by Amazon and by the seller.
+  next_token: "next_token_example" # String | A string token returned in the response to your previous request.
 }
 
 begin
@@ -655,7 +687,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -673,7 +705,8 @@ Returns current transportation information about an inbound shipment.  **Usage P
 require 'fulfillment-inbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentInboundApiModel::FbaInboundApi.new
-shipment_id = 'shipment_id_example' # String | A shipment identifier originally returned by the createInboundShipmentPlan operation.
+
+shipment_id = "shipment_id_example" # String | A shipment identifier originally returned by the createInboundShipmentPlan operation.
 
 
 begin
@@ -700,13 +733,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
 
 # **put_transport_details**
-> PutTransportDetailsResponse put_transport_details(bodyshipment_id)
+> PutTransportDetailsResponse put_transport_details(shipment_id, body)
 
 
 
@@ -718,12 +751,14 @@ Sends transportation information to Amazon about an inbound shipment.  **Usage P
 require 'fulfillment-inbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentInboundApiModel::FbaInboundApi.new
+
+shipment_id = "shipment_id_example" # String | A shipment identifier originally returned by the createInboundShipmentPlan operation.
+
 body = AmzSpApi::FulfillmentInboundApiModel::PutTransportDetailsRequest.new # PutTransportDetailsRequest | 
-shipment_id = 'shipment_id_example' # String | A shipment identifier originally returned by the createInboundShipmentPlan operation.
 
 
 begin
-  result = api_instance.put_transport_details(bodyshipment_id)
+  result = api_instance.put_transport_details(shipment_id, body)
   p result
 rescue AmzSpApi::FulfillmentInboundApiModel::ApiError => e
   puts "Exception when calling FbaInboundApi->put_transport_details: #{e}"
@@ -734,8 +769,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PutTransportDetailsRequest**](PutTransportDetailsRequest.md)|  | 
  **shipment_id** | **String**| A shipment identifier originally returned by the createInboundShipmentPlan operation. | 
+ **body** | [**PutTransportDetailsRequest**](PutTransportDetailsRequest.md)|  | 
 
 ### Return type
 
@@ -753,11 +788,11 @@ No authorization required
 
 
 # **update_inbound_shipment**
-> InboundShipmentResponse update_inbound_shipment(bodyshipment_id)
+> InboundShipmentResponse update_inbound_shipment(body, shipment_id)
 
 
 
-Adds, updates, or removes items from the inbound shipment identified by the specified shipment identifier.   **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 2 | 30 |  For more information, see \"Usage Plans and Rate Limits\" in the Selling Partner API documentation.
+Updates or removes items from the inbound shipment identified by the specified shipment identifier. Adding new items is not supported.  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 2 | 30 |  For more information, see \"Usage Plans and Rate Limits\" in the Selling Partner API documentation.
 
 ### Example
 ```ruby
@@ -765,12 +800,14 @@ Adds, updates, or removes items from the inbound shipment identified by the spec
 require 'fulfillment-inbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentInboundApiModel::FbaInboundApi.new
+
 body = AmzSpApi::FulfillmentInboundApiModel::InboundShipmentRequest.new # InboundShipmentRequest | 
-shipment_id = 'shipment_id_example' # String | A shipment identifier originally returned by the createInboundShipmentPlan operation.
+
+shipment_id = "shipment_id_example" # String | A shipment identifier originally returned by the createInboundShipmentPlan operation.
 
 
 begin
-  result = api_instance.update_inbound_shipment(bodyshipment_id)
+  result = api_instance.update_inbound_shipment(body, shipment_id)
   p result
 rescue AmzSpApi::FulfillmentInboundApiModel::ApiError => e
   puts "Exception when calling FbaInboundApi->update_inbound_shipment: #{e}"
@@ -812,7 +849,8 @@ Cancels a previously-confirmed request to ship an inbound shipment using an Amaz
 require 'fulfillment-inbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentInboundApiModel::FbaInboundApi.new
-shipment_id = 'shipment_id_example' # String | A shipment identifier originally returned by the createInboundShipmentPlan operation.
+
+shipment_id = "shipment_id_example" # String | A shipment identifier originally returned by the createInboundShipmentPlan operation.
 
 
 begin
@@ -839,7 +877,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 

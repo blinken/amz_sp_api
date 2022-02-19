@@ -10,3 +10,4 @@ Name | Type | Description | Notes
 **highlight** | **BOOLEAN** | Determines whether this block of content is visually highlighted. | [optional] 
 **metrics** | [**Array&lt;PlainTextItem&gt;**](PlainTextItem.md) | Comparison metrics for the product. | [optional] 
 
+

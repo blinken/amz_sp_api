@@ -4,5 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **currency_code** | [**CurrencyCode**](CurrencyCode.md) |  | 
-**value** | [**BigDecimalType**](BigDecimalType.md) |  | 
+**value** | [**BigDecimalType**](BigDecimalType.md) | The amount. | 
+
 

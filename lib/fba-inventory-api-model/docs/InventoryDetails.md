@@ -11,3 +11,4 @@ Name | Type | Description | Notes
 **researching_quantity** | [**ResearchingQuantity**](ResearchingQuantity.md) |  | [optional] 
 **unfulfillable_quantity** | [**UnfulfillableQuantity**](UnfulfillableQuantity.md) |  | [optional] 
 
+

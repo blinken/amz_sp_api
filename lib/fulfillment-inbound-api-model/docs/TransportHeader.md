@@ -8,3 +8,4 @@ Name | Type | Description | Notes
 **is_partnered** | **BOOLEAN** | Indicates whether a putTransportDetails request is for a partnered carrier.  Possible values:  * true – Request is for an Amazon-partnered carrier.  * false – Request is for a non-Amazon-partnered carrier. | 
 **shipment_type** | [**ShipmentType**](ShipmentType.md) |  | 
 
+

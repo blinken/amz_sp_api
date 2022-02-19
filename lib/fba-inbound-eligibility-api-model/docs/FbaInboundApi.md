@@ -1,10 +1,11 @@
 # AmzSpApi::FbaInboundEligibilityApiModel::FbaInboundApi
 
-All URIs are relative to *https://sellingpartnerapi-na.amazon.com/*
+All URIs are relative to *https://sellingpartnerapi-na.amazon.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_item_eligibility_preview**](FbaInboundApi.md#get_item_eligibility_preview) | **GET** /fba/inbound/v1/eligibility/itemPreview | 
+
 
 # **get_item_eligibility_preview**
 > GetItemEligibilityPreviewResponse get_item_eligibility_preview(asin, program, opts)
@@ -19,10 +20,13 @@ This operation gets an eligibility preview for an item that you specify. You can
 require 'fba-inbound-eligibility-api-model'
 
 api_instance = AmzSpApi::FbaInboundEligibilityApiModel::FbaInboundApi.new
-asin = 'asin_example' # String | The ASIN of the item for which you want an eligibility preview.
-program = 'program_example' # String | The program that you want to check eligibility against.
+
+asin = "asin_example" # String | The ASIN of the item for which you want an eligibility preview.
+
+program = "program_example" # String | The program that you want to check eligibility against.
+
 opts = { 
-  marketplace_ids: ['marketplace_ids_example'] # Array<String> | The identifier for the marketplace in which you want to determine eligibility. Required only when program=INBOUND.
+  marketplace_ids: ["marketplace_ids_example"] # Array<String> | The identifier for the marketplace in which you want to determine eligibility. Required only when program=INBOUND.
 }
 
 begin
@@ -51,8 +55,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, ItemEligibilityPreview
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 

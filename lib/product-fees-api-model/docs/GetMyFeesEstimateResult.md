@@ -3,5 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**fees_estimate_result** | [**FeesEstimateResult**](FeesEstimateResult.md) |  | [optional] 
+**fees_estimate_result** | [**FeesEstimateResult**](FeesEstimateResult.md) | The item&#39;s estimated fees. | [optional] 
+
 

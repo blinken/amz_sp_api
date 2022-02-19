@@ -12,3 +12,4 @@ Name | Type | Description | Notes
 **country_code** | **String** | The country code in two-character ISO 3166-1 alpha-2 format. | 
 **postal_code** | **String** | The postal code.  If postal codes are used in your marketplace, we recommended that you include one with your request. This helps Amazon select the most appropriate Amazon fulfillment center for the inbound shipment plan. | 
 
+

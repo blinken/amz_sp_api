@@ -10,3 +10,4 @@ Name | Type | Description | Notes
 **sidebar_image_text_block** | [**StandardImageTextBlock**](StandardImageTextBlock.md) |  | [optional] 
 **sidebar_list_block** | [**StandardTextListBlock**](StandardTextListBlock.md) |  | [optional] 
 
+

@@ -10,3 +10,4 @@ Name | Type | Description | Notes
 **image_url** | **String** | The default image for the ASIN in the Amazon catalog. | [optional] 
 **content_reference_key_set** | [**ContentReferenceKeySet**](ContentReferenceKeySet.md) |  | [optional] 
 
+

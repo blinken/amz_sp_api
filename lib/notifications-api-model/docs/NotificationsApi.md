@@ -1,6 +1,6 @@
 # AmzSpApi::NotificationsApiModel::NotificationsApi
 
-All URIs are relative to *https://sellingpartnerapi-na.amazon.com/*
+All URIs are relative to *https://sellingpartnerapi-na.amazon.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**get_destinations**](NotificationsApi.md#get_destinations) | **GET** /notifications/v1/destinations | 
 [**get_subscription**](NotificationsApi.md#get_subscription) | **GET** /notifications/v1/subscriptions/{notificationType} | 
 [**get_subscription_by_id**](NotificationsApi.md#get_subscription_by_id) | **GET** /notifications/v1/subscriptions/{notificationType}/{subscriptionId} | 
+
 
 # **create_destination**
 > CreateDestinationResponse create_destination(body)
@@ -26,6 +27,7 @@ Creates a destination resource to receive notifications. The createDestination A
 require 'notifications-api-model'
 
 api_instance = AmzSpApi::NotificationsApiModel::NotificationsApi.new
+
 body = AmzSpApi::NotificationsApiModel::CreateDestinationRequest.new # CreateDestinationRequest | 
 
 
@@ -54,12 +56,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json, Successful Response
+ - **Accept**: application/json
 
 
 
 # **create_subscription**
-> CreateSubscriptionResponse create_subscription(bodynotification_type)
+> CreateSubscriptionResponse create_subscription(body, notification_type)
 
 
 
@@ -71,12 +73,14 @@ Creates a subscription for the specified notification type to be delivered to th
 require 'notifications-api-model'
 
 api_instance = AmzSpApi::NotificationsApiModel::NotificationsApi.new
+
 body = AmzSpApi::NotificationsApiModel::CreateSubscriptionRequest.new # CreateSubscriptionRequest | 
-notification_type = 'notification_type_example' # String | The type of notification to which you want to subscribe.   For more information about notification types, see the Notifications API Use Case Guide.
+
+notification_type = "notification_type_example" # String | The type of notification.   For more information about notification types, see [the Notifications API Use Case Guide](https://github.com/amzn/selling-partner-api-docs/blob/main/guides/en-US/use-case-guides/notifications-api-use-case-guide/notifications-use-case-guide-v1.md).
 
 
 begin
-  result = api_instance.create_subscription(bodynotification_type)
+  result = api_instance.create_subscription(body, notification_type)
   p result
 rescue AmzSpApi::NotificationsApiModel::ApiError => e
   puts "Exception when calling NotificationsApi->create_subscription: #{e}"
@@ -88,7 +92,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**CreateSubscriptionRequest**](CreateSubscriptionRequest.md)|  | 
- **notification_type** | **String**| The type of notification to which you want to subscribe.   For more information about notification types, see the Notifications API Use Case Guide. | 
+ **notification_type** | **String**| The type of notification.   For more information about notification types, see [the Notifications API Use Case Guide](https://github.com/amzn/selling-partner-api-docs/blob/main/guides/en-US/use-case-guides/notifications-api-use-case-guide/notifications-use-case-guide-v1.md). | 
 
 ### Return type
 
@@ -101,7 +105,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json, Successful Response
+ - **Accept**: application/json
 
 
 
@@ -118,7 +122,8 @@ Deletes the destination that you specify. The deleteDestination API is grantless
 require 'notifications-api-model'
 
 api_instance = AmzSpApi::NotificationsApiModel::NotificationsApi.new
-destination_id = 'destination_id_example' # String | The identifier for the destination that you want to delete.
+
+destination_id = "destination_id_example" # String | The identifier for the destination that you want to delete.
 
 
 begin
@@ -145,8 +150,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, Successful Response
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
@@ -163,8 +168,10 @@ Deletes the subscription indicated by the subscription identifier and notificati
 require 'notifications-api-model'
 
 api_instance = AmzSpApi::NotificationsApiModel::NotificationsApi.new
-subscription_id = 'subscription_id_example' # String | The identifier for the subscription that you want to delete.
-notification_type = 'notification_type_example' # String | The type of notification to which you want to subscribe.   For more information about notification types, see the Notifications API Use Case Guide.
+
+subscription_id = "subscription_id_example" # String | The identifier for the subscription that you want to delete.
+
+notification_type = "notification_type_example" # String | The type of notification.   For more information about notification types, see [the Notifications API Use Case Guide](https://github.com/amzn/selling-partner-api-docs/blob/main/guides/en-US/use-case-guides/notifications-api-use-case-guide/notifications-use-case-guide-v1.md).
 
 
 begin
@@ -180,7 +187,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subscription_id** | **String**| The identifier for the subscription that you want to delete. | 
- **notification_type** | **String**| The type of notification to which you want to subscribe.   For more information about notification types, see the Notifications API Use Case Guide. | 
+ **notification_type** | **String**| The type of notification.   For more information about notification types, see [the Notifications API Use Case Guide](https://github.com/amzn/selling-partner-api-docs/blob/main/guides/en-US/use-case-guides/notifications-api-use-case-guide/notifications-use-case-guide-v1.md). | 
 
 ### Return type
 
@@ -192,8 +199,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, Successful Operation Response
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
@@ -210,7 +217,8 @@ Returns information about the destination that you specify. The getDestination A
 require 'notifications-api-model'
 
 api_instance = AmzSpApi::NotificationsApiModel::NotificationsApi.new
-destination_id = 'destination_id_example' # String | The identifier generated when you created the destination.
+
+destination_id = "destination_id_example" # String | The identifier generated when you created the destination.
 
 
 begin
@@ -237,8 +245,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, Successful Response
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
@@ -277,8 +285,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, Successful Response
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
@@ -295,7 +303,8 @@ Returns information about subscriptions of the specified notification type. You 
 require 'notifications-api-model'
 
 api_instance = AmzSpApi::NotificationsApiModel::NotificationsApi.new
-notification_type = 'notification_type_example' # String | The type of notification to which you want to subscribe.   For more information about notification types, see the Notifications API Use Case Guide.
+
+notification_type = "notification_type_example" # String | The type of notification.   For more information about notification types, see [the Notifications API Use Case Guide](https://github.com/amzn/selling-partner-api-docs/blob/main/guides/en-US/use-case-guides/notifications-api-use-case-guide/notifications-use-case-guide-v1.md).
 
 
 begin
@@ -310,7 +319,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **notification_type** | **String**| The type of notification to which you want to subscribe.   For more information about notification types, see the Notifications API Use Case Guide. | 
+ **notification_type** | **String**| The type of notification.   For more information about notification types, see [the Notifications API Use Case Guide](https://github.com/amzn/selling-partner-api-docs/blob/main/guides/en-US/use-case-guides/notifications-api-use-case-guide/notifications-use-case-guide-v1.md). | 
 
 ### Return type
 
@@ -322,8 +331,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, Successful Response
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
@@ -340,8 +349,10 @@ Returns information about a subscription for the specified notification type. Th
 require 'notifications-api-model'
 
 api_instance = AmzSpApi::NotificationsApiModel::NotificationsApi.new
-subscription_id = 'subscription_id_example' # String | The identifier for the subscription that you want to get.
-notification_type = 'notification_type_example' # String | The type of notification to which you want to subscribe.   For more information about notification types, see the Notifications API Use Case Guide.
+
+subscription_id = "subscription_id_example" # String | The identifier for the subscription that you want to get.
+
+notification_type = "notification_type_example" # String | The type of notification.   For more information about notification types, see [the Notifications API Use Case Guide](https://github.com/amzn/selling-partner-api-docs/blob/main/guides/en-US/use-case-guides/notifications-api-use-case-guide/notifications-use-case-guide-v1.md).
 
 
 begin
@@ -357,7 +368,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subscription_id** | **String**| The identifier for the subscription that you want to get. | 
- **notification_type** | **String**| The type of notification to which you want to subscribe.   For more information about notification types, see the Notifications API Use Case Guide. | 
+ **notification_type** | **String**| The type of notification.   For more information about notification types, see [the Notifications API Use Case Guide](https://github.com/amzn/selling-partner-api-docs/blob/main/guides/en-US/use-case-guides/notifications-api-use-case-guide/notifications-use-case-guide-v1.md). | 
 
 ### Return type
 
@@ -369,8 +380,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, Successful Response
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 

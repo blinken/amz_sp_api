@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **url** | **String** | The image URL attribute of the item. | [optional] 
-**height** | [**DecimalWithUnits**](DecimalWithUnits.md) |  | [optional] 
-**width** | [**DecimalWithUnits**](DecimalWithUnits.md) |  | [optional] 
+**height** | [**DecimalWithUnits**](DecimalWithUnits.md) | The image height attribute of the item. | [optional] 
+**width** | [**DecimalWithUnits**](DecimalWithUnits.md) | The image width attribute of the item. | [optional] 
+
 

@@ -1,10 +1,11 @@
 # AmzSpApi::SellersApiModel::SellersApi
 
-All URIs are relative to *https://sellingpartnerapi-na.amazon.com/*
+All URIs are relative to *https://sellingpartnerapi-na.amazon.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_marketplace_participations**](SellersApi.md#get_marketplace_participations) | **GET** /sellers/v1/marketplaceParticipations | 
+
 
 # **get_marketplace_participations**
 > GetMarketplaceParticipationsResponse get_marketplace_participations
@@ -41,8 +42,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, payload
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 

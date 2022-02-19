@@ -1,6 +1,6 @@
 # AmzSpApi::MessagingApiModel::MessagingApi
 
-All URIs are relative to *https://sellingpartnerapi-na.amazon.com/*
+All URIs are relative to *https://sellingpartnerapi-na.amazon.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -17,8 +17,9 @@ Method | HTTP request | Description
 [**get_attributes**](MessagingApi.md#get_attributes) | **GET** /messaging/v1/orders/{amazonOrderId}/attributes | 
 [**get_messaging_actions_for_order**](MessagingApi.md#get_messaging_actions_for_order) | **GET** /messaging/v1/orders/{amazonOrderId} | 
 
+
 # **confirm_customization_details**
-> CreateConfirmCustomizationDetailsResponse confirm_customization_details(bodymarketplace_idsamazon_order_id)
+> CreateConfirmCustomizationDetailsResponse confirm_customization_details(amazon_order_id, marketplace_ids, body)
 
 
 
@@ -30,13 +31,16 @@ Sends a message asking a buyer to provide or verify customization details such a
 require 'messaging-api-model'
 
 api_instance = AmzSpApi::MessagingApiModel::MessagingApi.new
+
+amazon_order_id = "amazon_order_id_example" # String | An Amazon order identifier. This specifies the order for which a message is sent.
+
+marketplace_ids = ["marketplace_ids_example"] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
+
 body = AmzSpApi::MessagingApiModel::CreateConfirmCustomizationDetailsRequest.new # CreateConfirmCustomizationDetailsRequest | 
-marketplace_ids = ['marketplace_ids_example'] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
-amazon_order_id = 'amazon_order_id_example' # String | An Amazon order identifier. This specifies the order for which a message is sent.
 
 
 begin
-  result = api_instance.confirm_customization_details(bodymarketplace_idsamazon_order_id)
+  result = api_instance.confirm_customization_details(amazon_order_id, marketplace_ids, body)
   p result
 rescue AmzSpApi::MessagingApiModel::ApiError => e
   puts "Exception when calling MessagingApi->confirm_customization_details: #{e}"
@@ -47,9 +51,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateConfirmCustomizationDetailsRequest**](CreateConfirmCustomizationDetailsRequest.md)|  | 
- **marketplace_ids** | [**Array&lt;String&gt;**](String.md)| A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. | 
  **amazon_order_id** | **String**| An Amazon order identifier. This specifies the order for which a message is sent. | 
+ **marketplace_ids** | [**Array&lt;String&gt;**](String.md)| A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. | 
+ **body** | [**CreateConfirmCustomizationDetailsRequest**](CreateConfirmCustomizationDetailsRequest.md)|  | 
 
 ### Return type
 
@@ -67,7 +71,7 @@ No authorization required
 
 
 # **create_amazon_motors**
-> CreateAmazonMotorsResponse create_amazon_motors(bodymarketplace_idsamazon_order_id)
+> CreateAmazonMotorsResponse create_amazon_motors(amazon_order_id, marketplace_ids, body)
 
 
 
@@ -79,13 +83,16 @@ Sends a message to a buyer to provide details about an Amazon Motors order. This
 require 'messaging-api-model'
 
 api_instance = AmzSpApi::MessagingApiModel::MessagingApi.new
+
+amazon_order_id = "amazon_order_id_example" # String | An Amazon order identifier. This specifies the order for which a message is sent.
+
+marketplace_ids = ["marketplace_ids_example"] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
+
 body = AmzSpApi::MessagingApiModel::CreateAmazonMotorsRequest.new # CreateAmazonMotorsRequest | 
-marketplace_ids = ['marketplace_ids_example'] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
-amazon_order_id = 'amazon_order_id_example' # String | An Amazon order identifier. This specifies the order for which a message is sent.
 
 
 begin
-  result = api_instance.create_amazon_motors(bodymarketplace_idsamazon_order_id)
+  result = api_instance.create_amazon_motors(amazon_order_id, marketplace_ids, body)
   p result
 rescue AmzSpApi::MessagingApiModel::ApiError => e
   puts "Exception when calling MessagingApi->create_amazon_motors: #{e}"
@@ -96,9 +103,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateAmazonMotorsRequest**](CreateAmazonMotorsRequest.md)|  | 
- **marketplace_ids** | [**Array&lt;String&gt;**](String.md)| A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. | 
  **amazon_order_id** | **String**| An Amazon order identifier. This specifies the order for which a message is sent. | 
+ **marketplace_ids** | [**Array&lt;String&gt;**](String.md)| A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. | 
+ **body** | [**CreateAmazonMotorsRequest**](CreateAmazonMotorsRequest.md)|  | 
 
 ### Return type
 
@@ -116,7 +123,7 @@ No authorization required
 
 
 # **create_confirm_delivery_details**
-> CreateConfirmDeliveryDetailsResponse create_confirm_delivery_details(bodymarketplace_idsamazon_order_id)
+> CreateConfirmDeliveryDetailsResponse create_confirm_delivery_details(amazon_order_id, marketplace_ids, body)
 
 
 
@@ -128,13 +135,16 @@ Sends a message to a buyer to arrange a delivery or to confirm contact informati
 require 'messaging-api-model'
 
 api_instance = AmzSpApi::MessagingApiModel::MessagingApi.new
+
+amazon_order_id = "amazon_order_id_example" # String | An Amazon order identifier. This specifies the order for which a message is sent.
+
+marketplace_ids = ["marketplace_ids_example"] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
+
 body = AmzSpApi::MessagingApiModel::CreateConfirmDeliveryDetailsRequest.new # CreateConfirmDeliveryDetailsRequest | 
-marketplace_ids = ['marketplace_ids_example'] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
-amazon_order_id = 'amazon_order_id_example' # String | An Amazon order identifier. This specifies the order for which a message is sent.
 
 
 begin
-  result = api_instance.create_confirm_delivery_details(bodymarketplace_idsamazon_order_id)
+  result = api_instance.create_confirm_delivery_details(amazon_order_id, marketplace_ids, body)
   p result
 rescue AmzSpApi::MessagingApiModel::ApiError => e
   puts "Exception when calling MessagingApi->create_confirm_delivery_details: #{e}"
@@ -145,9 +155,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateConfirmDeliveryDetailsRequest**](CreateConfirmDeliveryDetailsRequest.md)|  | 
- **marketplace_ids** | [**Array&lt;String&gt;**](String.md)| A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. | 
  **amazon_order_id** | **String**| An Amazon order identifier. This specifies the order for which a message is sent. | 
+ **marketplace_ids** | [**Array&lt;String&gt;**](String.md)| A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. | 
+ **body** | [**CreateConfirmDeliveryDetailsRequest**](CreateConfirmDeliveryDetailsRequest.md)|  | 
 
 ### Return type
 
@@ -165,7 +175,7 @@ No authorization required
 
 
 # **create_confirm_order_details**
-> CreateConfirmOrderDetailsResponse create_confirm_order_details(bodymarketplace_idsamazon_order_id)
+> CreateConfirmOrderDetailsResponse create_confirm_order_details(amazon_order_id, marketplace_ids, body)
 
 
 
@@ -177,13 +187,16 @@ Sends a message to ask a buyer an order-related question prior to shipping their
 require 'messaging-api-model'
 
 api_instance = AmzSpApi::MessagingApiModel::MessagingApi.new
+
+amazon_order_id = "amazon_order_id_example" # String | An Amazon order identifier. This specifies the order for which a message is sent.
+
+marketplace_ids = ["marketplace_ids_example"] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
+
 body = AmzSpApi::MessagingApiModel::CreateConfirmOrderDetailsRequest.new # CreateConfirmOrderDetailsRequest | 
-marketplace_ids = ['marketplace_ids_example'] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
-amazon_order_id = 'amazon_order_id_example' # String | An Amazon order identifier. This specifies the order for which a message is sent.
 
 
 begin
-  result = api_instance.create_confirm_order_details(bodymarketplace_idsamazon_order_id)
+  result = api_instance.create_confirm_order_details(amazon_order_id, marketplace_ids, body)
   p result
 rescue AmzSpApi::MessagingApiModel::ApiError => e
   puts "Exception when calling MessagingApi->create_confirm_order_details: #{e}"
@@ -194,9 +207,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateConfirmOrderDetailsRequest**](CreateConfirmOrderDetailsRequest.md)|  | 
- **marketplace_ids** | [**Array&lt;String&gt;**](String.md)| A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. | 
  **amazon_order_id** | **String**| An Amazon order identifier. This specifies the order for which a message is sent. | 
+ **marketplace_ids** | [**Array&lt;String&gt;**](String.md)| A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. | 
+ **body** | [**CreateConfirmOrderDetailsRequest**](CreateConfirmOrderDetailsRequest.md)|  | 
 
 ### Return type
 
@@ -214,7 +227,7 @@ No authorization required
 
 
 # **create_confirm_service_details**
-> CreateConfirmServiceDetailsResponse create_confirm_service_details(bodymarketplace_idsamazon_order_id)
+> CreateConfirmServiceDetailsResponse create_confirm_service_details(amazon_order_id, marketplace_ids, body)
 
 
 
@@ -226,13 +239,16 @@ Sends a message to contact a Home Service customer to arrange a service call or 
 require 'messaging-api-model'
 
 api_instance = AmzSpApi::MessagingApiModel::MessagingApi.new
+
+amazon_order_id = "amazon_order_id_example" # String | An Amazon order identifier. This specifies the order for which a message is sent.
+
+marketplace_ids = ["marketplace_ids_example"] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
+
 body = AmzSpApi::MessagingApiModel::CreateConfirmServiceDetailsRequest.new # CreateConfirmServiceDetailsRequest | 
-marketplace_ids = ['marketplace_ids_example'] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
-amazon_order_id = 'amazon_order_id_example' # String | An Amazon order identifier. This specifies the order for which a message is sent.
 
 
 begin
-  result = api_instance.create_confirm_service_details(bodymarketplace_idsamazon_order_id)
+  result = api_instance.create_confirm_service_details(amazon_order_id, marketplace_ids, body)
   p result
 rescue AmzSpApi::MessagingApiModel::ApiError => e
   puts "Exception when calling MessagingApi->create_confirm_service_details: #{e}"
@@ -243,9 +259,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateConfirmServiceDetailsRequest**](CreateConfirmServiceDetailsRequest.md)|  | 
- **marketplace_ids** | [**Array&lt;String&gt;**](String.md)| A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. | 
  **amazon_order_id** | **String**| An Amazon order identifier. This specifies the order for which a message is sent. | 
+ **marketplace_ids** | [**Array&lt;String&gt;**](String.md)| A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. | 
+ **body** | [**CreateConfirmServiceDetailsRequest**](CreateConfirmServiceDetailsRequest.md)|  | 
 
 ### Return type
 
@@ -263,7 +279,7 @@ No authorization required
 
 
 # **create_digital_access_key**
-> CreateDigitalAccessKeyResponse create_digital_access_key(bodymarketplace_idsamazon_order_id)
+> CreateDigitalAccessKeyResponse create_digital_access_key(amazon_order_id, marketplace_ids, body)
 
 
 
@@ -275,13 +291,16 @@ Sends a message to a buyer to share a digital access key needed to utilize digit
 require 'messaging-api-model'
 
 api_instance = AmzSpApi::MessagingApiModel::MessagingApi.new
+
+amazon_order_id = "amazon_order_id_example" # String | An Amazon order identifier. This specifies the order for which a message is sent.
+
+marketplace_ids = ["marketplace_ids_example"] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
+
 body = AmzSpApi::MessagingApiModel::CreateDigitalAccessKeyRequest.new # CreateDigitalAccessKeyRequest | 
-marketplace_ids = ['marketplace_ids_example'] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
-amazon_order_id = 'amazon_order_id_example' # String | An Amazon order identifier. This specifies the order for which a message is sent.
 
 
 begin
-  result = api_instance.create_digital_access_key(bodymarketplace_idsamazon_order_id)
+  result = api_instance.create_digital_access_key(amazon_order_id, marketplace_ids, body)
   p result
 rescue AmzSpApi::MessagingApiModel::ApiError => e
   puts "Exception when calling MessagingApi->create_digital_access_key: #{e}"
@@ -292,9 +311,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateDigitalAccessKeyRequest**](CreateDigitalAccessKeyRequest.md)|  | 
- **marketplace_ids** | [**Array&lt;String&gt;**](String.md)| A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. | 
  **amazon_order_id** | **String**| An Amazon order identifier. This specifies the order for which a message is sent. | 
+ **marketplace_ids** | [**Array&lt;String&gt;**](String.md)| A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. | 
+ **body** | [**CreateDigitalAccessKeyRequest**](CreateDigitalAccessKeyRequest.md)|  | 
 
 ### Return type
 
@@ -312,7 +331,7 @@ No authorization required
 
 
 # **create_legal_disclosure**
-> CreateLegalDisclosureResponse create_legal_disclosure(bodymarketplace_idsamazon_order_id)
+> CreateLegalDisclosureResponse create_legal_disclosure(amazon_order_id, marketplace_ids, body)
 
 
 
@@ -324,13 +343,16 @@ Sends a critical message that contains documents that a seller is legally obliga
 require 'messaging-api-model'
 
 api_instance = AmzSpApi::MessagingApiModel::MessagingApi.new
+
+amazon_order_id = "amazon_order_id_example" # String | An Amazon order identifier. This specifies the order for which a message is sent.
+
+marketplace_ids = ["marketplace_ids_example"] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
+
 body = AmzSpApi::MessagingApiModel::CreateLegalDisclosureRequest.new # CreateLegalDisclosureRequest | 
-marketplace_ids = ['marketplace_ids_example'] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
-amazon_order_id = 'amazon_order_id_example' # String | An Amazon order identifier. This specifies the order for which a message is sent.
 
 
 begin
-  result = api_instance.create_legal_disclosure(bodymarketplace_idsamazon_order_id)
+  result = api_instance.create_legal_disclosure(amazon_order_id, marketplace_ids, body)
   p result
 rescue AmzSpApi::MessagingApiModel::ApiError => e
   puts "Exception when calling MessagingApi->create_legal_disclosure: #{e}"
@@ -341,9 +363,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateLegalDisclosureRequest**](CreateLegalDisclosureRequest.md)|  | 
- **marketplace_ids** | [**Array&lt;String&gt;**](String.md)| A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. | 
  **amazon_order_id** | **String**| An Amazon order identifier. This specifies the order for which a message is sent. | 
+ **marketplace_ids** | [**Array&lt;String&gt;**](String.md)| A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. | 
+ **body** | [**CreateLegalDisclosureRequest**](CreateLegalDisclosureRequest.md)|  | 
 
 ### Return type
 
@@ -373,8 +395,10 @@ Sends a non-critical message that asks a buyer to remove their negative feedback
 require 'messaging-api-model'
 
 api_instance = AmzSpApi::MessagingApiModel::MessagingApi.new
-amazon_order_id = 'amazon_order_id_example' # String | An Amazon order identifier. This specifies the order for which a message is sent.
-marketplace_ids = ['marketplace_ids_example'] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
+
+amazon_order_id = "amazon_order_id_example" # String | An Amazon order identifier. This specifies the order for which a message is sent.
+
+marketplace_ids = ["marketplace_ids_example"] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
 
 
 begin
@@ -402,13 +426,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/hal+json
 
 
 
 # **create_unexpected_problem**
-> CreateUnexpectedProblemResponse create_unexpected_problem(bodymarketplace_idsamazon_order_id)
+> CreateUnexpectedProblemResponse create_unexpected_problem(amazon_order_id, marketplace_ids, body)
 
 
 
@@ -420,13 +444,16 @@ Sends a critical message to a buyer that an unexpected problem was encountered a
 require 'messaging-api-model'
 
 api_instance = AmzSpApi::MessagingApiModel::MessagingApi.new
+
+amazon_order_id = "amazon_order_id_example" # String | An Amazon order identifier. This specifies the order for which a message is sent.
+
+marketplace_ids = ["marketplace_ids_example"] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
+
 body = AmzSpApi::MessagingApiModel::CreateUnexpectedProblemRequest.new # CreateUnexpectedProblemRequest | 
-marketplace_ids = ['marketplace_ids_example'] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
-amazon_order_id = 'amazon_order_id_example' # String | An Amazon order identifier. This specifies the order for which a message is sent.
 
 
 begin
-  result = api_instance.create_unexpected_problem(bodymarketplace_idsamazon_order_id)
+  result = api_instance.create_unexpected_problem(amazon_order_id, marketplace_ids, body)
   p result
 rescue AmzSpApi::MessagingApiModel::ApiError => e
   puts "Exception when calling MessagingApi->create_unexpected_problem: #{e}"
@@ -437,9 +464,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateUnexpectedProblemRequest**](CreateUnexpectedProblemRequest.md)|  | 
- **marketplace_ids** | [**Array&lt;String&gt;**](String.md)| A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. | 
  **amazon_order_id** | **String**| An Amazon order identifier. This specifies the order for which a message is sent. | 
+ **marketplace_ids** | [**Array&lt;String&gt;**](String.md)| A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. | 
+ **body** | [**CreateUnexpectedProblemRequest**](CreateUnexpectedProblemRequest.md)|  | 
 
 ### Return type
 
@@ -457,7 +484,7 @@ No authorization required
 
 
 # **create_warranty**
-> CreateWarrantyResponse create_warranty(bodymarketplace_idsamazon_order_id)
+> CreateWarrantyResponse create_warranty(amazon_order_id, marketplace_ids, body)
 
 
 
@@ -469,13 +496,16 @@ Sends a message to a buyer to provide details about warranty information on a pu
 require 'messaging-api-model'
 
 api_instance = AmzSpApi::MessagingApiModel::MessagingApi.new
+
+amazon_order_id = "amazon_order_id_example" # String | An Amazon order identifier. This specifies the order for which a message is sent.
+
+marketplace_ids = ["marketplace_ids_example"] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
+
 body = AmzSpApi::MessagingApiModel::CreateWarrantyRequest.new # CreateWarrantyRequest | 
-marketplace_ids = ['marketplace_ids_example'] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
-amazon_order_id = 'amazon_order_id_example' # String | An Amazon order identifier. This specifies the order for which a message is sent.
 
 
 begin
-  result = api_instance.create_warranty(bodymarketplace_idsamazon_order_id)
+  result = api_instance.create_warranty(amazon_order_id, marketplace_ids, body)
   p result
 rescue AmzSpApi::MessagingApiModel::ApiError => e
   puts "Exception when calling MessagingApi->create_warranty: #{e}"
@@ -486,9 +516,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateWarrantyRequest**](CreateWarrantyRequest.md)|  | 
- **marketplace_ids** | [**Array&lt;String&gt;**](String.md)| A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. | 
  **amazon_order_id** | **String**| An Amazon order identifier. This specifies the order for which a message is sent. | 
+ **marketplace_ids** | [**Array&lt;String&gt;**](String.md)| A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. | 
+ **body** | [**CreateWarrantyRequest**](CreateWarrantyRequest.md)|  | 
 
 ### Return type
 
@@ -518,8 +548,10 @@ Returns a response containing attributes related to an order. This includes buye
 require 'messaging-api-model'
 
 api_instance = AmzSpApi::MessagingApiModel::MessagingApi.new
-amazon_order_id = 'amazon_order_id_example' # String | An Amazon order identifier. This specifies the order for which a message is sent.
-marketplace_ids = ['marketplace_ids_example'] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
+
+amazon_order_id = "amazon_order_id_example" # String | An Amazon order identifier. This specifies the order for which a message is sent.
+
+marketplace_ids = ["marketplace_ids_example"] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
 
 
 begin
@@ -547,7 +579,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/hal+json
 
 
@@ -565,8 +597,10 @@ Returns a list of message types that are available for an order that you specify
 require 'messaging-api-model'
 
 api_instance = AmzSpApi::MessagingApiModel::MessagingApi.new
-amazon_order_id = 'amazon_order_id_example' # String | An Amazon order identifier. This specifies the order for which you want a list of available message types.
-marketplace_ids = ['marketplace_ids_example'] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
+
+amazon_order_id = "amazon_order_id_example" # String | An Amazon order identifier. This specifies the order for which you want a list of available message types.
+
+marketplace_ids = ["marketplace_ids_example"] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
 
 
 begin
@@ -594,7 +628,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/hal+json
 
 

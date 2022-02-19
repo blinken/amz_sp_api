@@ -8,3 +8,4 @@ Name | Type | Description | Notes
 **carrier_will_pick_up** | [**CarrierWillPickUpOption**](CarrierWillPickUpOption.md) |  | [optional] 
 **delivery_experience** | [**DeliveryExperienceOption**](DeliveryExperienceOption.md) |  | [optional] 
 
+

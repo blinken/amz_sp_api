@@ -10,3 +10,4 @@ Name | Type | Description | Notes
 **sales_rankings** | [**SalesRankList**](SalesRankList.md) |  | [optional] 
 **offers** | [**OffersList**](OffersList.md) |  | [optional] 
 
+

@@ -4,5 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **carrier_will_pick_up_option** | [**CarrierWillPickUpOption**](CarrierWillPickUpOption.md) |  | 
-**charge** | [**CurrencyAmount**](CurrencyAmount.md) |  | 
+**charge** | [**CurrencyAmount**](CurrencyAmount.md) | The fee charged. | 
+
 

@@ -9,12 +9,13 @@ Name | Type | Description | Notes
 **carrier_code** | **String** | The name of the carrier. | [optional] 
 **carrier_phone_number** | **String** | The phone number of the carrier. | [optional] 
 **carrier_url** | **String** | The URL of the carrier’s website. | [optional] 
-**ship_date** | [**Timestamp**](Timestamp.md) |  | [optional] 
-**estimated_arrival_date** | [**Timestamp**](Timestamp.md) |  | [optional] 
-**ship_to_address** | [**TrackingAddress**](TrackingAddress.md) |  | [optional] 
+**ship_date** | [**Timestamp**](Timestamp.md) | The shipping date for the package. | [optional] 
+**estimated_arrival_date** | [**Timestamp**](Timestamp.md) | The estimated arrival date. | [optional] 
+**ship_to_address** | [**TrackingAddress**](TrackingAddress.md) | The destination city for the package. | [optional] 
 **current_status** | [**CurrentStatus**](CurrentStatus.md) |  | [optional] 
 **current_status_description** | **String** | Description corresponding to the CurrentStatus value. | [optional] 
 **signed_for_by** | **String** | The name of the person who signed for the package. | [optional] 
 **additional_location_info** | [**AdditionalLocationInfo**](AdditionalLocationInfo.md) |  | [optional] 
 **tracking_events** | [**TrackingEventList**](TrackingEventList.md) |  | [optional] 
+
 

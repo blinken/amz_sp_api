@@ -7,3 +7,4 @@ Name | Type | Description | Notes
 **url** | **String** | The URL for the upload destination. | [optional] 
 **headers** | **Object** | The headers to include in the upload request. | [optional] 
 
+

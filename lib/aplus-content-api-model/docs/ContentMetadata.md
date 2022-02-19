@@ -9,3 +9,4 @@ Name | Type | Description | Notes
 **badge_set** | [**ContentBadgeSet**](ContentBadgeSet.md) |  | 
 **update_time** | **DateTime** | The approximate age of the A+ Content document and metadata. | 
 
+

@@ -8,3 +8,4 @@ Name | Type | Description | Notes
 **quantity** | **Integer** | The number of service jobs. | [optional] 
 **required_skills** | **Array&lt;String&gt;** | A list of skills required to perform the job. | [optional] 
 
+

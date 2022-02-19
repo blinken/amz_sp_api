@@ -8,3 +8,4 @@ Name | Type | Description | Notes
 **asin_inbound_guidance_list** | [**ASINInboundGuidanceList**](ASINInboundGuidanceList.md) |  | [optional] 
 **invalid_asin_list** | [**InvalidASINList**](InvalidASINList.md) |  | [optional] 
 
+

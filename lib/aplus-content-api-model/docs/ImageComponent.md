@@ -7,3 +7,4 @@ Name | Type | Description | Notes
 **image_crop_specification** | [**ImageCropSpecification**](ImageCropSpecification.md) |  | 
 **alt_text** | **String** | The alternative text for the image. | 
 
+

@@ -1,11 +1,12 @@
 # AmzSpApi::SolicitationsApiModel::SolicitationsApi
 
-All URIs are relative to *https://sellingpartnerapi-na.amazon.com/*
+All URIs are relative to *https://sellingpartnerapi-na.amazon.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_product_review_and_seller_feedback_solicitation**](SolicitationsApi.md#create_product_review_and_seller_feedback_solicitation) | **POST** /solicitations/v1/orders/{amazonOrderId}/solicitations/productReviewAndSellerFeedback | 
 [**get_solicitation_actions_for_order**](SolicitationsApi.md#get_solicitation_actions_for_order) | **GET** /solicitations/v1/orders/{amazonOrderId} | 
+
 
 # **create_product_review_and_seller_feedback_solicitation**
 > CreateProductReviewAndSellerFeedbackSolicitationResponse create_product_review_and_seller_feedback_solicitation(amazon_order_id, marketplace_ids)
@@ -20,8 +21,10 @@ Sends a solicitation to a buyer asking for seller feedback and a product review 
 require 'solicitations-api-model'
 
 api_instance = AmzSpApi::SolicitationsApiModel::SolicitationsApi.new
-amazon_order_id = 'amazon_order_id_example' # String | An Amazon order identifier. This specifies the order for which a solicitation is sent.
-marketplace_ids = ['marketplace_ids_example'] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
+
+amazon_order_id = "amazon_order_id_example" # String | An Amazon order identifier. This specifies the order for which a solicitation is sent.
+
+marketplace_ids = ["marketplace_ids_example"] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
 
 
 begin
@@ -49,7 +52,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/hal+json
 
 
@@ -67,8 +70,10 @@ Returns a list of solicitation types that are available for an order that you sp
 require 'solicitations-api-model'
 
 api_instance = AmzSpApi::SolicitationsApiModel::SolicitationsApi.new
-amazon_order_id = 'amazon_order_id_example' # String | An Amazon order identifier. This specifies the order for which you want a list of available solicitation types.
-marketplace_ids = ['marketplace_ids_example'] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
+
+amazon_order_id = "amazon_order_id_example" # String | An Amazon order identifier. This specifies the order for which you want a list of available solicitation types.
+
+marketplace_ids = ["marketplace_ids_example"] # Array<String> | A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified.
 
 
 begin
@@ -96,7 +101,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/hal+json
 
 

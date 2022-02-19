@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **item_weight** | [**Weight**](Weight.md) |  | [optional] 
 **item_description** | [**ItemDescription**](ItemDescription.md) |  | [optional] 
 **transparency_code_list** | [**TransparencyCodeList**](TransparencyCodeList.md) |  | [optional] 
-**item_level_seller_inputs_list** | [**AdditionalSellerInputsList**](AdditionalSellerInputsList.md) |  | [optional] 
+**item_level_seller_inputs_list** | [**AdditionalSellerInputsList**](AdditionalSellerInputsList.md) | A list of additional seller inputs required to ship this item using the chosen shipping service. | [optional] 
+
 

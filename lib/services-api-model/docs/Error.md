@@ -8,3 +8,4 @@ Name | Type | Description | Notes
 **details** | **String** | Additional details that can help the caller understand or fix the issue. | [optional] 
 **error_level** | **String** | The type of error. | [optional] 
 
+

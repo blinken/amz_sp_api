@@ -7,3 +7,4 @@ Name | Type | Description | Notes
 **file_type** | [**FileType**](FileType.md) |  | 
 **checksum** | **String** | An MD5 hash to validate the PDF document data, in the form of a Base64-encoded string. | 
 
+

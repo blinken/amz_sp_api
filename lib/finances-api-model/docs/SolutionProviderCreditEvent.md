@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **seller_store_name** | **String** | The store name where the payment event occurred. | [optional] 
 **provider_id** | **String** | The Amazon-defined identifier of the solution provider. | [optional] 
 **provider_store_name** | **String** | The store name where the payment event occurred. | [optional] 
-**transaction_amount** | [**Currency**](Currency.md) |  | [optional] 
-**transaction_creation_date** | **Date** |  | [optional] 
+**transaction_amount** | [**Currency**](Currency.md) | The amount of the credit. | [optional] 
+**transaction_creation_date** | **Date** | The date and time that the credit transaction was created, in ISO 8601 date time format. | [optional] 
+
 

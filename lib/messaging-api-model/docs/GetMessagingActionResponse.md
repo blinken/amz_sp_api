@@ -8,3 +8,4 @@ Name | Type | Description | Notes
 **payload** | [**MessagingAction**](MessagingAction.md) |  | [optional] 
 **errors** | [**ErrorList**](ErrorList.md) |  | [optional] 
 
+

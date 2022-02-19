@@ -4,5 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | The type of fee. | 
-**amount** | [**Money**](Money.md) |  | 
+**amount** | [**Money**](Money.md) | The amount of the fee. | 
+
 

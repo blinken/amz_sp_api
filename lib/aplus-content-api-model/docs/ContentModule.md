@@ -20,3 +20,4 @@ Name | Type | Description | Notes
 **standard_text** | [**StandardTextModule**](StandardTextModule.md) |  | [optional] 
 **standard_three_image_text** | [**StandardThreeImageTextModule**](StandardThreeImageTextModule.md) |  | [optional] 
 
+

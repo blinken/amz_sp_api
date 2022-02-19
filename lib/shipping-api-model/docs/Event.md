@@ -7,3 +7,4 @@ Name | Type | Description | Notes
 **event_time** | **DateTime** | The date and time of an event for a shipment. | 
 **location** | [**Location**](Location.md) |  | [optional] 
 
+

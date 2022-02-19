@@ -8,3 +8,4 @@ Name | Type | Description | Notes
 **payload** | [**SolicitationsAction**](SolicitationsAction.md) |  | [optional] 
 **errors** | [**ErrorList**](ErrorList.md) |  | [optional] 
 
+

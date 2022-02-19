@@ -8,3 +8,4 @@ Name | Type | Description | Notes
 **country_code** | [**CountryCode**](CountryCode.md) |  | [optional] 
 **postal_code** | [**PostalCode**](PostalCode.md) |  | [optional] 
 
+

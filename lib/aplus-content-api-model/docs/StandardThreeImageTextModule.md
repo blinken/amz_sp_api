@@ -8,3 +8,4 @@ Name | Type | Description | Notes
 **block2** | [**StandardImageTextBlock**](StandardImageTextBlock.md) |  | [optional] 
 **block3** | [**StandardImageTextBlock**](StandardImageTextBlock.md) |  | [optional] 
 
+

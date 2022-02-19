@@ -9,3 +9,4 @@ Name | Type | Description | Notes
 **is_eligible_for_program** | **BOOLEAN** | Indicates if the item is eligible for the program. | 
 **ineligibility_reason_list** | **Array&lt;String&gt;** | Potential Ineligibility Reason Codes. | [optional] 
 
+

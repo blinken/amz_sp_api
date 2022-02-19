@@ -8,3 +8,4 @@ Name | Type | Description | Notes
 **partnered_ltl_data** | [**PartneredLtlDataOutput**](PartneredLtlDataOutput.md) |  | [optional] 
 **non_partnered_ltl_data** | [**NonPartneredLtlDataOutput**](NonPartneredLtlDataOutput.md) |  | [optional] 
 
+

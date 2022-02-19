@@ -10,3 +10,4 @@ Name | Type | Description | Notes
 **prep_instruction_list** | [**PrepInstructionList**](PrepInstructionList.md) |  | [optional] 
 **amazon_prep_fees_details_list** | [**AmazonPrepFeesDetailsList**](AmazonPrepFeesDetailsList.md) |  | [optional] 
 
+

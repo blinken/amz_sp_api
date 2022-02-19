@@ -8,8 +8,9 @@ Name | Type | Description | Notes
 **quantity** | [**Quantity**](Quantity.md) |  | 
 **gift_message** | **String** | A message to the gift recipient, if applicable. | [optional] 
 **displayable_comment** | **String** | Item-specific text that displays in recipient-facing materials such as the outbound shipment packing slip. | [optional] 
-**fulfillment_network_sku** | **String** | Amazon&#x27;s fulfillment network SKU of the item. | [optional] 
-**per_unit_declared_value** | [**Money**](Money.md) |  | [optional] 
-**per_unit_price** | [**Money**](Money.md) |  | [optional] 
-**per_unit_tax** | [**Money**](Money.md) |  | [optional] 
+**fulfillment_network_sku** | **String** | Amazon&#39;s fulfillment network SKU of the item. | [optional] 
+**per_unit_declared_value** | [**Money**](Money.md) | The monetary value assigned by the seller to this item. | [optional] 
+**per_unit_price** | [**Money**](Money.md) | The amount to be collected from the recipient for this item in a COD (Cash On Delivery) order. | [optional] 
+**per_unit_tax** | [**Money**](Money.md) | The tax on the amount to be collected from the recipient for this item in a COD (Cash On Delivery) order. | [optional] 
+
 

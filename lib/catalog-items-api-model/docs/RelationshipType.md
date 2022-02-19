@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**identifiers** | [**IdentifierType**](IdentifierType.md) | The identifiers that uniquely identify the item that is related. | [optional] 
 **color** | **String** | The color variation of the item. | [optional] 
 **edition** | **String** | The edition variation of the item. | [optional] 
 **flavor** | **String** | The flavor variation of the item. | [optional] 
@@ -20,9 +21,10 @@ Name | Type | Description | Notes
 **scent** | **String** | The scent variation of an item. | [optional] 
 **size** | **String** | The size variation of an item. | [optional] 
 **size_per_pearl** | **String** | The size per pearl variation of an item. | [optional] 
-**golf_club_loft** | [**DecimalWithUnits**](DecimalWithUnits.md) |  | [optional] 
-**total_diamond_weight** | [**DecimalWithUnits**](DecimalWithUnits.md) |  | [optional] 
-**total_gem_weight** | [**DecimalWithUnits**](DecimalWithUnits.md) |  | [optional] 
+**golf_club_loft** | [**DecimalWithUnits**](DecimalWithUnits.md) | The golf club loft variation of an item. | [optional] 
+**total_diamond_weight** | [**DecimalWithUnits**](DecimalWithUnits.md) | The total diamond weight variation of an item. | [optional] 
+**total_gem_weight** | [**DecimalWithUnits**](DecimalWithUnits.md) | The total gem weight variation of an item. | [optional] 
 **package_quantity** | **Integer** | The package quantity variation of an item. | [optional] 
-**item_dimensions** | [**DimensionType**](DimensionType.md) |  | [optional] 
+**item_dimensions** | [**DimensionType**](DimensionType.md) | The item dimensions relationship of an item. | [optional] 
+
 

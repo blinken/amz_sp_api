@@ -8,3 +8,4 @@ Name | Type | Description | Notes
 **encryption_details** | [**ReportDocumentEncryptionDetails**](ReportDocumentEncryptionDetails.md) |  | 
 **compression_algorithm** | **String** | If present, the report document contents have been compressed with the provided algorithm. | [optional] 
 
+

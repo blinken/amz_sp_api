@@ -11,3 +11,4 @@ Name | Type | Description | Notes
 **shipper** | [**Party**](Party.md) |  | [optional] 
 **containers** | [**ContainerList**](ContainerList.md) |  | 
 
+

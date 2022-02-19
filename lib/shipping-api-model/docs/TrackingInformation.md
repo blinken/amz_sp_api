@@ -8,3 +8,4 @@ Name | Type | Description | Notes
 **promised_delivery_date** | [**PromisedDeliveryDate**](PromisedDeliveryDate.md) |  | 
 **event_history** | [**EventList**](EventList.md) |  | 
 
+

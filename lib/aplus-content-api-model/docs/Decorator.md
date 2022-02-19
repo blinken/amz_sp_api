@@ -8,3 +8,4 @@ Name | Type | Description | Notes
 **length** | **Integer** | The number of content characters to alter with this decorator. Decorators such as line breaks can have zero length and fit between characters. | [optional] 
 **depth** | **Integer** | The relative intensity or variation of this decorator. Decorators such as bullet-points, for example, can have multiple indentation depths. | [optional] 
 
+

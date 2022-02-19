@@ -9,3 +9,4 @@ Name | Type | Description | Notes
 **return_reason_code** | **String** | The return reason code assigned to the return item by the seller. | 
 **return_comment** | **String** | An optional comment about the return item. | [optional] 
 
+

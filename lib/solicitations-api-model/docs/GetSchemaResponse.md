@@ -7,3 +7,4 @@ Name | Type | Description | Notes
 **payload** | [**Schema**](Schema.md) |  | [optional] 
 **errors** | [**ErrorList**](ErrorList.md) |  | [optional] 
 
+

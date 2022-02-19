@@ -8,3 +8,4 @@ Name | Type | Description | Notes
 **message** | **String** | A message that describes the error condition. | 
 **detail** | [**FeesEstimateErrorDetail**](FeesEstimateErrorDetail.md) |  | 
 
+

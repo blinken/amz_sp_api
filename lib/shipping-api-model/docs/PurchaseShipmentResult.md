@@ -7,3 +7,4 @@ Name | Type | Description | Notes
 **service_rate** | [**ServiceRate**](ServiceRate.md) |  | 
 **label_results** | [**LabelResultList**](LabelResultList.md) |  | 
 
+

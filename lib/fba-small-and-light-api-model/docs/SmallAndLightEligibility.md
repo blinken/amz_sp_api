@@ -7,3 +7,4 @@ Name | Type | Description | Notes
 **seller_sku** | [**SellerSKU**](SellerSKU.md) |  | 
 **status** | [**SmallAndLightEligibilityStatus**](SmallAndLightEligibilityStatus.md) |  | 
 
+

@@ -7,3 +7,4 @@ Name | Type | Description | Notes
 **_embedded** | [**GetMessagingActionsForOrderResponseEmbedded**](GetMessagingActionsForOrderResponseEmbedded.md) |  | [optional] 
 **errors** | [**ErrorList**](ErrorList.md) |  | [optional] 
 
+

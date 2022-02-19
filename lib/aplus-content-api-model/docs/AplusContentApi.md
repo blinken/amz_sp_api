@@ -1,6 +1,6 @@
 # AmzSpApi::AplusContentApiModel::AplusContentApi
 
-All URIs are relative to *https://sellingpartnerapi-na.amazon.com/*
+All URIs are relative to *https://sellingpartnerapi-na.amazon.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -15,8 +15,9 @@ Method | HTTP request | Description
 [**update_content_document**](AplusContentApi.md#update_content_document) | **POST** /aplus/2020-11-01/contentDocuments/{contentReferenceKey} | 
 [**validate_content_document_asin_relations**](AplusContentApi.md#validate_content_document_asin_relations) | **POST** /aplus/2020-11-01/contentAsinValidations | 
 
+
 # **create_content_document**
-> PostContentDocumentResponse create_content_document(bodymarketplace_id)
+> PostContentDocumentResponse create_content_document(marketplace_id, post_content_document_request)
 
 
 
@@ -28,12 +29,14 @@ Creates a new A+ Content document.  **Usage Plans:**  | Plan type | Rate (reques
 require 'aplus-content-api-model'
 
 api_instance = AmzSpApi::AplusContentApiModel::AplusContentApi.new
-body = AmzSpApi::AplusContentApiModel::PostContentDocumentRequest.new # PostContentDocumentRequest | The content document request details.
-marketplace_id = 'marketplace_id_example' # String | The identifier for the marketplace where the A+ Content is published.
+
+marketplace_id = "marketplace_id_example" # String | The identifier for the marketplace where the A+ Content is published.
+
+post_content_document_request = AmzSpApi::AplusContentApiModel::PostContentDocumentRequest.new # PostContentDocumentRequest | The content document request details.
 
 
 begin
-  result = api_instance.create_content_document(bodymarketplace_id)
+  result = api_instance.create_content_document(marketplace_id, post_content_document_request)
   p result
 rescue AmzSpApi::AplusContentApiModel::ApiError => e
   puts "Exception when calling AplusContentApi->create_content_document: #{e}"
@@ -44,8 +47,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PostContentDocumentRequest**](PostContentDocumentRequest.md)| The content document request details. | 
  **marketplace_id** | **String**| The identifier for the marketplace where the A+ Content is published. | 
+ **post_content_document_request** | [**PostContentDocumentRequest**](PostContentDocumentRequest.md)| The content document request details. | 
 
 ### Return type
 
@@ -75,9 +78,12 @@ Returns an A+ Content document, if available.  **Usage Plans:**  | Plan type | R
 require 'aplus-content-api-model'
 
 api_instance = AmzSpApi::AplusContentApiModel::AplusContentApi.new
-content_reference_key = 'content_reference_key_example' # String | The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ Content identifier.
-marketplace_id = 'marketplace_id_example' # String | The identifier for the marketplace where the A+ Content is published.
-included_data_set = ['included_data_set_example'] # Array<String> | The set of A+ Content data types to include in the response.
+
+content_reference_key = "content_reference_key_example" # String | The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ Content identifier.
+
+marketplace_id = "marketplace_id_example" # String | The identifier for the marketplace where the A+ Content is published.
+
+included_data_set = ["included_data_set_example"] # Array<String> | The set of A+ Content data types to include in the response.
 
 
 begin
@@ -106,7 +112,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -124,12 +130,15 @@ Returns a list of ASINs related to the specified A+ Content document, if availab
 require 'aplus-content-api-model'
 
 api_instance = AmzSpApi::AplusContentApiModel::AplusContentApi.new
-content_reference_key = 'content_reference_key_example' # String | The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ Content identifier.
-marketplace_id = 'marketplace_id_example' # String | The identifier for the marketplace where the A+ Content is published.
+
+content_reference_key = "content_reference_key_example" # String | The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ Content identifier.
+
+marketplace_id = "marketplace_id_example" # String | The identifier for the marketplace where the A+ Content is published.
+
 opts = { 
-  included_data_set: ['included_data_set_example'], # Array<String> | The set of A+ Content data types to include in the response. If you do not include this parameter, the operation returns the related ASINs without metadata.
-  asin_set: ['asin_set_example'], # Array<String> | The set of ASINs.
-  page_token: 'page_token_example' # String | A page token from the nextPageToken response element returned by your previous call to this operation. nextPageToken is returned when the results of a call exceed the page size. To get the next page of results, call the operation and include pageToken as the only parameter. Specifying pageToken with any other parameter will cause the request to fail. When no nextPageToken value is returned there are no more pages to return. A pageToken value is not usable across different operations.
+  included_data_set: ["included_data_set_example"], # Array<String> | The set of A+ Content data types to include in the response. If you do not include this parameter, the operation returns the related ASINs without metadata.
+  asin_set: ["asin_set_example"], # Array<String> | The set of ASINs.
+  page_token: "page_token_example" # String | A page token from the nextPageToken response element returned by your previous call to this operation. nextPageToken is returned when the results of a call exceed the page size. To get the next page of results, call the operation and include pageToken as the only parameter. Specifying pageToken with any other parameter will cause the request to fail. When no nextPageToken value is returned there are no more pages to return. A pageToken value is not usable across different operations.
 }
 
 begin
@@ -160,7 +169,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -178,8 +187,10 @@ Submits an A+ Content document for review, approval, and publishing.  **Usage Pl
 require 'aplus-content-api-model'
 
 api_instance = AmzSpApi::AplusContentApiModel::AplusContentApi.new
-content_reference_key = 'content_reference_key_example' # String | The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ content identifier.
-marketplace_id = 'marketplace_id_example' # String | The identifier for the marketplace where the A+ Content is published.
+
+content_reference_key = "content_reference_key_example" # String | The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ content identifier.
+
+marketplace_id = "marketplace_id_example" # String | The identifier for the marketplace where the A+ Content is published.
 
 
 begin
@@ -207,13 +218,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
 
 # **post_content_document_asin_relations**
-> PostContentDocumentAsinRelationsResponse post_content_document_asin_relations(bodymarketplace_idcontent_reference_key)
+> PostContentDocumentAsinRelationsResponse post_content_document_asin_relations(content_reference_key, marketplace_id, post_content_document_asin_relations_request)
 
 
 
@@ -225,13 +236,16 @@ Replaces all ASINs related to the specified A+ Content document, if available. T
 require 'aplus-content-api-model'
 
 api_instance = AmzSpApi::AplusContentApiModel::AplusContentApi.new
-body = AmzSpApi::AplusContentApiModel::PostContentDocumentAsinRelationsRequest.new # PostContentDocumentAsinRelationsRequest | The content document ASIN relations request details.
-marketplace_id = 'marketplace_id_example' # String | The identifier for the marketplace where the A+ Content is published.
-content_reference_key = 'content_reference_key_example' # String | The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ content identifier.
+
+content_reference_key = "content_reference_key_example" # String | The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ content identifier.
+
+marketplace_id = "marketplace_id_example" # String | The identifier for the marketplace where the A+ Content is published.
+
+post_content_document_asin_relations_request = AmzSpApi::AplusContentApiModel::PostContentDocumentAsinRelationsRequest.new # PostContentDocumentAsinRelationsRequest | The content document ASIN relations request details.
 
 
 begin
-  result = api_instance.post_content_document_asin_relations(bodymarketplace_idcontent_reference_key)
+  result = api_instance.post_content_document_asin_relations(content_reference_key, marketplace_id, post_content_document_asin_relations_request)
   p result
 rescue AmzSpApi::AplusContentApiModel::ApiError => e
   puts "Exception when calling AplusContentApi->post_content_document_asin_relations: #{e}"
@@ -242,9 +256,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PostContentDocumentAsinRelationsRequest**](PostContentDocumentAsinRelationsRequest.md)| The content document ASIN relations request details. | 
- **marketplace_id** | **String**| The identifier for the marketplace where the A+ Content is published. | 
  **content_reference_key** | **String**| The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ content identifier. | 
+ **marketplace_id** | **String**| The identifier for the marketplace where the A+ Content is published. | 
+ **post_content_document_asin_relations_request** | [**PostContentDocumentAsinRelationsRequest**](PostContentDocumentAsinRelationsRequest.md)| The content document ASIN relations request details. | 
 
 ### Return type
 
@@ -274,8 +288,10 @@ Submits a request to suspend visible A+ Content. This neither deletes the conten
 require 'aplus-content-api-model'
 
 api_instance = AmzSpApi::AplusContentApiModel::AplusContentApi.new
-content_reference_key = 'content_reference_key_example' # String | The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ content identifier.
-marketplace_id = 'marketplace_id_example' # String | The identifier for the marketplace where the A+ Content is published.
+
+content_reference_key = "content_reference_key_example" # String | The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ content identifier.
+
+marketplace_id = "marketplace_id_example" # String | The identifier for the marketplace where the A+ Content is published.
 
 
 begin
@@ -303,7 +319,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -321,9 +337,11 @@ Returns a list of all A+ Content documents assigned to a selling partner. This o
 require 'aplus-content-api-model'
 
 api_instance = AmzSpApi::AplusContentApiModel::AplusContentApi.new
-marketplace_id = 'marketplace_id_example' # String | The identifier for the marketplace where the A+ Content is published.
+
+marketplace_id = "marketplace_id_example" # String | The identifier for the marketplace where the A+ Content is published.
+
 opts = { 
-  page_token: 'page_token_example' # String | A page token from the nextPageToken response element returned by your previous call to this operation. nextPageToken is returned when the results of a call exceed the page size. To get the next page of results, call the operation and include pageToken as the only parameter. Specifying pageToken with any other parameter will cause the request to fail. When no nextPageToken value is returned there are no more pages to return. A pageToken value is not usable across different operations.
+  page_token: "page_token_example" # String | A page token from the nextPageToken response element returned by your previous call to this operation. nextPageToken is returned when the results of a call exceed the page size. To get the next page of results, call the operation and include pageToken as the only parameter. Specifying pageToken with any other parameter will cause the request to fail. When no nextPageToken value is returned there are no more pages to return. A pageToken value is not usable across different operations.
 }
 
 begin
@@ -351,7 +369,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -369,10 +387,13 @@ Searches for A+ Content publishing records, if available.  **Usage Plans:**  | P
 require 'aplus-content-api-model'
 
 api_instance = AmzSpApi::AplusContentApiModel::AplusContentApi.new
-marketplace_id = 'marketplace_id_example' # String | The identifier for the marketplace where the A+ Content is published.
-asin = 'asin_example' # String | The Amazon Standard Identification Number (ASIN).
+
+marketplace_id = "marketplace_id_example" # String | The identifier for the marketplace where the A+ Content is published.
+
+asin = "asin_example" # String | The Amazon Standard Identification Number (ASIN).
+
 opts = { 
-  page_token: 'page_token_example' # String | A page token from the nextPageToken response element returned by your previous call to this operation. nextPageToken is returned when the results of a call exceed the page size. To get the next page of results, call the operation and include pageToken as the only parameter. Specifying pageToken with any other parameter will cause the request to fail. When no nextPageToken value is returned there are no more pages to return. A pageToken value is not usable across different operations.
+  page_token: "page_token_example" # String | A page token from the nextPageToken response element returned by your previous call to this operation. nextPageToken is returned when the results of a call exceed the page size. To get the next page of results, call the operation and include pageToken as the only parameter. Specifying pageToken with any other parameter will cause the request to fail. When no nextPageToken value is returned there are no more pages to return. A pageToken value is not usable across different operations.
 }
 
 begin
@@ -401,13 +422,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
 
 # **update_content_document**
-> PostContentDocumentResponse update_content_document(bodymarketplace_idcontent_reference_key)
+> PostContentDocumentResponse update_content_document(content_reference_key, marketplace_id, post_content_document_request)
 
 
 
@@ -419,13 +440,16 @@ Updates an existing A+ Content document.  **Usage Plans:**  | Plan type | Rate (
 require 'aplus-content-api-model'
 
 api_instance = AmzSpApi::AplusContentApiModel::AplusContentApi.new
-body = AmzSpApi::AplusContentApiModel::PostContentDocumentRequest.new # PostContentDocumentRequest | The content document request details.
-marketplace_id = 'marketplace_id_example' # String | The identifier for the marketplace where the A+ Content is published.
-content_reference_key = 'content_reference_key_example' # String | The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ Content identifier.
+
+content_reference_key = "content_reference_key_example" # String | The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ Content identifier.
+
+marketplace_id = "marketplace_id_example" # String | The identifier for the marketplace where the A+ Content is published.
+
+post_content_document_request = AmzSpApi::AplusContentApiModel::PostContentDocumentRequest.new # PostContentDocumentRequest | The content document request details.
 
 
 begin
-  result = api_instance.update_content_document(bodymarketplace_idcontent_reference_key)
+  result = api_instance.update_content_document(content_reference_key, marketplace_id, post_content_document_request)
   p result
 rescue AmzSpApi::AplusContentApiModel::ApiError => e
   puts "Exception when calling AplusContentApi->update_content_document: #{e}"
@@ -436,9 +460,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PostContentDocumentRequest**](PostContentDocumentRequest.md)| The content document request details. | 
- **marketplace_id** | **String**| The identifier for the marketplace where the A+ Content is published. | 
  **content_reference_key** | **String**| The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ Content identifier. | 
+ **marketplace_id** | **String**| The identifier for the marketplace where the A+ Content is published. | 
+ **post_content_document_request** | [**PostContentDocumentRequest**](PostContentDocumentRequest.md)| The content document request details. | 
 
 ### Return type
 
@@ -456,7 +480,7 @@ No authorization required
 
 
 # **validate_content_document_asin_relations**
-> ValidateContentDocumentAsinRelationsResponse validate_content_document_asin_relations(bodymarketplace_id, opts)
+> ValidateContentDocumentAsinRelationsResponse validate_content_document_asin_relations(marketplace_id, post_content_document_request, opts)
 
 
 
@@ -468,14 +492,17 @@ Checks if the A+ Content document is valid for use on a set of ASINs.  **Usage P
 require 'aplus-content-api-model'
 
 api_instance = AmzSpApi::AplusContentApiModel::AplusContentApi.new
-body = AmzSpApi::AplusContentApiModel::PostContentDocumentRequest.new # PostContentDocumentRequest | The content document request details.
-marketplace_id = 'marketplace_id_example' # String | The identifier for the marketplace where the A+ Content is published.
+
+marketplace_id = "marketplace_id_example" # String | The identifier for the marketplace where the A+ Content is published.
+
+post_content_document_request = AmzSpApi::AplusContentApiModel::PostContentDocumentRequest.new # PostContentDocumentRequest | The content document request details.
+
 opts = { 
-  asin_set: ['asin_set_example'] # Array<String> | The set of ASINs.
+  asin_set: ["asin_set_example"] # Array<String> | The set of ASINs.
 }
 
 begin
-  result = api_instance.validate_content_document_asin_relations(bodymarketplace_id, opts)
+  result = api_instance.validate_content_document_asin_relations(marketplace_id, post_content_document_request, opts)
   p result
 rescue AmzSpApi::AplusContentApiModel::ApiError => e
   puts "Exception when calling AplusContentApi->validate_content_document_asin_relations: #{e}"
@@ -486,8 +513,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PostContentDocumentRequest**](PostContentDocumentRequest.md)| The content document request details. | 
  **marketplace_id** | **String**| The identifier for the marketplace where the A+ Content is published. | 
+ **post_content_document_request** | [**PostContentDocumentRequest**](PostContentDocumentRequest.md)| The content document request details. | 
  **asin_set** | [**Array&lt;String&gt;**](String.md)| The set of ASINs. | [optional] 
 
 ### Return type

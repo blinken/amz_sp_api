@@ -1,6 +1,6 @@
 # AmzSpApi::FulfillmentOutboundApiModel::FbaOutboundApi
 
-All URIs are relative to *https://sellingpartnerapi-na.amazon.com/*
+All URIs are relative to *https://sellingpartnerapi-na.amazon.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**list_return_reason_codes**](FbaOutboundApi.md#list_return_reason_codes) | **GET** /fba/outbound/2020-07-01/returnReasonCodes | 
 [**update_fulfillment_order**](FbaOutboundApi.md#update_fulfillment_order) | **PUT** /fba/outbound/2020-07-01/fulfillmentOrders/{sellerFulfillmentOrderId} | 
 
+
 # **cancel_fulfillment_order**
 > CancelFulfillmentOrderResponse cancel_fulfillment_order(seller_fulfillment_order_id)
 
@@ -30,7 +31,8 @@ Requests that Amazon stop attempting to fulfill the fulfillment order indicated 
 require 'fulfillment-outbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentOutboundApiModel::FbaOutboundApi.new
-seller_fulfillment_order_id = 'seller_fulfillment_order_id_example' # String | The identifier assigned to the item by the seller when the fulfillment order was created.
+
+seller_fulfillment_order_id = "seller_fulfillment_order_id_example" # String | The identifier assigned to the item by the seller when the fulfillment order was created.
 
 
 begin
@@ -57,7 +59,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -75,6 +77,7 @@ Requests that Amazon ship items from the seller's inventory in Amazon's fulfillm
 require 'fulfillment-outbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentOutboundApiModel::FbaOutboundApi.new
+
 body = AmzSpApi::FulfillmentOutboundApiModel::CreateFulfillmentOrderRequest.new # CreateFulfillmentOrderRequest | 
 
 
@@ -108,7 +111,7 @@ No authorization required
 
 
 # **create_fulfillment_return**
-> CreateFulfillmentReturnResponse create_fulfillment_return(bodyseller_fulfillment_order_id)
+> CreateFulfillmentReturnResponse create_fulfillment_return(body, seller_fulfillment_order_id)
 
 
 
@@ -120,12 +123,14 @@ Creates a fulfillment return.   **Usage Plan:**  | Rate (requests per second) | 
 require 'fulfillment-outbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentOutboundApiModel::FbaOutboundApi.new
+
 body = AmzSpApi::FulfillmentOutboundApiModel::CreateFulfillmentReturnRequest.new # CreateFulfillmentReturnRequest | 
-seller_fulfillment_order_id = 'seller_fulfillment_order_id_example' # String | An identifier assigned by the seller to the fulfillment order at the time it was created. The seller uses their own records to find the correct SellerFulfillmentOrderId value based on the buyer's request to return items.
+
+seller_fulfillment_order_id = "seller_fulfillment_order_id_example" # String | An identifier assigned by the seller to the fulfillment order at the time it was created. The seller uses their own records to find the correct SellerFulfillmentOrderId value based on the buyer's request to return items.
 
 
 begin
-  result = api_instance.create_fulfillment_return(bodyseller_fulfillment_order_id)
+  result = api_instance.create_fulfillment_return(body, seller_fulfillment_order_id)
   p result
 rescue AmzSpApi::FulfillmentOutboundApiModel::ApiError => e
   puts "Exception when calling FbaOutboundApi->create_fulfillment_return: #{e}"
@@ -137,7 +142,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**CreateFulfillmentReturnRequest**](CreateFulfillmentReturnRequest.md)|  | 
- **seller_fulfillment_order_id** | **String**| An identifier assigned by the seller to the fulfillment order at the time it was created. The seller uses their own records to find the correct SellerFulfillmentOrderId value based on the buyer&#x27;s request to return items. | 
+ **seller_fulfillment_order_id** | **String**| An identifier assigned by the seller to the fulfillment order at the time it was created. The seller uses their own records to find the correct SellerFulfillmentOrderId value based on the buyer&#39;s request to return items. | 
 
 ### Return type
 
@@ -150,7 +155,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json, payload
+ - **Accept**: application/json
 
 
 
@@ -167,10 +172,13 @@ Returns a list of inventory items that are eligible for the fulfillment feature 
 require 'fulfillment-outbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentOutboundApiModel::FbaOutboundApi.new
-marketplace_id = 'marketplace_id_example' # String | The marketplace for which to return a list of the inventory that is eligible for the specified feature.
-feature_name = 'feature_name_example' # String | The name of the feature for which to return a list of eligible inventory.
+
+marketplace_id = "marketplace_id_example" # String | The marketplace for which to return a list of the inventory that is eligible for the specified feature.
+
+feature_name = "feature_name_example" # String | The name of the feature for which to return a list of eligible inventory.
+
 opts = { 
-  next_token: 'next_token_example' # String | A string token returned in the response to your previous request that is used to return the next response page. A value of null will return the first page.
+  next_token: "next_token_example" # String | A string token returned in the response to your previous request that is used to return the next response page. A value of null will return the first page.
 }
 
 begin
@@ -199,8 +207,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, payload
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
@@ -217,9 +225,12 @@ Returns the number of items with the sellerSKU you specify that can have orders 
 require 'fulfillment-outbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentOutboundApiModel::FbaOutboundApi.new
-marketplace_id = 'marketplace_id_example' # String | The marketplace for which to return the count.
-feature_name = 'feature_name_example' # String | The name of the feature.
-seller_sku = 'seller_sku_example' # String | Used to identify an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
+
+marketplace_id = "marketplace_id_example" # String | The marketplace for which to return the count.
+
+feature_name = "feature_name_example" # String | The name of the feature.
+
+seller_sku = "seller_sku_example" # String | Used to identify an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
 
 
 begin
@@ -236,7 +247,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **marketplace_id** | **String**| The marketplace for which to return the count. | 
  **feature_name** | **String**| The name of the feature. | 
- **seller_sku** | **String**| Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#x27;s SellerId, which is included with every operation that you submit. | 
+ **seller_sku** | **String**| Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. | 
 
 ### Return type
 
@@ -248,8 +259,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, payload
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
@@ -266,7 +277,8 @@ Returns a list of features available for Multi-Channel Fulfillment orders in the
 require 'fulfillment-outbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentOutboundApiModel::FbaOutboundApi.new
-marketplace_id = 'marketplace_id_example' # String | The marketplace for which to return the list of features.
+
+marketplace_id = "marketplace_id_example" # String | The marketplace for which to return the list of features.
 
 
 begin
@@ -293,8 +305,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, payload
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
@@ -311,7 +323,8 @@ Returns the fulfillment order indicated by the specified order identifier.  **Us
 require 'fulfillment-outbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentOutboundApiModel::FbaOutboundApi.new
-seller_fulfillment_order_id = 'seller_fulfillment_order_id_example' # String | The identifier assigned to the item by the seller when the fulfillment order was created.
+
+seller_fulfillment_order_id = "seller_fulfillment_order_id_example" # String | The identifier assigned to the item by the seller when the fulfillment order was created.
 
 
 begin
@@ -338,8 +351,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, payload
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
@@ -356,6 +369,7 @@ Returns a list of fulfillment order previews based on shipping criteria that you
 require 'fulfillment-outbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentOutboundApiModel::FbaOutboundApi.new
+
 body = AmzSpApi::FulfillmentOutboundApiModel::GetFulfillmentPreviewRequest.new # GetFulfillmentPreviewRequest | 
 
 
@@ -384,7 +398,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json, payload
+ - **Accept**: application/json
 
 
 
@@ -401,6 +415,7 @@ Returns delivery tracking information for a package in an outbound shipment for 
 require 'fulfillment-outbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentOutboundApiModel::FbaOutboundApi.new
+
 package_number = 56 # Integer | The unencrypted package identifier returned by the getFulfillmentOrder operation.
 
 
@@ -428,8 +443,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, payload
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
@@ -446,9 +461,10 @@ Returns a list of fulfillment orders fulfilled after (or at) a specified date-ti
 require 'fulfillment-outbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentOutboundApiModel::FbaOutboundApi.new
+
 opts = { 
-  query_start_date: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | A date used to select fulfillment orders that were last updated after (or at) a specified time. An update is defined as any change in fulfillment order status, including the creation of a new fulfillment order.
-  next_token: 'next_token_example' # String | A string token returned in the response to your previous request.
+  query_start_date: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | A date used to select fulfillment orders that were last updated after (or at) a specified time. An update is defined as any change in fulfillment order status, including the creation of a new fulfillment order.
+  next_token: "next_token_example" # String | A string token returned in the response to your previous request.
 }
 
 begin
@@ -476,8 +492,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, payload
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
@@ -494,11 +510,14 @@ Returns a list of return reason codes for a seller SKU in a given marketplace.  
 require 'fulfillment-outbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentOutboundApiModel::FbaOutboundApi.new
-seller_sku = 'seller_sku_example' # String | The seller SKU for which return reason codes are required.
-language = 'language_example' # String | The language that the TranslatedDescription property of the ReasonCodeDetails response object should be translated into.
+
+seller_sku = "seller_sku_example" # String | The seller SKU for which return reason codes are required.
+
+language = "language_example" # String | The language that the TranslatedDescription property of the ReasonCodeDetails response object should be translated into.
+
 opts = { 
-  marketplace_id: 'marketplace_id_example', # String | The marketplace for which the seller wants return reason codes.
-  seller_fulfillment_order_id: 'seller_fulfillment_order_id_example' # String | The identifier assigned to the item by the seller when the fulfillment order was created. The service uses this value to determine the marketplace for which the seller wants return reason codes.
+  marketplace_id: "marketplace_id_example", # String | The marketplace for which the seller wants return reason codes.
+  seller_fulfillment_order_id: "seller_fulfillment_order_id_example" # String | The identifier assigned to the item by the seller when the fulfillment order was created. The service uses this value to determine the marketplace for which the seller wants return reason codes.
 }
 
 begin
@@ -528,13 +547,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, payload
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
 # **update_fulfillment_order**
-> UpdateFulfillmentOrderResponse update_fulfillment_order(bodyseller_fulfillment_order_id)
+> UpdateFulfillmentOrderResponse update_fulfillment_order(body, seller_fulfillment_order_id)
 
 
 
@@ -546,12 +565,14 @@ Updates and/or requests shipment for a fulfillment order with an order hold on i
 require 'fulfillment-outbound-api-model'
 
 api_instance = AmzSpApi::FulfillmentOutboundApiModel::FbaOutboundApi.new
+
 body = AmzSpApi::FulfillmentOutboundApiModel::UpdateFulfillmentOrderRequest.new # UpdateFulfillmentOrderRequest | 
-seller_fulfillment_order_id = 'seller_fulfillment_order_id_example' # String | The identifier assigned to the item by the seller when the fulfillment order was created.
+
+seller_fulfillment_order_id = "seller_fulfillment_order_id_example" # String | The identifier assigned to the item by the seller when the fulfillment order was created.
 
 
 begin
-  result = api_instance.update_fulfillment_order(bodyseller_fulfillment_order_id)
+  result = api_instance.update_fulfillment_order(body, seller_fulfillment_order_id)
   p result
 rescue AmzSpApi::FulfillmentOutboundApiModel::ApiError => e
   puts "Exception when calling FbaOutboundApi->update_fulfillment_order: #{e}"

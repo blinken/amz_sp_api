@@ -17,3 +17,4 @@ Name | Type | Description | Notes
 **phone** | **String** | The phone number. Not returned for Fulfillment by Amazon (FBA) orders. | [optional] 
 **address_type** | **String** | The address type of the shipping address. | [optional] 
 
+

@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sqs** | [**SqsResource**](SqsResource.md) |  | [optional] 
-**event_bridge** | [**EventBridgeResourceSpecification**](EventBridgeResourceSpecification.md) |  | [optional] 
+**sqs** | [**SqsResource**](SqsResource.md) | The information required to create an Amazon Simple Queue Service (SQS) queue destination. | [optional] 
+**event_bridge** | [**EventBridgeResourceSpecification**](EventBridgeResourceSpecification.md) | The information required to create an Amazon EventBridge destination. | [optional] 
+
 

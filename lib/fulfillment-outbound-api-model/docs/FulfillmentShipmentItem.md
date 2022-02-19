@@ -9,3 +9,4 @@ Name | Type | Description | Notes
 **package_number** | **Integer** | An identifier for the package that contains the item quantity. | [optional] 
 **serial_number** | **String** | The serial number of the shipped item. | [optional] 
 
+

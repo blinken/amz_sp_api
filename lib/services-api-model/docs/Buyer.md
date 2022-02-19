@@ -8,3 +8,4 @@ Name | Type | Description | Notes
 **phone** | **String** | The phone number of the buyer. | [optional] 
 **is_prime_member** | **BOOLEAN** | When true, the service is for an Amazon Prime buyer. | [optional] 
 
+

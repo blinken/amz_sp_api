@@ -1,6 +1,6 @@
 # AmzSpApi::ServicesApiModel::ServiceApi
 
-All URIs are relative to *https://sellingpartnerapi-na.amazon.com/*
+All URIs are relative to *https://sellingpartnerapi-na.amazon.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,8 +11,9 @@ Method | HTTP request | Description
 [**get_service_jobs**](ServiceApi.md#get_service_jobs) | **GET** /service/v1/serviceJobs | 
 [**reschedule_appointment_for_service_job_by_service_job_id**](ServiceApi.md#reschedule_appointment_for_service_job_by_service_job_id) | **POST** /service/v1/serviceJobs/{serviceJobId}/appointments/{appointmentId} | 
 
+
 # **add_appointment_for_service_job_by_service_job_id**
-> SetAppointmentResponse add_appointment_for_service_job_by_service_job_id(bodyservice_job_id)
+> SetAppointmentResponse add_appointment_for_service_job_by_service_job_id(service_job_id, body)
 
 
 
@@ -24,12 +25,14 @@ Adds an appointment to the service job indicated by the service job identifier y
 require 'services-api-model'
 
 api_instance = AmzSpApi::ServicesApiModel::ServiceApi.new
+
+service_job_id = "service_job_id_example" # String | An Amazon defined service job identifier.
+
 body = AmzSpApi::ServicesApiModel::AddAppointmentRequest.new # AddAppointmentRequest | Add appointment operation input details.
-service_job_id = 'service_job_id_example' # String | An Amazon defined service job identifier.
 
 
 begin
-  result = api_instance.add_appointment_for_service_job_by_service_job_id(bodyservice_job_id)
+  result = api_instance.add_appointment_for_service_job_by_service_job_id(service_job_id, body)
   p result
 rescue AmzSpApi::ServicesApiModel::ApiError => e
   puts "Exception when calling ServiceApi->add_appointment_for_service_job_by_service_job_id: #{e}"
@@ -40,8 +43,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AddAppointmentRequest**](AddAppointmentRequest.md)| Add appointment operation input details. | 
  **service_job_id** | **String**| An Amazon defined service job identifier. | 
+ **body** | [**AddAppointmentRequest**](AddAppointmentRequest.md)| Add appointment operation input details. | 
 
 ### Return type
 
@@ -71,8 +74,10 @@ Cancels the service job indicated by the service job identifier you specify.  **
 require 'services-api-model'
 
 api_instance = AmzSpApi::ServicesApiModel::ServiceApi.new
-service_job_id = 'service_job_id_example' # String | An Amazon defined service job identifier.
-cancellation_reason_code = 'cancellation_reason_code_example' # String | A cancel reason code that specifies the reason for cancelling a service job.
+
+service_job_id = "service_job_id_example" # String | An Amazon defined service job identifier.
+
+cancellation_reason_code = "cancellation_reason_code_example" # String | A cancel reason code that specifies the reason for cancelling a service job.
 
 
 begin
@@ -100,7 +105,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -118,7 +123,8 @@ Completes the service job indicated by the service job identifier you specify.  
 require 'services-api-model'
 
 api_instance = AmzSpApi::ServicesApiModel::ServiceApi.new
-service_job_id = 'service_job_id_example' # String | An Amazon defined service job identifier.
+
+service_job_id = "service_job_id_example" # String | An Amazon defined service job identifier.
 
 
 begin
@@ -145,7 +151,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -163,7 +169,8 @@ Gets service job details for the service job indicated by the service job identi
 require 'services-api-model'
 
 api_instance = AmzSpApi::ServicesApiModel::ServiceApi.new
-service_job_id = 'service_job_id_example' # String | A service job identifier.
+
+service_job_id = "service_job_id_example" # String | A service job identifier.
 
 
 begin
@@ -190,7 +197,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -208,20 +215,22 @@ Gets service job details for the specified filter query.  **Usage Plan:**  | Rat
 require 'services-api-model'
 
 api_instance = AmzSpApi::ServicesApiModel::ServiceApi.new
-marketplace_ids = ['marketplace_ids_example'] # Array<String> | Used to select jobs that were placed in the specified marketplaces. 
+
+marketplace_ids = ["marketplace_ids_example"] # Array<String> | Used to select jobs that were placed in the specified marketplaces. 
+
 opts = { 
-  service_order_ids: ['service_order_ids_example'], # Array<String> | List of service order ids for the query you want to perform.Max values supported 20. 
-  service_job_status: ['service_job_status_example'], # Array<String> | A list of one or more job status by which to filter the list of jobs.
-  page_token: 'page_token_example', # String | String returned in the response of your previous request.
+  service_order_ids: ["service_order_ids_example"], # Array<String> | List of service order ids for the query you want to perform.Max values supported 20. 
+  service_job_status: ["service_job_status_example"], # Array<String> | A list of one or more job status by which to filter the list of jobs.
+  page_token: "page_token_example", # String | String returned in the response of your previous request.
   page_size: 20, # Integer | A non-negative integer that indicates the maximum number of jobs to return in the list, Value must be 1 - 20. Default 20. 
-  sort_field: 'sort_field_example', # String | Sort fields on which you want to sort the output.
-  sort_order: 'sort_order_example', # String | Sort order for the query you want to perform.
-  created_after: 'created_after_example', # String | A date used for selecting jobs created after (or at) a specified time must be in ISO 8601 format. Required if LastUpdatedAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. 
-  created_before: 'created_before_example', # String | A date used for selecting jobs created before (or at) a specified time must be in ISO 8601 format. 
-  last_updated_after: 'last_updated_after_example', # String | A date used for selecting jobs updated after (or at) a specified time must be in ISO 8601 format. Required if createdAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. 
-  last_updated_before: 'last_updated_before_example', # String | A date used for selecting jobs updated before (or at) a specified time must be in ISO 8601 format. 
-  schedule_start_date: 'schedule_start_date_example', # String | A date used for filtering jobs schedule after (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. 
-  schedule_end_date: 'schedule_end_date_example' # String | A date used for filtering jobs schedule before (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. 
+  sort_field: "sort_field_example", # String | Sort fields on which you want to sort the output.
+  sort_order: "sort_order_example", # String | Sort order for the query you want to perform.
+  created_after: "created_after_example", # String | A date used for selecting jobs created after (or at) a specified time must be in ISO 8601 format. Required if LastUpdatedAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. 
+  created_before: "created_before_example", # String | A date used for selecting jobs created before (or at) a specified time must be in ISO 8601 format. 
+  last_updated_after: "last_updated_after_example", # String | A date used for selecting jobs updated after (or at) a specified time must be in ISO 8601 format. Required if createdAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. 
+  last_updated_before: "last_updated_before_example", # String | A date used for selecting jobs updated before (or at) a specified time must be in ISO 8601 format. 
+  schedule_start_date: "schedule_start_date_example", # String | A date used for filtering jobs schedule after (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. 
+  schedule_end_date: "schedule_end_date_example" # String | A date used for filtering jobs schedule before (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. 
 }
 
 begin
@@ -260,13 +269,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
 
 # **reschedule_appointment_for_service_job_by_service_job_id**
-> SetAppointmentResponse reschedule_appointment_for_service_job_by_service_job_id(bodyservice_job_idappointment_id)
+> SetAppointmentResponse reschedule_appointment_for_service_job_by_service_job_id(service_job_id, appointment_id, body)
 
 
 
@@ -278,13 +287,16 @@ Reschedules an appointment for the service job indicated by the service job iden
 require 'services-api-model'
 
 api_instance = AmzSpApi::ServicesApiModel::ServiceApi.new
+
+service_job_id = "service_job_id_example" # String | An Amazon defined service job identifier.
+
+appointment_id = "appointment_id_example" # String | An existing appointment identifier for the Service Job.
+
 body = AmzSpApi::ServicesApiModel::RescheduleAppointmentRequest.new # RescheduleAppointmentRequest | Reschedule appointment operation input details.
-service_job_id = 'service_job_id_example' # String | An Amazon defined service job identifier.
-appointment_id = 'appointment_id_example' # String | An existing appointment identifier for the Service Job.
 
 
 begin
-  result = api_instance.reschedule_appointment_for_service_job_by_service_job_id(bodyservice_job_idappointment_id)
+  result = api_instance.reschedule_appointment_for_service_job_by_service_job_id(service_job_id, appointment_id, body)
   p result
 rescue AmzSpApi::ServicesApiModel::ApiError => e
   puts "Exception when calling ServiceApi->reschedule_appointment_for_service_job_by_service_job_id: #{e}"
@@ -295,9 +307,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RescheduleAppointmentRequest**](RescheduleAppointmentRequest.md)| Reschedule appointment operation input details. | 
  **service_job_id** | **String**| An Amazon defined service job identifier. | 
  **appointment_id** | **String**| An existing appointment identifier for the Service Job. | 
+ **body** | [**RescheduleAppointmentRequest**](RescheduleAppointmentRequest.md)| Reschedule appointment operation input details. | 
 
 ### Return type
 

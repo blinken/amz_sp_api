@@ -8,3 +8,4 @@ Name | Type | Description | Notes
 **asin_prep_instructions_list** | [**ASINPrepInstructionsList**](ASINPrepInstructionsList.md) |  | [optional] 
 **invalid_asin_list** | [**InvalidASINList**](InvalidASINList.md) |  | [optional] 
 
+

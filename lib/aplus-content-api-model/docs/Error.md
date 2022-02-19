@@ -7,3 +7,4 @@ Name | Type | Description | Notes
 **message** | **String** | A human readable description of the error condition. | 
 **details** | **String** | Additional information, if available, to clarify the error condition. | [optional] 
 
+

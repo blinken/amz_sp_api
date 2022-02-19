@@ -7,3 +7,4 @@ Name | Type | Description | Notes
 **error_code** | **String** | An error code that identifies the type of error that occured. | [optional] 
 **error_description** | **String** | A message that describes the error condition. | [optional] 
 
+

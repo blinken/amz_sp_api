@@ -10,3 +10,4 @@ Name | Type | Description | Notes
 **default_language_code** | **String** | The ISO 639-1 format language code of the marketplace. | 
 **domain_name** | **String** | The domain name of the marketplace. | 
 
+

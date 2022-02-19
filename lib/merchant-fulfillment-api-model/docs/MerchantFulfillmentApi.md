@@ -1,6 +1,6 @@
 # AmzSpApi::MerchantFulfillmentApiModel::MerchantFulfillmentApi
 
-All URIs are relative to *https://sellingpartnerapi-na.amazon.com/*
+All URIs are relative to *https://sellingpartnerapi-na.amazon.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**get_eligible_shipment_services**](MerchantFulfillmentApi.md#get_eligible_shipment_services) | **POST** /mfn/v0/eligibleShippingServices | 
 [**get_eligible_shipment_services_old**](MerchantFulfillmentApi.md#get_eligible_shipment_services_old) | **POST** /mfn/v0/eligibleServices | 
 [**get_shipment**](MerchantFulfillmentApi.md#get_shipment) | **GET** /mfn/v0/shipments/{shipmentId} | 
+
 
 # **cancel_shipment**
 > CancelShipmentResponse cancel_shipment(shipment_id)
@@ -26,7 +27,8 @@ Cancel the shipment indicated by the specified shipment identifier.  **Usage Pla
 require 'merchant-fulfillment-api-model'
 
 api_instance = AmzSpApi::MerchantFulfillmentApiModel::MerchantFulfillmentApi.new
-shipment_id = 'shipment_id_example' # String | The Amazon-defined shipment identifier for the shipment to cancel.
+
+shipment_id = "shipment_id_example" # String | The Amazon-defined shipment identifier for the shipment to cancel.
 
 
 begin
@@ -53,7 +55,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -71,7 +73,8 @@ Cancel the shipment indicated by the specified shipment identifer.  **Usage Plan
 require 'merchant-fulfillment-api-model'
 
 api_instance = AmzSpApi::MerchantFulfillmentApiModel::MerchantFulfillmentApi.new
-shipment_id = 'shipment_id_example' # String | The Amazon-defined shipment identifier for the shipment to cancel.
+
+shipment_id = "shipment_id_example" # String | The Amazon-defined shipment identifier for the shipment to cancel.
 
 
 begin
@@ -98,7 +101,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -116,6 +119,7 @@ Create a shipment with the information provided.  **Usage Plan:**  | Rate (reque
 require 'merchant-fulfillment-api-model'
 
 api_instance = AmzSpApi::MerchantFulfillmentApiModel::MerchantFulfillmentApi.new
+
 body = AmzSpApi::MerchantFulfillmentApiModel::CreateShipmentRequest.new # CreateShipmentRequest | 
 
 
@@ -161,6 +165,7 @@ Gets a list of additional seller inputs required for a ship method. This is gene
 require 'merchant-fulfillment-api-model'
 
 api_instance = AmzSpApi::MerchantFulfillmentApiModel::MerchantFulfillmentApi.new
+
 body = AmzSpApi::MerchantFulfillmentApiModel::GetAdditionalSellerInputsRequest.new # GetAdditionalSellerInputsRequest | 
 
 
@@ -206,6 +211,7 @@ Get a list of additional seller inputs required for a ship method. This is gener
 require 'merchant-fulfillment-api-model'
 
 api_instance = AmzSpApi::MerchantFulfillmentApiModel::MerchantFulfillmentApi.new
+
 body = AmzSpApi::MerchantFulfillmentApiModel::GetAdditionalSellerInputsRequest.new # GetAdditionalSellerInputsRequest | 
 
 
@@ -243,7 +249,7 @@ No authorization required
 
 
 
-Returns a list of shipping service offers that satisfy the specified shipment request details.  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 1 | 1 |  For more information, see \"Usage Plans and Rate Limits\" in the Selling Partner API documentation.
+Returns a list of shipping service offers that satisfy the specified shipment request details.  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 5 | 10 |  For more information, see \"Usage Plans and Rate Limits\" in the Selling Partner API documentation.
 
 ### Example
 ```ruby
@@ -251,6 +257,7 @@ Returns a list of shipping service offers that satisfy the specified shipment re
 require 'merchant-fulfillment-api-model'
 
 api_instance = AmzSpApi::MerchantFulfillmentApiModel::MerchantFulfillmentApi.new
+
 body = AmzSpApi::MerchantFulfillmentApiModel::GetEligibleShipmentServicesRequest.new # GetEligibleShipmentServicesRequest | 
 
 
@@ -296,6 +303,7 @@ Returns a list of shipping service offers that satisfy the specified shipment re
 require 'merchant-fulfillment-api-model'
 
 api_instance = AmzSpApi::MerchantFulfillmentApiModel::MerchantFulfillmentApi.new
+
 body = AmzSpApi::MerchantFulfillmentApiModel::GetEligibleShipmentServicesRequest.new # GetEligibleShipmentServicesRequest | 
 
 
@@ -341,7 +349,8 @@ Returns the shipment information for an existing shipment.  **Usage Plan:**  | R
 require 'merchant-fulfillment-api-model'
 
 api_instance = AmzSpApi::MerchantFulfillmentApiModel::MerchantFulfillmentApi.new
-shipment_id = 'shipment_id_example' # String | The Amazon-defined shipment identifier for the shipment.
+
+shipment_id = "shipment_id_example" # String | The Amazon-defined shipment identifier for the shipment.
 
 
 begin
@@ -368,7 +377,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 

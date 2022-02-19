@@ -15,3 +15,4 @@ Name | Type | Description | Notes
 **copy_emails** | **Array&lt;String&gt;** | The email cc addresses of the contact associated with the address. | [optional] 
 **phone_number** | **String** | The phone number of the person, business or institution located at that address. | [optional] 
 
+

@@ -15,3 +15,4 @@ Name | Type | Description | Notes
 **country_code** | **String** | The two digit country code, in ISO 3166-1 alpha-2 format. | [optional] 
 **phone** | **String** | The phone number. | [optional] 
 
+

@@ -12,3 +12,4 @@ Name | Type | Description | Notes
 **specification_list_block** | [**StandardHeaderTextListBlock**](StandardHeaderTextListBlock.md) |  | [optional] 
 **specification_text_block** | [**StandardTextBlock**](StandardTextBlock.md) |  | [optional] 
 
+

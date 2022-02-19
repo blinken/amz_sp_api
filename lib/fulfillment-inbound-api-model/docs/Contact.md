@@ -8,3 +8,4 @@ Name | Type | Description | Notes
 **email** | **String** | The email address of the contact person. | 
 **fax** | **String** | The fax number of the contact person. | [optional] 
 
+
